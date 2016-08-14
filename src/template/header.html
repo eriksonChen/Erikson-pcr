@@ -1,10 +1,10 @@
 <header>
     <nav>
-        <a routerLink="/index" (click)='changeHamer()'><img class="logo" src="asset/svg/logo.svg" alt="logo"></a>
+        <a routerLink="/index" (click)='closeMenu()'><img class="logo" src="asset/svg/logo.svg" alt="logo"></a>
         <ul class="menu">
-            <li><a [class.foucs]='isSelected("about")' routerLink="/about">ABOUT</a></li>
-            <li><a [class.foucs]='isSelected("work")' routerLink="/work">WORK</a></li>
-            <li><a href="javascript:;">CONTACT</a></li>
+            <li><a routerLink="/about" routerLinkActive="foucs">ABOUT</a></li>
+            <li><a routerLink="/work" routerLinkActive="foucs">WORK</a></li>
+            <li><a href="javascript:;" routerLinkActive="foucs">CONTACT</a></li>
         </ul>
         <div class="social">
             <img src="asset/svg/facebook.svg" alt="" class="svg">
@@ -21,8 +21,8 @@
 <!-- mobile meun -->
 <div class="mobile-menu">
     <ul>
-        <li [class.foucs]="isSelected('/about')"><a routerLink="/about" (click)="closeMenu()">ABOUT</a></li>
-        <li [class.foucs]="isSelected('/work')"><a routerLink="/work" (click)="closeMenu()">WORK</a></li>
+        <li routerLinkActive="foucs"><a routerLink="/about" (click)="closeMenu()">ABOUT</a></li>
+        <li routerLinkActive="foucs"><a routerLink="/work" (click)="closeMenu()">WORK</a></li>
         <li><a href="javascript:;" (click)="closeMenu()">CONTACT</a></li>
     </ul>
     <div class="social">

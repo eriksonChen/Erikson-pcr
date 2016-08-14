@@ -5,9 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routes';
 import { AboutComponent } from './about.component';
+import { AboutHomeComponent } from './abouthome.component';
 import { HomeComponent } from './home.component';
 import { WorkComponent } from './work.component';
 import { ResumeComponent } from './resume.component';
+import { ExperienceComponent } from './experience.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { ResumeComponent } from './resume.component';
     HomeComponent,
     AboutComponent,
     WorkComponent,
-    ResumeComponent
+    ResumeComponent,
+    AboutHomeComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,7 @@ import { ResumeComponent } from './resume.component';
     FormsModule,
     routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })

@@ -4,28 +4,30 @@ import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
 import { WorkComponent } from './work.component';
 import { ResumeComponent } from './resume.component';
+import { AboutHomeComponent } from './abouthome.component';
+import { ExperienceComponent } from './experience.component';
 
 const appRoutes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/index'
+    redirectTo: 'index'
   },
   {
     path: 'index',
     component: HomeComponent
   },
   {
-  	path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'resume',
-    component: ResumeComponent
-  },
-  {
   	path: 'work',
     component: WorkComponent
+  },
+  { path: 'about', component: AboutComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: AboutHomeComponent },
+      { path: 'resume', component: ResumeComponent },
+      { path: 'experience', component: ExperienceComponent }
+    ]
   }
 
 ];

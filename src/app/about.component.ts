@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about',
+  // selector: 'app-about',
   templateUrl: '../template/about.html',
-  styleUrls: ['../sass/about.scss']
+  styleUrls: []
 })
 export class AboutComponent implements OnInit{
   constructor() { }
 
   ngOnInit() {
+
+  	console.log('about.');
   }
 }
