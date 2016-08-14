@@ -1,0 +1,64 @@
+// font style
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@font-face {
+    font-family: 'cwTeXHei';
+    font-style: normal;
+    src: url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+    src: url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'), url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'), url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'), url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+}
+@import "media";
+
+// @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+body {
+    font-family:  'Noto Sans TC', '微軟正黑體', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 2px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+    font-weight: 200;
+}
+
+h6 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 2;
+}
+
+P {
+    font-size: 0.87rem;
+    font-weight: 300;
+    @media #{$sml} {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}

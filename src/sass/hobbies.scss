@@ -1,0 +1,393 @@
+@import "color";
+@import "mixin";
+@import "cont-title";
+// hobbies.css
+.wrap {
+    @media #{$med} {
+        // background-color: $lightRed;
+    }
+    @media #{$sml} {
+        padding: 4.625rem 0 0.875rem;
+        // background-color: red;
+    }
+    .hob-cont {
+        margin-top: 1.875rem;
+        color: $text;
+        width: 100%;
+        position: relative;
+        @media #{$sml} {
+            height: 100%;
+            margin-top: 0;
+            .intro {
+                display: none;
+            }
+        }
+        .banner {
+            width: 95%;
+            height: 380px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid $lightGray;
+            margin: 0 auto 1rem;
+            @media #{$med} {
+                width: 95%;
+            }
+            @media #{$sml} {
+                width: 95%;
+                height: auto;
+                background-color: #eee;
+                border: 0;
+                margin: 12px auto 0;
+                padding-bottom: 2rem;
+                // margin-bottom: 0.5rem;
+            }
+            .pic {
+                position: relative;
+                width: 50%;
+                height: 100%;
+                float: left;
+                overflow: hidden;
+                @media #{$sml} {
+                    height: 270px;
+                }
+                img {
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    @media #{$med} {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+            .des {
+                width: 50%;
+                height: 100%;
+                padding: 0 2rem 0 4rem;
+                float: right;
+                line-height: 1.7;
+                color: $textDark;
+                position: relative;
+                @media #{$med} {
+                    padding-left: 2rem;
+                }
+                @media #{$sml} {
+                    padding: 0 1.5rem;
+                    height: 55%;
+                    line-height: 1.5;
+                    p {
+                        text-align: justify;
+                        font-size: 1rem;
+                    }
+                }
+                .more-button {
+                    position: absolute;
+                    right: 2rem;
+                    bottom: 1.5rem;
+                    @media #{$sml} {
+                        position: relative;
+                        margin: 2rem auto 0;
+                        right: inherit;
+                        bottom: inherit;
+                    }
+                }
+                .title {
+                    margin-top: 3rem;
+                    font-weight: 600;
+                    @media #{$med} {
+                        margin-top: 2rem;
+                    }
+                    @media #{$sml} {
+                        margin-top: 5px;
+                    }
+                }
+                .red-line {
+                    margin: 1rem 0;
+                    width: 60px;
+                    height: 1px;
+                    display: block;
+                    border-bottom: 1px solid $darkRed;
+                    @media #{$med} {
+                        margin: 0.5rem 0;
+                    }
+                    @media #{$sml} {
+                        margin: 0.5rem auto 1.5rem;
+                    }
+                }
+            }
+            .pic,
+            .des {
+                @media #{$sml} {
+                    text-align: center;
+                    float: none;
+                    width: 100%;
+                }
+            }
+        }
+        .icon-menu {
+            position: relative;
+            float: right;
+            margin-top: -5rem;
+            cursor: pointer;
+            img {
+                width: 42px;
+                margin: 0 0.5rem;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+            @media #{$sml} {
+                margin: 1.5rem 0 1rem;
+                float: none;
+                right: 0;
+                text-align: center;
+                img {
+                    width: 50px;
+                }
+            }
+        }
+        .items {
+            width: 95%;
+            position: relative;
+            margin: 1rem auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .item {
+                position: relative;
+                background-color: white;
+                overflow: hidden;
+                width: 32.5%;
+                margin-bottom: 1.2%;
+                border: 1px solid $lightGray;
+                @media #{$med} {
+                    width: 49%;
+                }
+                @media #{$sml} {
+                    width: 100%;
+                    margin: 0 0 2.5%;
+                }
+                .item-pic {
+                    position: relative;
+                    height: 144px;
+                    width: 100%;
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        width: 101%;
+                        top: 50%;
+                        left: 50%;
+                        margin-right: -50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .item-text {
+                    position: relative;
+                    padding: 1rem;
+                    color: $textDark;
+                    @include clearfix;
+                    h5 {
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+                    .fa {
+                        margin-left: 5px;
+                    }
+                    .btn {
+                        margin-top: 15px;
+                        color: $darkRed;
+                        float: right;
+                        display: block;
+                        cursor: pointer;
+                        &:hover {
+                            color: $lightRed;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.more-button {
+    width: auto;
+    height: 34px;
+    padding: 0 17px;
+    font-size: 12px;
+    font-weight: 300;
+    color: $superLight;
+    cursor: pointer;
+    background-color: $btnGray;
+    @include rounded(5px);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50);
+    @include ease;
+    @media #{$sml} {
+        right: inherit;
+        bottom: 5%;
+        width: 80%;
+        height: 3rem;
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0);
+    }
+    p {
+        font-size: 12px;
+    }
+    &:hover {
+        background-color: $textDark;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.30);
+    }
+    .fa {
+        margin-left: 10px;
+    }
+    .btn-text {
+        display: inline-block;
+        line-height: 34px;
+        @include ease;
+        @media #{$sml} {
+            line-height: 3rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+// popup css
+.popup {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    @media #{$sml} {
+        z-index: 100;
+    }
+    .pop-cont {
+        max-width: 1280px;
+        position: absolute;
+        width: 90%;
+        height: 60%;
+        top: 50%;
+        left: 50%;
+        padding: 7px;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50);
+        // border: 1px solid $textDark;
+        background-color: $superLight;
+        @media #{$sml} {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            overflow: auto;
+        }
+        .close {
+            background-image: url('../asset/svg/close.svg');
+            right: 0;
+            z-index: 10;
+            width: 38px;
+            height: 38px;
+            margin-right: 10px;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            @include ease;
+            &:hover {
+                -ms-transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            @media #{$sml} {
+                position: relative;
+                margin: 2rem auto 0;
+                text-align: center;
+            }
+        }
+        .pop-pic {
+            position: relative;
+            overflow: hidden;
+            width: 55%;
+            height: 100%;
+            float: left;
+            img {
+                position: absolute;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @media #{$sml} {
+                margin-top: 1rem;
+                display: block;
+                width: 100%;
+                height: 50%;
+                float: none;
+            }
+        }
+        .pop-des {
+            position: relative;
+            padding: 0 3% 5%;
+            width: 45%;
+            float: right;
+            height: auto;
+            text-align: justify;
+            color: $textDark;
+            top: 50%;
+            transform: translate(0%, -50%);
+            @media #{$sml} {
+                display: block;
+                width: 100%;
+                height: auto;
+                float: none;
+                top: 0;
+                transform: translate(0%, 0%);
+                padding: 1.25rem;
+                // text-align: center;
+            }
+            .title {
+                // margin-top: 3rem;
+                margin-bottom: 1.625rem;
+                font-weight: 600;
+                color: $textDark;
+                @media #{$sml} {
+                    text-align: center;
+                }
+            }
+            .des {
+                line-height: 1.8;
+                font-size: 1rem;
+                padding-right: 1rem;
+                @media #{$sml} {
+                    padding-right: 0;
+                }
+            }
+        }
+        .more-button {
+            position: absolute;
+            right: 3rem;
+            bottom: 2rem;
+            @media #{$sml} {
+                font-size: 1rem;
+                display: block;
+                position: relative;
+                right: 0;
+                bottom: 0;
+                height: auto;
+                text-align: center;
+                line-height: 48px;
+                margin: 0 auto 1rem;
+            }
+        }
+    }
+    .pop-bg {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+        z-index: -1;
+    }
+    @include clearfix;
+}

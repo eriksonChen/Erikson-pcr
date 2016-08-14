@@ -1,0 +1,76 @@
+@import "color";
+@import "mixin";
+@import "media";
+// index style.css
+.wrap {
+    .bgimg,
+    .text-box {
+        position: absolute;
+    }
+    .bgimg {
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            position: relative;
+        }
+        @media #{$sml} {
+            width: 100%;
+                top:45%;
+            img {
+                width: 80%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+        }
+    }
+    .text-box {
+        width: 300px;
+        height: 170px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        // box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        display: block;
+        @include ease(0.25s);
+        &:hover {
+            background-color: $lightGray;
+        }
+        .box-title {
+            margin-top: 2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: $textDark;
+        }
+        .box-name{
+        	color: $textDark;
+        }
+        .line {
+            border: 1px solid $darkRed;
+            width: 100px;
+            margin: 1.4rem auto;
+        }
+        @media #{$sml}{
+        	background-color: #777;
+        	width: 95%;
+        	top: 88%;
+        	height: 100px;
+            border: 1px solid $lightGray;
+
+			.box-title, .box-name{
+				line-height: 1.6;
+                color: $superLight;
+			}
+			.box-title{
+				margin-top: 1rem;
+			}
+			.line{
+				display: none;
+			}
+        }
+    }
+    @include clearfix;
+}

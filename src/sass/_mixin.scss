@@ -1,0 +1,38 @@
+//按鈕
+@mixin btnstyle($color, $btnwith, $btnheight, $btnborder, $btnradius) {
+    background-color: $color;
+    width: $btnwith;
+    height: $btnheight;
+    border: $btnborder;
+    display: inline-block;
+    border-radius: $btnradius;
+    line-height: $btnheight;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-color: white;
+    border-style: solid;
+}
+
+@mixin scale($scale) {
+    -webkit-transform: scale($scale);
+    transform: scale($scale);
+}
+
+@mixin rounded($radius: 5px) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin ease($time:0.2s){
+    transition: all $time ease-in-out;
+}

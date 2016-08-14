@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Erikson 攝影。創作。記錄</title>
+    <!-- facebook share -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Erikson 攝影。創作。記錄" />
+    <meta property="og:description" content="Erikson 攝影。創作。記錄" />
+    <meta property="og:image" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <!-- favicon -->
+    <!-- <link rel="icon" href="img/favicon.ico"> -->
+    <!-- css style -->
+    <script>
+    /*var useragent = navigator.userAgent;
+            if (useragent.indexOf('iPhone') == -1 && useragent.indexOf('Android') == -1 && useragent.indexOf('Windows Phone') == -1 && useragent.indexOf('iPad') == -1) {
+                location.href = 'pc/';
+            }*/
+    </script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="js/vendor/jquery/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./"><img class="logo" src="asset/svg/logo.svg" alt="logo"></a>
+            <ul class="menu">
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="social">
+                <img src="asset/svg/facebook.svg" alt="" class="svg">
+                <img src="asset/svg/flickr.svg" alt="" class="svg">
+                <img src="asset/svg/linkin.svg" alt="" class="svg">
+            </div>
+            <div class="hamber">
+                <div class="icon"></div>
+            </div>
+        </nav>
+        <!-- end .nav -->
+    </header>
+    <!-- end .header -->
+    <!-- mobile meun -->
+    <div class="mobile-menu">
+        <ul>
+            <li class="foucs"><a href="about.html">ABOUT</a></li>
+            <li><a href="work.html">WORK</a></li>
+            <li><a href="javascript:;">CONTACT</a></li>
+        </ul>
+        <div class="social">
+            <img src="asset/svg/facebook.svg" alt="" class="svg">
+            <img src="asset/svg/flickr.svg" alt="" class="svg">
+            <img src="asset/svg/linkin.svg" alt="" class="svg">
+        </div>
+    </div>
+    <!-- end .mobile-menu -->
+    <div class="wrap">
+        <div class="bgimg">
+            <img src="img/ca1.png" alt="camera1">
+        </div>
+        <div class="text-box">
+            <h4 class="box-title">攝影。創作。記錄</h4>
+            <div class="line"></div>
+            <h5 class="box-name">Erikson</h5>
+        </div>
+        <!-- end .text-box -->
+    </div>
+    <!-- end .wrap -->
+    
+    <script src="js/vendor/gsap/TweenMax.min.js"></script>
+    <script>
+    $(function() {
+        var menu =  $('.mobile-menu');
+        $('.hamber').on('click', function() {
+
+            $(this).toggleClass( function() {
+                if ($(this).is('.open')) {
+                    TweenMax.to(menu, 0.5, {top:'-100%', ease:Cubic.easeOut});
+                    return 'open';
+                } else {
+                    TweenMax.to(menu, 0.5, {top:'0', ease:Cubic.easeOut});
+                    return 'open';
+                }
+            });
+
+        });
+    });
+    </script>
+</body>
+
+</html>
