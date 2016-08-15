@@ -24,7 +24,7 @@ export class CameraComponent implements OnInit{
   				console.log(this.items);
   			})*/
 
-  		this.http.get('/api/camera.json')
+  		this.http.get('./api/camera.json')
       		.subscribe(response => {
       			this.items = response.json().data;
       			this.banner= response.json().banner;
