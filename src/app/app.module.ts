@@ -10,7 +10,11 @@ import { HomeComponent } from './home.component';
 import { WorkComponent } from './work.component';
 import { ResumeComponent } from './resume.component';
 import { ExperienceComponent } from './experience.component';
-
+import { HobbiesComponent } from './hobbies.component';
+import { CameraComponent } from './camera.component';
+import { ClimbingComponent } from './climbing.component';
+import { BikeComponent } from './bike.component';
+import { Http, HTTP_PROVIDERS }from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ExperienceComponent } from './experience.component';
     WorkComponent,
     ResumeComponent,
     AboutHomeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    CameraComponent,
+    HobbiesComponent,
+    ClimbingComponent,
+    BikeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,7 @@ import { ExperienceComponent } from './experience.component';
     FormsModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, HTTP_PROVIDERS],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })

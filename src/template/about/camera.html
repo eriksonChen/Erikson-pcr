@@ -1,92 +1,60 @@
-<div class="cont-title">
-    <h1 class="title">ABOUT</h1>
-    <h3 class="subtitle">Hobbies/興趣</h2>
+<div class="wrap">
+    <div class="cont-title">
+        <h1 class="title">ABOUT</h1>
+        <h2 class="subtitle">Hobbies/興趣</h2>
+    </div>
+    <div class="line"></div>
+    <div class="hob-cont">
+        <icon-menu></icon-menu>
+        <div class="banner intro">
+            <div class="pic">
+                <img src="img/ca1.png" alt="camera">
+            </div>
+            <div class="des">
+                <h4 class="title">{{banner.name}}</h4>
+                <div class="red-line"></div>
+                <p class="text-cont">
+                    {{banner.text}}
+                </p>
+            </div>
+        </div>
+        <!-- end .banner photo -->
+        <div class="items">
+            <div class="item" *ngFor="let item of items">
+                <div class="item-pic">
+                    <img [src]="item.pic" alt="">
+                </div>
+                <div class="item-text">
+                    <h5>{{item.title}}</h5>
+                    <p>{{item.summary}}</p>
+                    <div class="btn" (click)=pop(item)>more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <!-- end .items -->
+    </div>
+    <!-- end .hob-cont -->
 </div>
-<div class="line"></div>
-<div class="hob-cont">
-    <div class="icon-menu">
-        <img class="btn-cam" src="asset/svg/camera.svg" alt="">
-        <img class="btn-bpk" src="asset/svg/backpack.svg" alt="">
-        <img class="btn-bike" src="asset/svg/bike.svg" alt="">
-    </div>
-    <div class="banner intro">
-        <div class="pic">
-             <img src="img/ca1.png" alt="camera">
-        </div>
-        <div class="des">
-            <h4 class="title">攝影</h4>
-            <div class="red-line"></div>
-            <p class="text-cont">
-                最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。
-            </p>
-        </div>
-    </div>
-    <!-- end .banner photo -->
-    <div class="items">
-        <div class="item">
-            <div class="item-pic">
-                <img src="img/photo01.jpg" alt="">
-            </div>
-            <div class="item-text">
-                <h5>日常器具</h5>
-                <p>生活中的用品不只是好看更應該好用,什麼樣的器具代表著什麼樣的生活...</p>
-                <div class="btn">more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-            </div>
+
+<div class="popup">
+    <div class="pop-cont">
+        <div class="close" (click)="closePop()"></div>
+        <div class="pop-pic">
+            <img [src]="pitem.pic" alt="">
         </div>
 
-        <div class="item">
-            <div class="item-pic">
-                <img src="img/photo02.jpg" alt="">
-            </div>
-            <div class="item-text">
-                <h5>生活中的美景</h5>
-                <p>生活中的用品不只是好看更應該好用麼樣的器具代表著什麼樣的生活態度。</p>
-                <div class="btn">more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+        <div class="pop-des">
+            <h4 class="title">{{pitem.title}}</h4>
+            <p class="des">{{pitem.des}}</p>
+        </div>
+        <div class="more-button">
+            <div class="btn-text" (click)=urlto(pitem.href)>
+                See Photo<i class="fa fa-chevron-right" aria-hidden="true"></i>
             </div>
         </div>
-        <div class="item">
-            <div class="item-pic">
-                <img src="img/photo01.jpg" alt="">
-            </div>
-            <div class="item-text">
-                <h5>日常器具</h5>
-                <p>生活中的用品不只是好看更應該好用,什麼樣的器具代表著什麼樣的生活態度。</p>
-                <div class="btn">more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-pic">
-                <img src="img/photo01.jpg" alt="">
-            </div>
-            <div class="item-text">
-                <h5>日常器具</h5>
-                <p>生活中的用品不只是好看更應該好用,什麼樣的器具代表著什麼樣的生活態度。</p>
-                <div class="btn">more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="item-pic">
-                <img src="img/photo01.jpg" alt="">
-            </div>
-            <div class="item-text">
-                <h5>日常器具</h5>
-                <p>生活中的用品不只是好看更應該好用麼樣的器具代表著什麼樣的生活態度。</p>
-                <div class="btn">more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-pic">
-                <img src="img/photo01.jpg" alt="">
-            </div>
-            <div class="item-text">
-                <h5>日常器具</h5>
-                <p>生活中的用品不只是好看更應該好用,什麼樣的器具代表著什麼樣的生活態度。</p>
-                <div class="btn">more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-            </div>
-        </div>
-
     </div>
-    <!-- end .items -->
+    <div class="pop-bg"></div>
 </div>
-<!-- end .hob-cont -->
+<!-- end .popup -->

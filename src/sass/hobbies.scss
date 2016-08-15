@@ -10,6 +10,31 @@
         padding: 4.625rem 0 0.875rem;
         // background-color: red;
     }
+    .icon-menu {
+        position: relative;
+        float: right;
+        margin-top: -5rem;
+        cursor: pointer;
+        img {
+            width: 42px;
+            margin: 0 0.5rem;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        .hide {
+            display: none;
+        }
+        @media #{$sml} {
+            margin: 1.5rem 0 1rem;
+            float: none;
+            right: 0;
+            text-align: center;
+            img {
+                width: 50px;
+            }
+        }
+    }
     .hob-cont {
         margin-top: 1.875rem;
         color: $text;
@@ -123,28 +148,6 @@
                     text-align: center;
                     float: none;
                     width: 100%;
-                }
-            }
-        }
-        .icon-menu {
-            position: relative;
-            float: right;
-            margin-top: -5rem;
-            cursor: pointer;
-            img {
-                width: 42px;
-                margin: 0 0.5rem;
-                &:hover {
-                    opacity: 0.5;
-                }
-            }
-            @media #{$sml} {
-                margin: 1.5rem 0 1rem;
-                float: none;
-                right: 0;
-                text-align: center;
-                img {
-                    width: 50px;
                 }
             }
         }

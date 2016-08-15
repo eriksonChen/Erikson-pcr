@@ -6,6 +6,10 @@ import { WorkComponent } from './work.component';
 import { ResumeComponent } from './resume.component';
 import { AboutHomeComponent } from './abouthome.component';
 import { ExperienceComponent } from './experience.component';
+import { CameraComponent } from './camera.component';
+import { HobbiesComponent } from './hobbies.component';
+import { ClimbingComponent } from './climbing.component';
+import { BikeComponent } from './bike.component';
 
 const appRoutes: Routes = [
   {
@@ -26,7 +30,11 @@ const appRoutes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: AboutHomeComponent },
       { path: 'resume', component: ResumeComponent },
-      { path: 'experience', component: ExperienceComponent }
+      { path: 'experience', component: ExperienceComponent },
+      { path: 'hobbies', component: HobbiesComponent },
+      { path: 'camera', component: CameraComponent },
+      { path: 'climbing', component: ClimbingComponent },
+      { path: 'bike', component: BikeComponent }
     ]
   }
 
