@@ -193,12 +193,12 @@
                         }
                         .btn {
                             font-family: '微軟正黑體', Arial;
-                            color: $darkRed;
+                            color: $lightRed;
                             float: right;
                             display: block;
                             cursor: pointer;
                             &:hover {
-                                color: $lightRed;
+                                color: $darkRed;
                             }
                         }
                     }
@@ -213,14 +213,16 @@
     height: 34px;
     padding: 0 17px;
     font-size: 12px;
-    font-weight: 300;
-    color: $superLight;
+    font-weight: 600;
+    color: $textGray;
     cursor: pointer;
-    background-color: $btnGray;
+    background-color:inherit;
     @include rounded(5px);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50);
-    @include ease;
+    border: 1px solid $textGray;
+    // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50);
+    
     @media #{$sml} {
+        @include ease;
         right: inherit;
         bottom: 5%;
         width: 80%;
@@ -231,15 +233,17 @@
         font-size: 12px;
     }
     &:hover {
-        background-color: $textDark;
-        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.30);
+        background-color: $textGray;
+        border-color: $textGray;
+        color:$superLight;
+        // box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.30);
     }
     .fa {
         margin-left: 10px;
     }
     .btn-text {
         display: inline-block;
-        line-height: 34px;
+        line-height: 30px;
         @include ease;
         @media #{$sml} {
             line-height: 3rem;

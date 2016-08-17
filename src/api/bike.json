@@ -7,56 +7,26 @@
   },
   "data": [
     {
-      "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
-      "title": "生活中的美景",
-      "date": "2016/04/30",
-      "pic": "img/photo02.jpg",
-      "category-link": "http://blog.miniasp.com/category/Visual-Studio.aspx",
+      "href": "https://goo.gl/photos/DLUjhRBenKQoCvyCA",
+      "title": "春節環島－8天",
+      "date": "2012.01",
+      "pic": "../img/bike/round.JPG",
+      "summary": "從一開始連續四天的雨天外加寒流到最後騎西濱往北大逆風，沿路還爆胎了四次⋯⋯",
+      "des": "這是人生的第一次環島，對於單車的熱情應該是從我看了『不去會死』開始的，之後看了蛙大的16天環島和Deray嘎嘎嘎的單車遊記更興起了環島的意念。所以在工作之餘開始了我的環島計劃，然後在2008的春節開始了我的單車環島。<br>從一開始連續四天的雨天外加寒流到最後騎西濱往北大逆風，沿路還爆胎了四次。雖然這樣還是遇到很多熱心的車友幫忙，加上沿路上的美景讓我感覺一路上遇到的困難都只是小事，因為得到的樂趣更多。當下決定以後有機會一定還要再來一次。"
+    },
+    {
+      "href": "https://goo.gl/photos/JGfj6Z5wtijgDPoy7",
+      "title": "環島－11天",
+      "date": "2016.06",
+      "pic": "../img/bike/round1.JPG",
       "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
-      "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
-      "title": "日常器具",
-      "date": "2016/04/30",
-      "pic": "img/photo02.jpg",
-      "category-link": "http://blog.miniasp.com/category/Visual-Studio.aspx",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
-      "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
-    },
-    {
-      "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
-      "title": "路燈",
-      "date": "2016/04/30",
-      "pic": "img/photo01.jpg",
-      "category-link": "http://blog.miniasp.com/category/Visual-Studio.aspx",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
-      "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
-    },
-    {
-      "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
-      "title": "日常器具",
-      "date": "2016/04/30",
-      "pic": "img/photo02.jpg",
-      "category-link": "http://blog.miniasp.com/category/Visual-Studio.aspx",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
-      "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
-    },
-    {
-      "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
-      "title": "日常器具",
-      "date": "2016/04/30",
-      "pic": "img/photo01.jpg",
-      "category-link": "http://blog.miniasp.com/category/Visual-Studio.aspx",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
-      "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
-    },
-    {
-      "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
-      "title": "日常器具",
-      "date": "2016/04/30",
-      "pic": "img/photo01.jpg",
-      "category-link": "http://blog.miniasp.com/category/Visual-Studio.aspx",
+      "href": "https://goo.gl/photos/8w8ypqv15tYWVqXf8",
+      "title": "花東4日遊",
+      "date": "2009.01",
+      "pic": "../img/bike/east.jpg",
       "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     }
