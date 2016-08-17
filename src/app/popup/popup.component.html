@@ -1,0 +1,19 @@
+<div class="popup">
+    <div class="pop-cont">
+        <div class="close" (click)="closePop()"></div>
+        <div class="pop-pic">
+            <img [src]="popCont.pic" alt="">
+        </div>
+
+        <div class="pop-des">
+            <h4 class="title">{{popCont.title}}</h4>
+            <p class="des">{{popCont.des}}</p>
+        </div>
+        <div class="more-button">
+            <div class="btn-text" (click)=urlto(popCont.href)>
+                See Photo<i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="pop-bg" (click)="closePop()"></div>
+</div>

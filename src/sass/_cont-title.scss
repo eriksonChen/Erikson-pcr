@@ -1,72 +1,69 @@
 @import "media";
-.wrap{
+@import 'color';
+@import 'mixin';
+
+.wrap {
     padding: 4.625rem 2rem 0.875rem 2rem;
-    @media #{$sml}{
+    @media #{$sml} {
         padding: 4.625rem 1.75rem 0.875rem 1.75rem;
     }
-    .cont-title {
-        margin-bottom: -2px;
-        letter-spacing: 1px;
-        position: relative;
-        .title {
-            color: $lightGray;
-            font-family: Helvetica;
-            font-weight: 300;
-            font-size: 4rem;
-
-        }
-        .subtitle {
-            margin-top: -1.5rem;
-            font-size: 1.5rem;
-            color: $textDark;
-        }
-        
-        @media #{$sml}{
-            text-align: center;
-            margin-bottom:0.5rem;
-            line-height: 1;
-            .subtitle{
-                margin-top: 0;
-                font-size: 1.25rem;
-            }
-
-            .title{
-                font-size: 2rem;
-                letter-spacing: 0;
-                // font-weight: 300;
-                color: $textGray;
-            }
-        }
-    }
-    .line {
-        position: relative;
-        border-bottom: 1px solid $lightGray;
-        margin: 1rem auto;
-        width: 100%;
-        @media #{$sml}{
-            width: 35%;
-            border-color: $darkRed;
-        }
-    }
-    .back{
-            position: absolute;
-            width: 42px;
-            height: 42px;
-            right: 2rem;
-            margin-top: -4rem;
-            @include ease;
-            &:hover{
-                opacity: 0.5;
-                cursor: pointer;
-            }
-
-            @media #{$sml}{
-                right: 1rem;
-                /* position: relative;
-                right: 0;
-                margin: 1rem auto; */
-                // display: block;
-            }
-        }
 }
-    
+
+.cont-title {
+    margin-bottom: -2px;
+    letter-spacing: 1px;
+    position: relative;
+    .title {
+        color: $lightGray;
+        font-family: Helvetica;
+        font-weight: 300;
+        font-size: 4rem;
+    }
+    .subtitle {
+        margin-top: -1.5rem;
+        font-size: 1.5rem;
+        color: $textDark;
+    }
+    @media #{$sml} {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        line-height: 1;
+        .subtitle {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+        .title {
+            font-size: 2.5rem;
+            letter-spacing: 0;
+            // font-weight: 300;
+            color: $textGray;
+        }
+    }
+}
+
+.line {
+    position: relative;
+    border-bottom: 1px solid $lightGray;
+    margin: 1rem auto;
+    width: 100%;
+    @media #{$sml} {
+        width: 35%;
+        border-color: $darkRed;
+    }
+}
+
+.back {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    right: 2rem;
+    margin-top: -4rem;
+    @include ease;
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    @media #{$sml} {
+        right: 1rem;
+    }
+}

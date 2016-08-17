@@ -4,31 +4,33 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routes';
-import { AboutComponent } from './about.component';
-import { AboutHomeComponent } from './abouthome.component';
-import { HomeComponent } from './home.component';
-import { WorkComponent } from './work.component';
-import { ResumeComponent } from './resume.component';
-import { ExperienceComponent } from './experience.component';
-import { HobbiesComponent } from './hobbies.component';
-import { CameraComponent } from './camera.component';
-import { ClimbingComponent } from './climbing.component';
-import { BikeComponent } from './bike.component';
 import { Http, HTTP_PROVIDERS }from '@angular/http';
+import { PopupComponent } from './popup/popup.component';
+import { HobbiesMenuComponent } from './hobbies-menu/hobbies-menu.component';
+import { HobbiesTypeComponent } from './hobbies-type/hobbies-type.component';
+import { HeaderComponent } from './header/header.component';
+import { WorkComponent } from './work/work.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { AboutHomeComponent } from './about-home/about-home.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ResumeComponent } from './resume/resume.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    WorkComponent,
     ResumeComponent,
-    AboutHomeComponent,
     ExperienceComponent,
-    CameraComponent,
     HobbiesComponent,
-    ClimbingComponent,
-    BikeComponent
+    PopupComponent,
+    HobbiesMenuComponent,
+    HobbiesTypeComponent,
+    HeaderComponent,
+    WorkComponent,
+    AboutHomeComponent
   ],
   imports: [
     BrowserModule,

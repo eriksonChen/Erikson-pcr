@@ -10,31 +10,6 @@
         padding: 4.625rem 0 0.875rem;
         // background-color: red;
     }
-    .icon-menu {
-        position: relative;
-        float: right;
-        margin-top: -5rem;
-        cursor: pointer;
-        img {
-            width: 42px;
-            margin: 0 0.5rem;
-            &:hover {
-                opacity: 0.5;
-            }
-        }
-        .hide {
-            display: none;
-        }
-        @media #{$sml} {
-            margin: 1.5rem 0 1rem;
-            float: none;
-            right: 0;
-            text-align: center;
-            img {
-                width: 50px;
-            }
-        }
-    }
     .hob-cont {
         margin-top: 1.875rem;
         color: $text;
@@ -119,7 +94,7 @@
                     }
                 }
                 .title {
-                    margin-top: 3rem;
+                    margin-top: 4rem;
                     font-weight: 600;
                     @media #{$med} {
                         margin-top: 2rem;
@@ -129,7 +104,7 @@
                     }
                 }
                 .red-line {
-                    margin: 1rem 0;
+                    margin: 0 0 1rem;
                     width: 60px;
                     height: 1px;
                     display: block;
@@ -188,24 +163,43 @@
                 }
                 .item-text {
                     position: relative;
-                    padding: 1rem;
+                    padding: 0.7rem;
                     color: $textDark;
-                    @include clearfix;
+                    text-align: justify;
                     h5 {
                         font-weight: 600;
-                        margin-bottom: 1rem;
                     }
                     .fa {
                         margin-left: 5px;
                     }
-                    .btn {
-                        margin-top: 15px;
-                        color: $darkRed;
-                        float: right;
+                    .date {
+                        font-weight: 400;
+                        margin-left: 0.5rem;
+                        // color: $textGray;
+                        font-size: 12px;
+                        font-family: '微軟正黑體', Arial;
+                    }
+                    .text{
+                        margin-top: 1rem;
+                    }
+                    .down {
                         display: block;
-                        cursor: pointer;
-                        &:hover {
-                            color: $lightRed;
+                        margin-top: 15px;
+                        @include clearfix;
+                        font-size: 0.875rem;
+                        .date {
+                            float: left;
+                            color: $textGray;
+                        }
+                        .btn {
+                            font-family: '微軟正黑體', Arial;
+                            color: $darkRed;
+                            float: right;
+                            display: block;
+                            cursor: pointer;
+                            &:hover {
+                                color: $lightRed;
+                            }
                         }
                     }
                 }
@@ -252,145 +246,4 @@
             font-size: 1rem;
         }
     }
-}
-
-// popup css
-.popup {
-    position: fixed;
-    z-index: 20;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: none;
-    @media #{$sml} {
-        z-index: 100;
-    }
-    .pop-cont {
-        max-width: 1280px;
-        position: absolute;
-        width: 90%;
-        height: 60%;
-        top: 50%;
-        left: 50%;
-        padding: 7px;
-        transform: translate(-50%, -50%);
-        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50);
-        // border: 1px solid $textDark;
-        background-color: $superLight;
-        @media #{$sml} {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            overflow: auto;
-        }
-        .close {
-            background-image: url('../asset/svg/close.svg');
-            right: 0;
-            z-index: 10;
-            width: 38px;
-            height: 38px;
-            margin-right: 10px;
-            cursor: pointer;
-            display: block;
-            position: absolute;
-            @include ease;
-            &:hover {
-                -ms-transform: rotate(90deg);
-                -webkit-transform: rotate(90deg);
-                transform: rotate(90deg);
-            }
-            @media #{$sml} {
-                position: relative;
-                margin: 2rem auto 0;
-                text-align: center;
-            }
-        }
-        .pop-pic {
-            position: relative;
-            overflow: hidden;
-            width: 55%;
-            height: 100%;
-            float: left;
-            img {
-                position: absolute;
-                height: 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-            @media #{$sml} {
-                margin-top: 1rem;
-                display: block;
-                width: 100%;
-                height: 50%;
-                float: none;
-            }
-        }
-        .pop-des {
-            position: relative;
-            padding: 0 3% 5%;
-            width: 45%;
-            float: right;
-            height: auto;
-            text-align: justify;
-            color: $textDark;
-            top: 50%;
-            transform: translate(0%, -50%);
-            @media #{$sml} {
-                display: block;
-                width: 100%;
-                height: auto;
-                float: none;
-                top: 0;
-                transform: translate(0%, 0%);
-                padding: 1.25rem;
-                // text-align: center;
-            }
-            .title {
-                // margin-top: 3rem;
-                margin-bottom: 1.625rem;
-                font-weight: 600;
-                color: $textDark;
-                @media #{$sml} {
-                    text-align: center;
-                }
-            }
-            .des {
-                line-height: 1.8;
-                font-size: 1rem;
-                padding-right: 1rem;
-                @media #{$sml} {
-                    padding-right: 0;
-                }
-            }
-        }
-        .more-button {
-            position: absolute;
-            right: 3rem;
-            bottom: 2rem;
-            @media #{$sml} {
-                font-size: 1rem;
-                display: block;
-                position: relative;
-                right: 0;
-                bottom: 0;
-                height: auto;
-                text-align: center;
-                line-height: 48px;
-                margin: 0 auto 1rem;
-            }
-        }
-    }
-    .pop-bg {
-        position: absolute;
-        background-color: #fff;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0.7;
-        z-index: -1;
-    }
-    @include clearfix;
 }

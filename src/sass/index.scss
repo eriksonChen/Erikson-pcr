@@ -3,6 +3,10 @@
 @import "media";
 // index style.css
 .wrap {
+    background: #abbabb;
+    background: -webkit-linear-gradient(to top, #abbabb, #fff);
+    background: linear-gradient(to top, #abbabb, #fff);
+    max-width: inherit;
     .bgimg,
     .text-box {
         position: absolute;
@@ -16,7 +20,7 @@
         }
         @media #{$sml} {
             width: 100%;
-                top:45%;
+            top: 45%;
             img {
                 width: 80%;
                 left: 50%;
@@ -36,6 +40,7 @@
         cursor: pointer;
         display: block;
         @include ease(0.25s);
+        @include rounded(2px);
         &:hover {
             background-color: $lightGray;
         }
@@ -45,31 +50,31 @@
             letter-spacing: 1px;
             color: $textDark;
         }
-        .box-name{
-        	color: $textDark;
+        .box-name {
+            color: $textDark;
         }
         .line {
             border: 1px solid $darkRed;
             width: 100px;
             margin: 1.4rem auto;
         }
-        @media #{$sml}{
-        	background-color: #777;
-        	width: 95%;
-        	top: 88%;
-        	height: 100px;
+        @media #{$sml} {
+            background-color: #777;
+            width: 95%;
+            top: 88%;
+            height: 100px;
             border: 1px solid $lightGray;
-
-			.box-title, .box-name{
-				line-height: 1.6;
+            .box-title,
+            .box-name {
+                line-height: 1.6;
                 color: $superLight;
-			}
-			.box-title{
-				margin-top: 1rem;
-			}
-			.line{
-				display: none;
-			}
+            }
+            .box-title {
+                margin-top: 1rem;
+            }
+            .line {
+                display: none;
+            }
         }
     }
     @include clearfix;
