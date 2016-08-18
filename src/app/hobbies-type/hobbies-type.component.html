@@ -13,9 +13,7 @@
             <div class="des">
                 <h4 class="title">{{banner.name}}</h4>
                 <div class="red-line"></div>
-                <p class="text-cont">
-                    {{banner.text}}
-                </p>
+                <p class="text-cont" [innerHTML]="banner.text"></p>
             </div>
         </div>
         <!-- end .banner photo -->

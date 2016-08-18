@@ -7,7 +7,7 @@
 
         <div class="pop-des">
             <h4 class="title">{{popCont.title}}</h4>
-            <p class="des">{{popCont.des}}</p>
+            <p class="des" [innerHTML]='popCont.des'></p>
         </div>
         <div class="more-button">
             <div class="btn-text" (click)=urlto(popCont.href)>
