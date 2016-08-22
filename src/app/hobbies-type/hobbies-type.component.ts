@@ -30,7 +30,7 @@ export class HobbiesTypeComponent implements OnInit {
   	ngOnInit() {
   		$('.hob-cont').css('display','none').delay(100).fadeIn();
 
-      	this.mytype=this.route.snapshot.data['item'];
+      this.mytype=this.route.snapshot.data['item'];
 
   		this.http.get('./api/'+this.mytype+'.json')
   			.subscribe(res => {
@@ -38,6 +38,12 @@ export class HobbiesTypeComponent implements OnInit {
   				this.banner= res.json().banner;
   			});
       window.scrollTo(0,0);
+      setTimeout(()=>{
+        $('.item').each((index, ele)=>{
+          TweenMax.from(ele, 0.7, {delay:(index+1.5)*0.18, alpha:0, y:70, ease:Back.easeOut});
+        });
+      },100);
+      
   	}
 
   	pop(p){

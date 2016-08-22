@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { AboutService } from '../about.service';
 
+
 @Component({
   // selector: 'app-about',
   templateUrl: `<router-outlet></router-outlet>`,

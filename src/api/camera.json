@@ -2,12 +2,12 @@
   "banner": 
   {
     "name": "攝影",
-    "author": "Erikson Chen",
-    "text": "從有了第一台數位單眼，就開始迷上了攝影。<br>雖然拍照的時間長也有自己的心得，但還是有很大的進步空間，對於商攝的經驗不多但個人創作到是不少。因為一直把它當成興趣所以一直玩的很心。過去曾在公司辦過兩場攝影聯展，過程中得到了很多想法，每個人都有自己的主題跟構圖方式，互相交流之下學到了很多東西。<br>對攝影來說，觀察一直是重要的過程之一，去仔細了解到周遭環境的美。適當的留白也是重要的元素之一，有了想像空問照片就開始說故事了。好的影像不該只是流於形式，更應該有故事的內容。"
+    "pic": "../img/ca1.png",
+    "text": "凡事都要多練習，想拍出好的照片沒有捷徑，多想多看多拍是基本功。對於攝影雖然有自己的看法，但我認為要進步的空間還是很多。曾經想拿攝影當作自已賺錢的工具，但還是單純的當成興趣還比較自在，至少可以拍自已想拍的作品。<br><br>Ansel Adams安塞爾．亞當斯曾說過＂真正的作品不需要言語去說明，而且它也無法用言語說明。＂好的作品本身就能陳述故事，經由觀察並透過詮譯才能真正完成一個作品。不過想像力不僅是攝影師必要的條件，觀者對作品也同樣要有想像空間。這樣，照片就能說故事了。"
   },
   "data": [
     {
-      "href": "https://photos.google.com/album/AF1QipPhJ5vEagXL-3bZuQnpIDX_tKyNb8VLv8eouq-g?hl=zh-TW",
+      "href": "https://goo.gl/photos/arneVH3qGMZVA1XUA",
       "title": "單色",
       "date": "2013.02",
       "pic": "../img/camera/bw-1.jpg",
@@ -15,7 +15,7 @@
       "des": "黑白照片本身就有一種深刻的感染力, 沒有了色彩元素，黑白照片更重視攝影的基本要求︰光與影，讓影像更純粹，很原始的視覺享受。"
     },
     {
-      "href": "https://photos.google.com/album/AF1QipO-ZAb6KYQ6JMjEl-O6_WbIwVo5qQIod0I2QvXX?hl=zh-TW",
+      "href": "https://goo.gl/photos/p42coJ2BWo3nbZo46",
       "title": "路燈",
       "date": "2011.05",
       "pic": "../img/camera/stree-light.jpg",
@@ -23,7 +23,7 @@
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
-      "href": "https://photos.google.com/album/AF1QipM7FnbU2ShpSfzwilrOMsuKpHeVFbq3NnqaFZ2n?hl=zh-TW",
+      "href": "https://goo.gl/photos/wrkP1FazWMHq7VWX7",
       "title": "Flower",
       "date": "2015.05",
       "pic": "../img/camera/flower.jpg",
@@ -31,7 +31,7 @@
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
-      "href": "https://photos.google.com/album/AF1QipOUROjo5rvxJOq_1UNJnaHqCcZupyzM8GtsgMY-?hl=zh-TW",
+      "href": "https://goo.gl/photos/ik1TgRAY88dpVKKR7",
       "title": "日常器具",
       "date": "2013.06",
       "pic": "../img/camera/live.jpg",
@@ -39,7 +39,7 @@
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
-      "href": "https://photos.google.com/album/AF1QipPRtcS3tt6Ihm7CPXS2EHvJT_qWsMI0yo58lxoz?hl=zh-TW",
+      "href": "https://goo.gl/photos/eD4zr91qVD8Ctg778",
       "title": "Pure 純真",
       "date": "2008~2013",
       "pic": "../img/camera/pure.jpg",
@@ -47,7 +47,7 @@
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
-      "href": "https://photos.google.com/album/AF1QipNuO4jDDtWvAiudG0_RlQ3YaeEmaSOdu1cR1w_s?hl=zh-TW",
+      "href": "https://goo.gl/photos/N3VmZCNiNZPYmzD79",
       "title": "A pic a day",
       "date": "2008~2015",
       "pic": "../img/camera/days.jpg",

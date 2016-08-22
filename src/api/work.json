@@ -1,81 +1,84 @@
 {
-  "banner": 
-  {
-    "name": "登山",
-    "pic": "../img/back.png",
-    "text": "石鹿古道橫跨新竹縣的五峰鄉、尖石鄉，並由清泉繞經石鹿大山（霞喀羅大山）後抵達尖石鄉養老村，全長約37.7公里，扮演早期當地部落前往外地重要的交通角色（現五峰清泉段已修整為公路）。古道上沿線具有多處極佳的賞楓點，入秋後可見紅葉翩翩的楓樹林。 日據時期，日人為討伐附近部落，曾沿著本古道進入山區，陸續設立砲台"
-  },
   "data": [
     {
       "href": "https://goo.gl/photos/hJzhyEkjMEfJsEmu7",
-      "title": "松蘿湖",
-      "date": "2015.04",
-      "pic": "../img/climbing/lake.JPG",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
+      "brands":"Gap",
+      "title": "盛放夏天",
+      "date": "20156.05",
+      "skill":"js jquery Angular",
+      "pic": "../img/cambing.jpg",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
       "href": "https://goo.gl/photos/DbhVD2QGZuh4zkAR7",
+      "brands":"Gap",
       "title": "雪山",
       "date": "2014.04",
+      "skill":"js jquery Angular",
       "pic": "../img/climbing/snowy.JPG",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
       "href": "https://goo.gl/photos/Tnxuw9JXA8rJuZ7YA",
+      "brands":"Gap",
       "title": "黑色奇萊",
       "date": "2008.11",
+      "skill":"js jquery Angular",
       "pic": "../img/climbing/black.jpg",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
       "href": "https://goo.gl/photos/zsSARnvpx2JJknpGA",
+      "brands":"Gap",
       "title": "玉山北壁",
       "date": "2007.08",
+      "skill":"js jquery Angular",
       "pic": "../img/climbing/yushan.JPG",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
       "href": "https://goo.gl/photos/tTSy2rEdLnxQ1diw5",
+      "brands":"Gap",
       "title": "玉山日出",
       "date": "2008.08",
+      "skill":"js jquery Angular",
       "pic": "../img/climbing/yushan1.jpg",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
       "href": "https://goo.gl/photos/coJPqGsqYQPmuwAZ6",
+      "brands":"Gap",
       "title": "半平山鋸齒陵線",
       "date": "2007.07",
+      "skill":"js jquery Angular",
       "pic": "../img/climbing/half.JPG",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
       "href": "https://goo.gl/photos/LFYnThS4FTUjDEdt6",
+      "brands":"Gap",
       "title": "皇帝殿",
       "date": "2015.06",
+      "skill":"js jquery Angular",
       "pic": "../img/climbing/king.JPG",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
       "href": "https://goo.gl/photos/Swoob2VokjzKFDzk7",
+      "brands":"Gap",
       "title": "五寮尖",
       "date": "2014.07",
+      "skill":"js jquery Angular",
       "pic": "../img/climbing/five.jpg",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     },
     {
       "href": "https://goo.gl/photos/ZgRBiigr2aS8p9p18",
+      "brands":"Gap",
       "title": "筆架山",
       "date": "2015.07",
+      "skill":"js jquery Angular",
       "pic": "../img/climbing/pen.JPG",
-      "summary": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步",
       "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
     }
   ]

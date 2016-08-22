@@ -4,164 +4,53 @@
     </div>
     <div class="line"></div>
     <div class="items">
-        <div class="item">
+        <div class="item" *ngFor="let work of works">
             <div class="pic">
-                <img src="img/cambing.jpg" alt="">
+                <img [src]="work.pic" [alt]="work.title">
                 <div class="btn-cont">
                     <div class="buttons inner-btn">
-                        <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                        <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
+                        <div class="button btn-white" (click)="onPopup(work)">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                        <div class="button" (click)="onUrl(work.href)">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
                     </div>
                     <div class="bg"></div>
                 </div>
             </div>
             <div class="text">
-                <h5 class="case">GAP | 盛放夏天1</h5>
+                <h5 class="case">{{work.brands}} | {{work.title}}</h5>
                 <div class="time">
-                    <i class="fa fa-calendar-o" aria-hidden="true"></i>2016.05
+                    <i class="fa fa-calendar-o" aria-hidden="true"></i>{{work.date}}
                 </div>
             </div>
             <div class="buttons out-btn">
                 <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
+                <div class="button" (click)="work.href">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
             </div>
         </div>
-        <div class="item">
-            <div class="pic">
-                <img src="img/cambing.jpg" alt="">
-                <div class="btn-cont">
-                    <div class="buttons">
-                        <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                        <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-                    </div>
-                    <div class="bg"></div>
-                </div>
-            </div>
-            <div class="text">
-                <h5 class="case">GAP | 盛放夏天2</h5>
-                <div class="time">
-                    <i class="fa fa-calendar-o" aria-hidden="true"></i>2016.05
-                </div>
-            </div>
-            <div class="buttons out-btn">
-                <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="pic">
-                <img src="img/cambing.jpg" alt="">
-                <div class="btn-cont">
-                    <div class="buttons">
-                        <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                        <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-                    </div>
-                    <div class="bg"></div>
-                </div>
-            </div>
-            <div class="text">
-                <h5 class="case">GAP | 盛放夏天3</h5>
-                <div class="time">
-                    <i class="fa fa-calendar-o" aria-hidden="true"></i>2016.05
-                </div>
-            </div>
-            <div class="buttons out-btn">
-                <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="pic">
-                <img src="img/cambing.jpg" alt="">
-                <div class="btn-cont">
-                    <div class="buttons">
-                        <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                        <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-                    </div>
-                    <div class="bg"></div>
-                </div>
-            </div>
-            <div class="text">
-                <h5 class="case">GAP | 盛放夏天4</h5>
-                <div class="time">
-                    <i class="fa fa-calendar-o" aria-hidden="true"></i>2016.05
-                </div>
-            </div>
-            <div class="buttons out-btn">
-                <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="pic">
-                <img src="img/cambing.jpg" alt="">
-                <div class="btn-cont">
-                    <div class="buttons">
-                        <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                        <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-                    </div>
-                    <div class="bg"></div>
-                </div>
-            </div>
-            <div class="text">
-                <h5 class="case">GAP | 盛放夏天3</h5>
-                <div class="time">
-                    <i class="fa fa-calendar-o" aria-hidden="true"></i>2016.05
-                </div>
-            </div>
-            <div class="buttons out-btn">
-                <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="pic">
-                <img src="img/cambing.jpg" alt="">
-                <div class="btn-cont">
-                    <div class="buttons">
-                        <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                        <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-                    </div>
-                    <div class="bg"></div>
-                </div>
-            </div>
-            <div class="text">
-                <h5 class="case">GAP | 盛放夏天4</h5>
-                <div class="time">
-                    <i class="fa fa-calendar-o" aria-hidden="true"></i>2016.05
-                </div>
-            </div>
-            <div class="buttons out-btn">
-                <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                <div class="button">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
-            </div>
-        </div>
-    </div>
     <!-- end .items -->
 </div>
 <!-- end .wrap -->
 <div class="popup">
     <div class="pop-cont">
-        <div class="close"></div>
+        <div class="close" (click)="onPopClose()"></div>
         <div class="pop-pic"><img src="img/gap.jpg" alt=""></div>
         <div class="pop-des">
             <div class="title">
-                <h3>Gap <span>盛放夏天</span></h3>
+                <h3>{{work.brands}} <span>{{work.title}}</span></h3>
             </div>
             <div class="red-line"></div>
             <div class="time">
                 <div class="small">TIME：</div>
-                <h5>2016.04</h5>
+                <h5>{{work.date}}</h5>
             </div>
             <div class="des">
                 <div class="small">DESCRIPTION：</div>
-                <p>最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。</p>
+                <p [innerHTML]="work.des"></p>
             </div>
         </div>
-        <div class="button">
+        <div class="button" (click)="onUrl(work.href)">
             Launch Project<i class="fa fa-link" aria-hidden="true"></i>
         </div>
     </div>
-    <div class="pop-bg"></div>
+    <div class="pop-bg" (click)="onPopClose()"></div>
 </div>
 <!-- end .popup -->

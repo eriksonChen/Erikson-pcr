@@ -11,7 +11,8 @@ export class ResumeComponent implements OnInit {
   	}
 
   	ngOnInit() {
-  		this.aboutService.changeBar(false);
+  		// this.aboutService.changeBar(false);
+  		window.scrollTo(0,0);
   	}
 
 }

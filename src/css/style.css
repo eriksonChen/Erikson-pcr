@@ -326,7 +326,7 @@ header nav .social .svg:hover path {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.mobile-menu .social img {
+.mobile-menu .social svg {
   margin: 0 10px;
 }
 @media only screen and (max-width: 48rem) {

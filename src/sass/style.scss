@@ -117,7 +117,7 @@ header {
     float: right;
     margin-top: -5rem;
     cursor: pointer;
-    img {
+    svg {
         width: 42px;
         margin: 0 0.5rem;
         &:hover {
@@ -132,7 +132,7 @@ header {
         float: none;
         right: 0;
         text-align: center;
-        img {
+        svg {
             width: 50px;
         }
     }
