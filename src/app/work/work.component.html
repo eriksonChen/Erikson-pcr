@@ -6,7 +6,7 @@
     <div class="items">
         <div class="item" *ngFor="let work of works">
             <div class="pic">
-                <img [src]="work.pic" [alt]="work.title">
+                <img [src]="work.pic_s" [alt]="work.title">
                 <div class="btn-cont">
                     <div class="buttons inner-btn">
                         <div class="button btn-white" (click)="onPopup(work)">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
@@ -32,7 +32,7 @@
 <div class="popup">
     <div class="pop-cont">
         <div class="close" (click)="onPopClose()"></div>
-        <div class="pop-pic"><img src="img/gap.jpg" alt=""></div>
+        <div class="pop-pic"><img [src]="work.pic" alt=""></div>
         <div class="pop-des">
             <div class="title">
                 <h3>{{work.brands}} <span>{{work.title}}</span></h3>
