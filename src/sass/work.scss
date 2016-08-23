@@ -328,6 +328,15 @@
             }
             .des {
                 line-height: 1.6;
+                .skill{
+                    font-weight: 500;
+                    color: $textBlue;
+                    margin-top: 1rem;
+                    font-size: 0.87rem;
+                    @media #{$sml} {
+                        font-size: 1.25rem;
+                    }
+                }
                 p {
                     font-size: 1rem;
                     @media #{$med} {

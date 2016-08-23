@@ -24,8 +24,6 @@ export class WorkComponent implements OnInit {
 				},1)
 			})
 		window.scrollTo(0,0);
-		
-
 	}
 
 	onUrl(url){

@@ -45,6 +45,7 @@
             <div class="des">
                 <div class="small">DESCRIPTION：</div>
                 <p [innerHTML]="work.des"></p>
+                <p class="skill">{{work.skill}}</p>   
             </div>
         </div>
         <div class="button" (click)="onUrl(work.href)" *ngIf="work.href">
