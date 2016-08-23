@@ -10,7 +10,7 @@
                 <div class="btn-cont">
                     <div class="buttons inner-btn">
                         <div class="button btn-white" (click)="onPopup(work)">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                        <div class="button" (click)="onUrl(work.href)">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
+                        <div class="button" (click)="onUrl(work.href)" *ngIf="work.href">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
                     </div>
                     <div class="bg"></div>
                 </div>
@@ -22,8 +22,8 @@
                 </div>
             </div>
             <div class="buttons out-btn">
-                <div class="button btn-white">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                <div class="button" (click)="work.href">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
+                <div class="button btn-white" (click)="onPopup(work)">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                <div class="button" (click)="onUrl(work.href)" *ngIf="work.href">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
             </div>
         </div>
     <!-- end .items -->
@@ -35,7 +35,7 @@
         <div class="pop-pic"><img [src]="work.pic" alt=""></div>
         <div class="pop-des">
             <div class="title">
-                <h3>{{work.brands}} <span>{{work.title}}</span></h3>
+                <h3>{{work.brands}} <span class="txt-line"> | </span> <span>{{work.title}}</span></h3>
             </div>
             <div class="red-line"></div>
             <div class="time">
@@ -47,7 +47,7 @@
                 <p [innerHTML]="work.des"></p>
             </div>
         </div>
-        <div class="button" (click)="onUrl(work.href)">
+        <div class="button" (click)="onUrl(work.href)" *ngIf="work.href">
             Launch Project<i class="fa fa-link" aria-hidden="true"></i>
         </div>
     </div>
