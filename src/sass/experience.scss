@@ -1,0 +1,143 @@
+@import "color";
+@import "mixin";
+@import "cont-title";
+@import "media";
+$time-line: 1px solid $textGray;
+// experience.css
+
+.exp-cont {
+    margin-top: 1.875rem;
+    padding: 1.25rem 1.75rem 0;
+    color: $text;
+    height: auto;
+    position: relative;
+    overflow: auto;
+    @media #{$sml} {
+        // margin-top: 1rem;
+        overflow: visible;
+        padding: 1.25rem 0 0;
+    }
+    .items {
+        position: relative;
+        line-height: 2;
+        display: block;
+        @include clearfix;
+        .left,
+        .right {
+            position: relative;
+            width: 50%;
+            display: block;
+            padding-bottom: 3rem;
+            .doc {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                display: block;
+                background-color: white;
+                // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50);
+                border: 6px solid $textGray;
+                @include rounded(50%);
+            }
+            .text-cont {
+                padding: 0 2rem;
+                display: block;
+                width: 100%;
+                .date {
+                    color: $textDark;
+                    line-height: 1.2;
+                    margin-bottom: 0.7rem;
+                }
+                .red {
+                    font-weight: 700;
+                    color: $darkRed;
+                    font-size: 1rem;
+                }
+                p {
+                    clear: both;
+                }
+                @media #{$med} {
+                    .date {
+                        font-size: 1.5rem;
+                        letter-spacing: 1;
+                    }
+                    p {
+                        line-height: 1.8;
+                    }
+                }
+                @media #{$sml} {
+                    .date {
+                        font-size: 1.25rem;
+                        letter-spacing: 1;
+                    }
+                    p {
+                        line-height: 1.8;
+                    }
+                }
+            }
+            .red-line {
+                position: relative;
+                width: 120px;
+                border-bottom: 1px solid $darkRed;
+                height: 1px;
+                display: block;
+                margin: 15px 0;
+            }
+        }
+        .right {
+            border-left: $time-line;
+            float: right;
+            text-align: left;
+            .doc {
+                float: left;
+                margin-left: -15px;
+            }
+            .red-line {
+                float: left;
+            }
+            .text-cont {
+                @media #{$med} {
+                    padding: 0 0 0 2rem;
+                }
+            }
+        }
+        .left {
+            border-right: $time-line;
+            float: left;
+            left: 1px;
+            text-align: right;
+            .doc {
+                float: right;
+                margin-right: -15px;
+            }
+            .red-line {
+                float: right;
+            }
+            .text-cont {
+                @media #{$med} {
+                    padding: 0 2rem 0 0;
+                }
+            }
+        }
+        @media #{$sml} {
+            .right,
+            .left {
+                width: 100%;
+                float: left;
+                border-left: $time-line;
+                border-right: 0;
+                text-align: left;
+                .doc {
+                    float: left;
+                    margin-left: -15px;
+                }
+                .red-line {
+                    // display: none;
+                    float: left;
+                }
+                .text-cont {
+                    padding: 0 0 0 1.25rem;
+                }
+            }
+        }
+    }
+}

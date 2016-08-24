@@ -90,15 +90,18 @@ header {
         .social {
             display: inline-block;
             float: right;
+            a{
+                float: left;
+            }
             .svg {
                 float: left;
-                margin: 20px 10px;
+                margin: 15px;
                 cursor: pointer;
                 display: block;
                 width: 20px;
                 @include ease(0.25s);
                 &:hover path {
-                    fill: $lightBlue;
+                    fill: $textGray;
                 }
             }
         }

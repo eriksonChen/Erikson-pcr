@@ -66,4 +66,15 @@ export class HeaderComponent implements OnInit {
 		var st = this.router.url.indexOf(state+"");
 		return st != -1; 
 	}
+
+    //social
+    onFb(){
+        window.open('https://www.facebook.com/ChenErikson');
+    }
+    onIg(){
+        window.open('https://www.instagram.com/erikson/');
+    }
+    onFlickr(){
+        window.open('https://www.flickr.com/photos/botan3951/');
+    }
 }

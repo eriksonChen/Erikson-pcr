@@ -206,9 +206,12 @@ header nav .social {
   display: inline-block;
   float: right;
 }
+header nav .social a {
+  float: left;
+}
 header nav .social .svg {
   float: left;
-  margin: 20px 10px;
+  margin: 15px;
   cursor: pointer;
   display: block;
   width: 20px;
@@ -216,7 +219,7 @@ header nav .social .svg {
   transition: all 0.25s ease-in-out;
 }
 header nav .social .svg:hover path {
-  fill: #ADD8E6;
+  fill: #4a4a4a;
 }
 @media only screen and (max-width: 48rem) {
   header nav ul.menu,

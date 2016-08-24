@@ -7,9 +7,15 @@
             <li><a href="javascript:;" routerLinkActive="foucs">CONTACT</a></li>
         </ul>
         <div class="social">
-            <img src="asset/svg/facebook.svg" alt="" class="svg">
-            <img src="asset/svg/flickr.svg" alt="" class="svg">
-            <img src="asset/svg/linkin.svg" alt="" class="svg">
+            <a href="javascript:;" (click)="onFb()">
+                <img src="../../asset/svg/facebook.svg" alt="facebook" class="svg">
+            </a>
+            <a href="javascript:;" (click)="onIg()">
+                <img src="../../asset/svg/instagram.svg" alt="instagram" class="svg">
+            </a>
+            <a href="javascript:;" (click)="onFlickr()">
+                <img src="../../asset/svg/flickr.svg" alt="flickr" class="svg">
+            </a>
         </div>
         <div class="hamber" [class.open]='isopen' (click)='changeHamer()'>
             <div class="icon"></div>
@@ -26,9 +32,15 @@
         <li><a href="javascript:;" (click)="closeMenu()">CONTACT</a></li>
     </ul>
     <div class="social">
-        <img src="asset/svg/facebook.svg" alt="" class="svg">
-        <img src="asset/svg/flickr.svg" alt="" class="svg">
-        <img src="asset/svg/linkin.svg" alt="" class="svg">
+        <a href="javascript:;" (click)="onFb()">
+            <img src="../../asset/svg/facebook.svg" alt="facebook" class="svg">
+        </a>
+        <a href="javascript:;" (click)="onIg()">
+            <img src="../../asset/svg/instagram.svg" alt="instagram" class="svg">
+        </a>
+        <a href="javascript:;" (click)="onFlickr()">
+            <img src="../../asset/svg/flickr.svg" alt="flickr" class="svg">
+        </a>
     </div>
 </div>
 <!-- end .mobile-menu -->
