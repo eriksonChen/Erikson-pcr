@@ -9,6 +9,7 @@ import { Http, Request } from '@angular/http';
 export class WorkComponent implements OnInit {
 	works:any;
 	work={};
+	pop=$('.pop-cont');
 
 	constructor(private http:Http) { }
 
@@ -24,6 +25,7 @@ export class WorkComponent implements OnInit {
 				},1)
 			})
 		window.scrollTo(0,0);
+		TweenMax.set('.pop-cont', {transformPerspective:3000});
 	}
 
 	onUrl(url){
@@ -32,7 +34,12 @@ export class WorkComponent implements OnInit {
 
 	onPopup(work){		
 		this.work=work;
-		$('.popup').fadeIn();
+		TweenMax.set('.pop-cont', {alpha:0, rotationX:110, x:'-50%', y:'-100%'});
+		$('.popup').fadeIn( ()=>{
+			TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, x:'-50%', y:'-50%', ease:Expo.easeOut});
+		});
+		
+		
 	}
 
 	onPopClose(){

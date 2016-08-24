@@ -44,12 +44,15 @@ export class HobbiesTypeComponent implements OnInit {
           TweenMax.from(ele, 0.7, {delay:(index+1.5)*0.18, alpha:0, y:70, ease:Back.easeOut});
         });
       },100);
-      
+      TweenMax.set('.pop-cont', {transformPerspective:3000, x:'-50%', y:'-50%'});
   	}
 
   	pop(p){
   		this.pitem=p;
-  		$('.popup').fadeIn('fast');
+      TweenMax.set('.pop-cont', {alpha:0, rotationX:110, top:50});
+      $('.popup').fadeIn( ()=>{
+        TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, top:'50%', ease:Expo.easeOut});
+      });
   	}
 
 }
