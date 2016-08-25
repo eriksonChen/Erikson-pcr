@@ -11,7 +11,7 @@
 
 .bio-cont {
     margin-top: 1.875rem;
-    padding: 1.25rem 1.75rem;
+    padding: 1.25rem 1.75rem 0;
     color: $text;
     width: 100%;
     word-wrap: break-word;
@@ -68,17 +68,45 @@
             font-weight: 700;
             color: $textDark;
         }
-        .skill {
-            margin-top: 1rem;
-            text-align: left;
-            .title-box {
-                border: 1px solid $textDark;
-                padding: 10px 0 10px 7px;
-                display: block;
-                width: 120px;
-                line-height: 1;
+        .skill-cont {
+            border-top: 1px dashed $textGray;
+            width: 100%;
+            padding: 3rem 0 2rem;
+            text-align: center;
+            h4 {
+                margin: 0 0 3rem;
+                letter-spacing: 1px;
+                line-height: 1.2;
+                color: $textDark;
             }
-            line-height: 2;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                li {
+                    margin: 0 0.8rem 2rem;
+                    width: 130px;
+                    text-align: center;
+                    h5{
+                        font-size: 0.875rem;
+                    }
+                    
+                    img {
+                        width: 100px;
+                    }
+                     @media #{$med} {
+                        margin: 0 0.5rem 2rem;
+                     }
+                }
+                .big {
+                    margin: 0 2rem 2rem;
+                    width: 200px;
+                    img {
+                        width: 150px;
+                    }
+                }
+            }
         }
     }
 }

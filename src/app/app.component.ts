@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import{ HeaderComponent } from './header/'
 
 @Component({
@@ -11,7 +11,8 @@ import{ HeaderComponent } from './header/'
 	<!-- wrap 各頁面的內容 -->
 	<router-outlet></router-outlet>
   `,
-  // styleUrls: ['../sass/index.scss'],
+  styleUrls: ['../sass/style.scss'],
+  encapsulation: ViewEncapsulation.None,
   directives: [HeaderComponent]
 })
 export class AppComponent implements OnInit{
