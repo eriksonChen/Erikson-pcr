@@ -34,8 +34,8 @@ export class WorkComponent implements OnInit {
 
 	onPopup(work){		
 		this.work=work;
-		TweenMax.set('.pop-cont', {alpha:0, rotationX:110, x:'-50%', y:'-100%'});
-		$('.popup').fadeIn( ()=>{
+		TweenMax.set('.pop-cont', {alpha:0, rotationX:90, x:'-50%', y:'-100%'});
+		$('.popup').fadeIn('fast', ()=>{
 			TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, x:'-50%', y:'-50%', ease:Expo.easeOut});
 		});
 		
@@ -43,7 +43,7 @@ export class WorkComponent implements OnInit {
 	}
 
 	onPopClose(){
-		$('.popup').fadeOut();
+		$('.popup').fadeOut('fast');
 	}
 
 }

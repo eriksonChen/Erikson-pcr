@@ -63,6 +63,7 @@
         }
         p {
             font-size: 1rem;
+            font-weight: 400;
         }
         strong {
             font-weight: 700;
@@ -71,12 +72,13 @@
         .skill-cont {
             border-top: 1px dashed $textGray;
             width: 100%;
-            padding: 3rem 0 2rem;
+            padding: 5rem 0 4rem;
             text-align: center;
             h4 {
-                margin: 0 0 3rem;
+                display: inline-block;
+                margin: 0 0 3.8rem;
                 letter-spacing: 1px;
-                line-height: 1.2;
+                line-height: 1.5;
                 color: $textDark;
             }
             ul {
@@ -90,6 +92,7 @@
                     text-align: center;
                     h5{
                         font-size: 0.875rem;
+                        font-weight: 400;
                     }
                     
                     img {
@@ -103,7 +106,7 @@
                     margin: 0 2rem 2rem;
                     width: 200px;
                     img {
-                        width: 150px;
+                        width: 140px;
                     }
                 }
             }

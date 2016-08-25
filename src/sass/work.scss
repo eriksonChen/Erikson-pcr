@@ -61,13 +61,15 @@
                 box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.50);
                 @media #{$med} {
                     height: 230px;
+                    margin: 0 auto;
                 }
                 @media #{$sml} {
-                    height: 280px;
+                    height: 300px;
                 }
                 @media #{$sml-360} {
-                        height: 250px;
-                    }
+                    max-width: 380px;
+                    height: 250px;
+                }
                 img {
                     position: absolute;
                     width: 100%;
