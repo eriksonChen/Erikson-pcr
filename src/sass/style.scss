@@ -139,7 +139,6 @@ header {
             .svg {
                 float: left;
                 margin: 15px;
-                cursor: pointer;
                 display: block;
                 width: 20px;
                 @include ease(0.25s);
@@ -272,7 +271,7 @@ header {
         width: 100%;
         display: flex;
         justify-content: center;
-        img {
+        a {
             margin: 0 10px;
         }
     }
