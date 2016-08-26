@@ -61,9 +61,10 @@
     height: 42px;
     right: 2rem;
     margin-top: -3rem;
+    opacity: 0.5;
     @include ease;
     &:hover {
-        opacity: 0.5;
+        opacity: 1;
         cursor: pointer;
     }
     @media #{$sml} {
