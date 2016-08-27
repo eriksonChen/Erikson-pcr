@@ -26,6 +26,10 @@
             position: relative;
             border: 1px solid $lightGray;
             margin: 0 auto 0.5rem;
+            background: #ECE9E6; 
+            background: -webkit-linear-gradient(to right, #ECE9E6 , #FFFFFF);
+            background: linear-gradient(to right, #ECE9E6 , #FFFFFF); 
+        
             @media #{$med} {
                 width: 95%;
             }
@@ -36,6 +40,7 @@
                 border: 0;
                 margin: 12px auto 0;
                 padding-bottom: 2rem;
+                background: #ECE9E6;
                 // margin-bottom: 0.5rem;
             }
             background-color: $superLight;
@@ -44,7 +49,7 @@
                 border-left: 0;
                 border-right: 0;
                 border-bottom: 1px dashed $textGray;
-                background-color: inherit;
+                background: inherit;
                 @media #{$sml} {
                     display: none;
                 }
@@ -57,16 +62,19 @@
                 // overflow: hidden;
                 @media #{$sml} {
                     height: 270px;
+                    margin-top: 1rem;
                 }
                 img {
                     position: absolute;
-                    height: 100%;
+                    height: 85%;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     @media #{$med} {
-                        height: 100%;
                         width: auto;
+                    }
+                    @media #{$sml}{
+                        height: 100%;
                     }
                 }
             }
