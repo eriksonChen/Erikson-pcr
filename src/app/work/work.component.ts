@@ -22,15 +22,24 @@ export class WorkComponent implements OnInit {
 					$('.item').each((i, ele)=>{
 						TweenMax.from(ele, 0.8, {delay:(i+1)*0.18, alpha:0, y:40, ease:Back.easeOut});
 					});
+					this.onResize();
 				},1)
 			})
 		window.scrollTo(0,0);
 		TweenMax.set('.pop-cont', {transformPerspective:3000});
+
 	}
 
 	onUrl(url){
 		window.open(url);
 	}
+
+	onResize(){
+		let pw = Math.floor($('.pic').eq(0).width());
+		let ph = Math.floor(pw/6*4)+1;
+		$('.item .pic').css('height',ph+'px');
+	}
+
 
 	onPopup(work){		
 		this.work=work;
