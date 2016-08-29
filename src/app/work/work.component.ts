@@ -20,7 +20,7 @@ export class WorkComponent implements OnInit {
 				setTimeout(()=>{
 					$('.item').css('display','block');
 					$('.item').each((i, ele)=>{
-						TweenMax.from(ele, 0.8, {delay:(i+1)*0.18, alpha:0, y:40, ease:Back.easeOut});
+						TweenMax.from(ele, 0.7, {delay:(i+1)*0.2, alpha:0, y:50, ease:Back.easeOut});
 					});
 					this.onResize();
 				},1)
@@ -39,7 +39,6 @@ export class WorkComponent implements OnInit {
 		let ph = Math.floor(pw/6*4)+1;
 		$('.item .pic').css('height',ph+'px');
 	}
-
 
 	onPopup(work){		
 		this.work=work;

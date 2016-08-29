@@ -28,7 +28,6 @@ export class HobbiesTypeComponent implements OnInit {
     }
 
   	ngOnInit() {
-      console.log('test');
   		$('.hob-cont').css('display','none').delay(100).fadeIn();
 
       this.mytype=this.route.snapshot.data['item'];

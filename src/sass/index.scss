@@ -3,6 +3,7 @@
 @import "media";
 // index style.css
 .wrap {
+    display: none;
     background: #abbabb;
     background: -webkit-linear-gradient(to top, #abbabb, #fff);
     background: linear-gradient(to top, #abbabb, #fff);
@@ -10,6 +11,7 @@
     .bgimg,
     .text-box {
         position: absolute;
+        display: none;
     }
     .bgimg {
         top: 52%;
@@ -29,45 +31,41 @@
         }
     }
     .text-box {
-        width: 300px;
-        height: 170px;
+        width: 250px;
+        height: 100px;
         text-align: center;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
-        // box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
         cursor: pointer;
-        display: block;
-        @include ease(0.25s);
         @include rounded(2px);
         &:hover {
+        @include ease(0.25s);
             background-color: $lightGray;
         }
         .box-title {
-            margin-top: 2rem;
+            margin-top: 1rem;
             font-weight: 500;
-            letter-spacing: 1px;
+            // letter-spacing: 1px;
             color: $textDark;
         }
         .box-name {
+            font-size: 1rem;
             color: $textDark;
         }
         .line {
-            border: 1px solid $darkRed;
+            border-bottom: 1px solid $darkRed;
             width: 100px;
-            margin: 1.4rem auto;
+            margin: 0.6rem auto;
         }
         @media #{$sml} {
-            // background-color: #777;
             width: 95%;
             top: 90%;
             height: 100px;
-            // border: 1px solid $lightGray;
             .box-title,
             .box-name {
                 line-height: 1.6;
-                // color: $superLight;
             }
             .box-title {
                 margin-top: 1rem;
