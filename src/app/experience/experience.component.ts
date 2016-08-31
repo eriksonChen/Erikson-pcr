@@ -14,15 +14,28 @@ export class ExperienceComponent implements OnInit, OnDestroy {
 	constructor(private http:Http) { }
 
 	ngOnInit() {
+    $('.wrap').css('display','none').delay(100).fadeIn();
 		this.http.get('./api/about.json')
   			.subscribe(res => {
   				this.experience = res.json().experience;
   				this.experience.forEach((val, key) => {
   					val.dist = key%2==0 ? 'left' : 'right';
   				})
+
+          setTimeout(()=>{
+            this.anim();
+          },10);
   			});
 		window.scrollTo(0,0);
 	}
+
+  anim(){
+    $('.item').each((i, ele)=>{
+      TweenMax.from($(ele).find('.doc'), 0.7, {delay:(i+1)*0.2, scaleX:0, scaleY:0, ease:Expo.easeOut});
+
+      TweenMax.from($(ele).find('.text-cont'), 0.7, {delay:(i+2)*0.2, alpha:0, y:20, ease:Back.easeOut});
+    });
+  }
 
 	ngOnDestroy(){
 

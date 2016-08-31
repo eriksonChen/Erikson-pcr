@@ -102,6 +102,7 @@ header {
         position: relative;
         display: block;
         margin: 0 auto;
+        @include clearfix;
         ul.menu {
             display: inline-block;
             position: relative;
@@ -258,7 +259,7 @@ header {
         border-bottom: 1px solid $darkRed;
     }
     ul {
-        margin: 3rem 10% 5rem;
+        margin: 3rem 15% 5rem;
         li {
             line-height: 3.5;
             font-size: 1.25rem;
