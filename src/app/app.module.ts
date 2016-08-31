@@ -16,6 +16,7 @@ import { AboutHomeComponent } from './about-home/about-home.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     HobbiesTypeComponent,
     HeaderComponent,
     WorkComponent,
-    AboutHomeComponent
+    AboutHomeComponent, ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 export * from './about';
 export * from './about-home';
+export * from './contact';
 export * from './experience';
 export * from './header';
 export * from './header-component';

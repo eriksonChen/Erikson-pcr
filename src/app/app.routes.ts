@@ -8,6 +8,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { HobbiesTypeComponent } from './hobbies-type/';
 import { ResumeComponent } from './resume/resume.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   {
@@ -34,6 +35,9 @@ const appRoutes: Routes = [
       { path: 'climbing', component: HobbiesTypeComponent, data: {item: 'climbing'} },
       { path: 'bike', component: HobbiesTypeComponent, data: {item: 'bike'} }
     ]
+  },{
+    path: 'contact',
+    component: ContactComponent
   }
 
 ];
