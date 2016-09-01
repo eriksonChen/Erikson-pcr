@@ -1,0 +1,344 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url("font-awesome.min.css");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'cwTeXHei';
+  font-style: normal;
+  src: url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+  src: url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format("woff"), url(http://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format("truetype");
+}
+body {
+  font-family: 'Noto Sans TC', '微軟正黑體', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 2px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+h6 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 2;
+}
+
+P {
+  font-size: 0.87rem;
+  font-weight: 300;
+}
+@media only screen and (max-width: 48rem) {
+  P {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  text-decoration: none;
+}
+
+.wrap {
+  position: relative;
+  display: block;
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header {
+  height: 3.75rem;
+  background-color: #f6f6f6;
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+  z-index: 100;
+}
+@media only screen and (max-width: 48rem) {
+  header {
+    position: fixed;
+    height: 3.125rem;
+  }
+}
+header .logo {
+  margin-right: 2rem;
+  margin-top: 0.8125rem;
+  padding: 0;
+  position: relative;
+  float: left;
+  width: 35px;
+}
+@media only screen and (max-width: 48rem) {
+  header .logo {
+    margin-top: 0.5rem;
+  }
+}
+header nav {
+  max-width: 1280px;
+  height: 3.75rem;
+  padding: 0 20px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+header nav ul.menu {
+  display: inline-block;
+  position: relative;
+  line-height: 30px;
+  padding: 15px 0;
+}
+header nav ul.menu li {
+  font-family: Helvetica, '微軟正黑體', Arial;
+  float: left;
+  font-weight: 500;
+  width: 120px;
+  text-align: center;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  border-left: 1px solid #dcdcdc;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+header nav ul.menu li :hover {
+  color: #ce7681;
+}
+header nav ul.menu li a.foucs {
+  color: #880b1a;
+  font-weight: 700;
+}
+header nav a {
+  color: #9b9b9b;
+  display: block;
+}
+header nav .social {
+  display: inline-block;
+  float: right;
+}
+header nav .social a {
+  float: left;
+}
+header nav .social .svg {
+  float: left;
+  margin: 15px;
+  cursor: pointer;
+  display: block;
+  width: 20px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+header nav .social .svg:hover path {
+  fill: #4a4a4a;
+}
+@media only screen and (max-width: 48rem) {
+  header nav ul.menu,
+  header nav .social {
+    display: none;
+  }
+}
+
+.hamber {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 15px 0;
+  top: 0;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 8;
+  display: none;
+}
+@media only screen and (max-width: 48rem) {
+  .hamber {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+.hamber .icon {
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  top: 15px;
+  background-color: #4a4a4a;
+}
+.hamber .icon:before {
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #4a4a4a;
+  content: "";
+  top: -10px;
+}
+.hamber .icon:after {
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #4a4a4a;
+  content: "";
+  top: 10px;
+}
+
+.hamber.open .icon {
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  background: transparent;
+}
+.hamber.open .icon:before {
+  -webkit-transform: rotateZ(45deg) scaleX(1.25) translate(6px, 6.5px);
+  -ms-transform: rotate(45deg) scaleX(1.25) translate(6px, 6.5px);
+  transform: rotateZ(45deg) scaleX(1.25) translate(6px, 6.5px);
+}
+.hamber.open .icon:after {
+  -webkit-transform: rotateZ(-45deg) scaleX(1.25) translate(6.5px, -6.5px);
+  -ms-transform: rotate(-45deg) scaleX(1.25) translate(6.5px, -6.5px);
+  transform: rotateZ(-45deg) scaleX(1.25) translate(6.5px, -6.5px);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  top: -100%;
+  background-color: #f6f6f6;
+  padding: 2rem 0;
+  letter-spacing: 2px;
+}
+.mobile-menu a {
+  color: #9b9b9b;
+  font-weight: 500;
+}
+.mobile-menu .foucs {
+  border-bottom: 1px solid #880b1a;
+}
+.mobile-menu ul {
+  margin: 3rem 10% 5rem;
+}
+.mobile-menu ul li {
+  line-height: 3.5;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.mobile-menu .social {
+  position: absolute;
+  bottom: 8%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.mobile-menu .social svg {
+  margin: 0 10px;
+}
+@media only screen and (max-width: 48rem) {
+  .mobile-menu {
+    display: block;
+  }
+}
+
+ .des .red{
+  color:#880b1a？;
+  font-weight: 500;
+}

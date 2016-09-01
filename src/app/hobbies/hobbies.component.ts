@@ -12,13 +12,13 @@ export class HobbiesComponent implements OnInit {
 
   ngOnInit() {
   	window.scrollTo(0,0);
-  	$('.hob-cont').css('display','none').delay(100).fadeIn();
+  	$('.wrap').css('display','none').delay(100).fadeIn('slow');
   	this.anim();
   }
 
   anim(){
   	$('.banner').each((i, ele)=>{
-		TweenMax.from(ele, 0.7, {delay:(i+1)*0.2, alpha:0, y:50, ease:Back.easeOut});
+		TweenMax.from(ele, 0.7, {delay:(i+3)*0.2, alpha:0, y:50, ease:Back.easeOut});
 	});
   }
   

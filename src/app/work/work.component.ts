@@ -43,12 +43,12 @@ export class WorkComponent implements OnInit {
 
 	onPopup(work){		
 		this.work=work;
-		// console.log($('.btn-cont').css('display'));
 		if($('.btn-cont').css('display')==='none'){ //手機動態
 			TweenMax.set('.pop-cont', {y:'-50%', x:'50%'});
 			$('.popup').fadeIn('fast', ()=>{
 				TweenMax.to('.pop-cont', 0.6, { x:'-50%', ease:Expo.easeInOut});
 			});
+			$('.pop-cont').scrollTop(0);
 		}else{
 			TweenMax.set('.pop-cont', {alpha:0, rotationX:90, x:'-50%', y:'-100%'});
 			$('.popup').fadeIn('fast', ()=>{

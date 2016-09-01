@@ -28,9 +28,9 @@ export class HobbiesTypeComponent implements OnInit {
     }
 
   	ngOnInit() {
-  		$('.hob-cont').css('display','none').delay(100).fadeIn();
+  		$('.wrap').css('display','none').delay(100).fadeIn('wrap');
 
-      this.mytype=this.route.snapshot.data['item'];
+      this.mytype = this.route.snapshot.data['item'];
 
   		this.http.get('./api/'+this.mytype+'.json')
   			.subscribe(res => {
@@ -40,7 +40,7 @@ export class HobbiesTypeComponent implements OnInit {
       window.scrollTo(0,0);
       setTimeout(()=>{
         $('.item').each((index, ele)=>{
-          TweenMax.from(ele, 0.7, {delay:(index+1.5)*0.18, alpha:0, y:70, ease:Back.easeOut});
+          TweenMax.from(ele, 0.7, {delay:(index+1.8)*0.18, alpha:0, y:70, ease:Back.easeOut});
         });
       },100);
       TweenMax.set('.pop-cont', {transformPerspective:3000, x:'-50%', y:'-50%'});
@@ -54,6 +54,8 @@ export class HobbiesTypeComponent implements OnInit {
         $('.popup').fadeIn('fast', ()=>{
           TweenMax.to('.pop-cont', 0.6, { x:'-50%', ease:Expo.easeInOut});
         });
+
+        $( ".pop-cont" ).scrollTop( 0 );
       }else{
         TweenMax.set('.pop-cont', {alpha:0, rotationX:90, top:50});
         $('.popup').fadeIn( ()=>{

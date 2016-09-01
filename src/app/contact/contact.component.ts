@@ -26,7 +26,8 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     $('.hiddendiv').css("display","none");
 
-    $('.wrap').css('display', 'none').fadeIn();
+    $('.wrap').css('display', 'none').delay(200).fadeIn('slow');
+    TweenMax.from('.form-cont', 0.7, {delay:0.5, alpha:0, y:30, ease:Expo.easeOut});
   }
 
   onSubmit(){

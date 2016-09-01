@@ -30,8 +30,9 @@
 </div>
 <!-- end .wrap -->
 <div class="popup">
+    <div class="close" (click)="onPopClose()"></div>
     <div class="pop-cont">
-        <div class="close" (click)="onPopClose()"></div>
+        <div class="close close2" (click)="onPopClose()"></div>
         <div class="pop-pic"><img [src]="work.pic" alt=""></div>
         <div class="pop-des">
             <div class="title">
