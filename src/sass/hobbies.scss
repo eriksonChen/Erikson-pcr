@@ -238,11 +238,11 @@
     padding: 0 17px;
     font-size: 12px;
     font-weight: 300;
-    color: $textGray;
+    color: $superLight;
     cursor: pointer;
-    background-color: inherit;
+    background-color: $btnGray;
     @include rounded(5px);
-    border: 1px solid $textGray;
+    // border: 1px solid $textGray;
     // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50);
     @media #{$sml} {
         @include ease;

@@ -163,12 +163,16 @@
         background-color: $superLight;
         color: $textDark;
         @media #{$sml} {
-            background-color: $btnGray;
+            background-color: $btnGreen;
             color: $superLight;
         }
         &:hover {
             background-color: inherit;
             color: $superLight;
+            @media #{$sml} {
+                background-color: $btnGreen;
+                color: $superLight;
+            }
         }
     }
 }
@@ -207,6 +211,8 @@
         color: $textDark;
     }
 }
+
+
 
 // popup css
 .popup {
@@ -363,8 +369,9 @@
             position: absolute;
             right: 3.5%;
             bottom: 2rem;
-            border: 1px solid $textDark;
-            color: $textDark;
+            // border: 1px solid $textDark;
+            background-color: $btnGreen;
+            color: $superLight;
             @media #{$sml} {
                 font-size: 1rem;
                 display: block;

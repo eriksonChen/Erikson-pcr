@@ -34,6 +34,7 @@ export class WorkComponent implements OnInit {
 		window.open(url);
 	}
 
+
 	onResize(){
 		let pw = Math.floor($('.pic').eq(0).width());
 		let ph = Math.floor(pw/6*4)+1;
@@ -42,11 +43,18 @@ export class WorkComponent implements OnInit {
 
 	onPopup(work){		
 		this.work=work;
-		TweenMax.set('.pop-cont', {alpha:0, rotationX:90, x:'-50%', y:'-100%'});
-		$('.popup').fadeIn('fast', ()=>{
-			TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, x:'-50%', y:'-50%', ease:Expo.easeOut});
-		});
-		
+		// console.log($('.btn-cont').css('display'));
+		if($('.btn-cont').css('display')==='none'){ //手機動態
+			TweenMax.set('.pop-cont', {y:'-50%', x:'50%'});
+			$('.popup').fadeIn('fast', ()=>{
+				TweenMax.to('.pop-cont', 0.6, { x:'-50%', ease:Expo.easeInOut});
+			});
+		}else{
+			TweenMax.set('.pop-cont', {alpha:0, rotationX:90, x:'-50%', y:'-100%'});
+			$('.popup').fadeIn('fast', ()=>{
+				TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, x:'-50%', y:'-50%', ease:Expo.easeOut});
+			});
+		}
 		
 	}
 

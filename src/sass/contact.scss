@@ -63,6 +63,11 @@ nav {
             margin: 0 auto;
             width: 200px;
             display: block;
+
+            @media #{$sml}{
+                width: 80%;
+                height: 45px;
+            }
         }
     }
 }

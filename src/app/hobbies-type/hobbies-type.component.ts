@@ -48,10 +48,19 @@ export class HobbiesTypeComponent implements OnInit {
 
   	pop(p){
   		this.pitem=p;
-      TweenMax.set('.pop-cont', {alpha:0, rotationX:110, top:50});
-      $('.popup').fadeIn( ()=>{
-        TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, top:'50%', ease:Expo.easeOut});
-      });
+
+      if($('.banner').css('display')==='none'){ //手機動態
+        TweenMax.set('.pop-cont', {y:'-50%', x:'50%'});
+        $('.popup').fadeIn('fast', ()=>{
+          TweenMax.to('.pop-cont', 0.6, { x:'-50%', ease:Expo.easeInOut});
+        });
+      }else{
+        TweenMax.set('.pop-cont', {alpha:0, rotationX:90, top:50});
+        $('.popup').fadeIn( ()=>{
+          TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, top:'50%', ease:Expo.easeOut});
+        });
+      }
+      
   	}
 
 }

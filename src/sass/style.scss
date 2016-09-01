@@ -257,6 +257,10 @@ header {
     }
     .foucs {
         border-bottom: 1px solid $darkRed;
+        a{
+            color: $darkRed;
+            font-weight: 500;
+        }
     }
     ul {
         margin: 3rem 15% 5rem;
