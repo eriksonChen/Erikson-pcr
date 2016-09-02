@@ -3,22 +3,10 @@
 @import "media";
 
 // @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
-@font-face {
-  font-family: MyCustomFont;
-  src: local(Helvetica),     
-       local(Arial);         
-}
 
-/* 中文專用 */
-@font-face {
-  font-family: MyCustomFont;      
-  unicode-range: U+3400-4DFFh;    
-  src: local('Noto Sans TC'),          
-       local("微軟正黑體"); 
-}
 
 body {
-    font-family: 'Noto Sans TC',"微軟正黑體", Arial, sans-serif;
+    font-family:"微軟正黑體", 'Heiti TC', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
@@ -58,7 +46,7 @@ h5 {
 
 h6 {
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: bold;
     line-height: 2;
 }
 

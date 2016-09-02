@@ -108,7 +108,7 @@
                 }
                 .case {
                     color: $textDark;
-                    font-weight: 500;
+                    font-weight: bold;
                     float: left;
                     line-height: 25px;
                     @include ease;
@@ -312,7 +312,7 @@
                 // text-align: center;
             }
             .title {
-                font-weight: 400;
+                font-weight: bold;
                 color: $textDark;
                 line-height: 1.2;
                 span {

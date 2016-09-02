@@ -26,10 +26,9 @@
             position: relative;
             border: 1px solid $lightGray;
             margin: 0 auto 1rem;
-            background: #ECE9E6; 
-            background: -webkit-linear-gradient(to right, #ECE9E6 , #FFFFFF);
-            background: linear-gradient(to right, #ECE9E6 , #FFFFFF); 
-        
+            background: #ECE9E6;
+            background: -webkit-linear-gradient(to right, #ECE9E6, #FFFFFF);
+            background: linear-gradient(to right, #ECE9E6, #FFFFFF);
             @media #{$med} {
                 width: 95%;
             }
@@ -71,7 +70,7 @@
                     @media #{$med} {
                         width: auto;
                     }
-                    @media #{$sml}{
+                    @media #{$sml} {
                         height: 100%;
                     }
                 }
@@ -96,15 +95,14 @@
                         font-size: 1rem;
                     }
                 }
-                .text-cont{
-                    font-weight: 400;
-                    span{
-                        font-weight: 400;
+                .text-cont {
+                    font-weight: bold;
+                    // font-size:0.875rem;
+                    span {
+                        font-weight: bold;
                         font-style: italic;
                     }
-                    
                 }
-                
                 .more-button {
                     position: absolute;
                     right: 2rem;
@@ -149,10 +147,22 @@
                 }
             }
         }
+        .title_m {
+            text-align: center;
+            line-height: 3;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-top: 2rem;
+            display: none;
+            color: $textDark;
+            @media #{$sml} {
+                display: block;
+            }
+        }
         .items {
             width: 95%;
             position: relative;
-            margin: 1.5rem auto 1rem;
+            margin: 0 auto 1rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
