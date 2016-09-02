@@ -47,17 +47,17 @@ export class HeaderComponent implements OnInit {
 	}
 
 	closeMenu(){
-		TweenMax.to($('.mobile-menu'), 0.6, {top:'-100%', ease:Expo.easeInOut});
+		TweenMax.to($('.mobile-menu'), 0.7, {top:'-100%', ease:Expo.easeInOut});
 		this.isopen=false;
 	}
 
 	changeHamer(){
 		if(this.isopen){
 			this.isopen=false;
-			TweenMax.to($('.mobile-menu'), 0.6, {top:'-100%', ease:Expo.easeInOut});
+			TweenMax.to($('.mobile-menu'), 0.7, {top:'-100%', ease:Expo.easeInOut});
 		}else{
 			this.isopen=true;
-			TweenMax.to($('.mobile-menu'), 0.6, {top:'0', ease:Expo.easeInOut});
+			TweenMax.to($('.mobile-menu'), 0.7, {top:'0', ease:Expo.easeInOut});
 		}
 
 	}

@@ -12,6 +12,7 @@ export class PopupComponent implements OnInit, OnChanges {
   	@Input() popCont:any;
 
   	constructor(private aboutService:AboutService) {
+      
     }
 
   	ngOnInit() {

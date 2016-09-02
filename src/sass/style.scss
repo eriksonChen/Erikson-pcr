@@ -91,6 +91,7 @@ header {
         position: relative;
         float: left;
         width: 35px;
+        
         @media #{$sml} {
             margin-top: 0.5rem;
         }

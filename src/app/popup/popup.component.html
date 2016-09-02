@@ -1,11 +1,10 @@
 <div class="popup">
-    <div class="close" (click)="closePop()"></div>
+    <div class="close" (click)="closePop()"><img width="38" height="38" src="../../asset/svg/close3.svg" alt=""></div>
     <div class="pop-cont">
         <div class="close close2" (click)="closePop()"></div>
         <div class="pop-pic">
-            <img [src]="popCont.pic" alt="">
+            <img [src]="popCont.pic" alt="pic">
         </div>
-
         <div class="pop-des">
             <h4 class="title">{{popCont.title}}</h4>
             <p class="des" [innerHTML]='popCont.des'></p>

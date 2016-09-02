@@ -28,8 +28,8 @@
             position: relative;
             background-color: white;
             display: none;
-            width: 32.5%;
-            margin-bottom: 1rem;
+            width: 32%;
+            margin-bottom: 2rem;
             &:hover {
                 .pic {
                     .btn-cont {
@@ -49,7 +49,7 @@
                 border: 0;
                 border-bottom: 1px dashed $textGray;
                 padding-bottom: 1rem;
-                margin: 0 0.5rem 1rem;
+                margin: 1rem 0.5rem;
             }
             .out-btn {
                 display: none;
@@ -187,7 +187,7 @@
     border: 1px solid $superLight;
     cursor: pointer;
     overflow: hidden;
-    @include rounded(5px);
+    @include rounded(3px);
     @include ease;
     font-weight: 500;
     text-align: center;
@@ -224,7 +224,6 @@
         z-index: 100;
     }
     .close {
-        background-image: url('../asset/svg/close2.svg');
         right: 0;
         z-index: 10;
         width: 38px;
@@ -238,6 +237,8 @@
             display: block;
             margin: 10px;
             float: right;
+            @include rounded(50%);
+            background-color: $superLight;
         }
     }
     .pop-cont {
@@ -258,6 +259,7 @@
             overflow: auto;
         }
         .close {
+            background-image: url('../asset/svg/close2.svg');
             display: block;
             position: absolute;
             &:hover {

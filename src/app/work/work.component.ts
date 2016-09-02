@@ -46,7 +46,7 @@ export class WorkComponent implements OnInit {
 		if($('.btn-cont').css('display')==='none'){ //手機動態
 			TweenMax.set('.pop-cont', {y:'-50%', x:'50%'});
 			$('.popup').fadeIn('fast', ()=>{
-				TweenMax.to('.pop-cont', 0.6, { x:'-50%', ease:Expo.easeInOut});
+				TweenMax.to('.pop-cont', 0.7, { x:'-50%', ease:Expo.easeInOut});
 			});
 			$('.pop-cont').scrollTop(0);
 		}else{
@@ -59,7 +59,7 @@ export class WorkComponent implements OnInit {
 	}
 
 	onPopClose(){
-		$('.popup').fadeOut('fast');
+		$('.popup').fadeOut();
 	}
 
 }

@@ -22,13 +22,19 @@ export class HomeComponent implements OnInit {
       });
     },10);
   	
-  	
   }
 
   anim(){
     $('.bgimg, .text-box').css('display','block');
-  	TweenMax.from('.bgimg', 1, {delay:0.3, alpha:0, scaleX:0.4, scaleY:0.4, rotation:50, ease:Expo.easeOut });
-  	TweenMax.from('.text-box', 0.6, {delay:0.6, alpha:0, y:-30, scaleY:1.5, scaleX:1.5, ease:Cubic.easeOut});
+  	TweenMax.from('.bgimg', 0.7, {delay:0.5, alpha:0, scaleX:0.4, scaleY:0.4, rotation:50, ease:Cubic.easeOut });
+  	TweenMax.from('.text-box', 0.7, {delay:1,  scaleY:0, scaleX:0, ease:Expo.easeInOut, onComplete:this.boxDown});
+  }
+
+  boxDown(){
+    $('.start').css('display','block');
+    // TweenMax.set('.start', {scaleX:0.3, scaleY:0.3});
+    TweenMax.to('.text-box', 0.6, {delay:0.5, css:{marginTop:'-20px', height:'200'}, ease:Expo.easeInOut});
+    TweenMax.from('.start', 0.6, {delay:0.5, y:-50, scaleX:0, scaleY:0, ease:Expo.easeInOut});
   }
 
 }

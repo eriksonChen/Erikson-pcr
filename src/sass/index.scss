@@ -11,7 +11,6 @@
     .bgimg,
     .text-box {
         position: absolute;
-        // display: none;
     }
     .bgimg {
         top: 52%;
@@ -31,8 +30,8 @@
         }
     }
     .text-box {
-        width: 250px;
-        height: 100px;
+        width: 300px;
+        height: 125px;
         text-align: center;
         top: 50%;
         left: 50%;
@@ -41,11 +40,16 @@
         cursor: pointer;
         @include rounded(2px);
         &:hover {
-        @include ease(0.25s);
-            background-color: $lightGray;
+            .start{
+                @include ease(0.25s);
+                // background-color: $textGray;
+                background-color: $darkRed;
+                color: #fff;
+            }
+            
         }
         .box-title {
-            margin-top: 1rem;
+            margin-top: 1.7rem;
             font-weight: 500;
             // letter-spacing: 1px;
             color: $textDark;
@@ -59,19 +63,36 @@
             width: 100px;
             margin: 0.6rem auto;
         }
+        .start {
+            position: relative;
+            width: 60%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 1.125rem;
+            @include rounded(2px);
+            margin: 2rem auto;
+            
+            border: 1px solid $darkRed;
+            color: $darkRed;
+            cursor: pointer;
+            display: none;
+
+        }
         @media #{$sml} {
             width: 95%;
-            top: 90%;
-            height: 100px;
+            top: 85%;
+            height: 120px;
             .box-title,
             .box-name {
-                line-height: 1.6;
+                line-height: 2;
             }
             .box-title {
                 margin-top: 1rem;
             }
-            .line {
-                display: none;
+            .start{
+                background-color: $darkRed;
+                color: #fff;
             }
         }
     }

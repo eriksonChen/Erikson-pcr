@@ -268,7 +268,7 @@
     .btn-text {
         display: inline-block;
         font-weight: 500;
-        line-height: 30px;
+        line-height: 34px;
         @include ease;
         @media #{$sml} {
             line-height: 3rem;

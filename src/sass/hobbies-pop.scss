@@ -58,7 +58,7 @@
         z-index: 100;
     }
     .close {
-        background-image: url('./asset/svg/close2.svg');
+        // background-image: url('./asset/svg/close2.svg');
         right: 0;
         z-index: 10;
         width: 38px;
@@ -74,6 +74,8 @@
             display: block;
             margin: 10px;
             float: right;
+            @include rounded(50%);
+            background-color: $superLight;
         }
     }
     .pop-cont {
@@ -95,6 +97,7 @@
             overflow: auto;
         }
         .close2 {
+            background-image: url('./asset/svg/close2.svg');
             position: absolute;
             display: block;
             &:hover {
