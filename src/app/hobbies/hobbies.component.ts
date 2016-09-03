@@ -14,6 +14,7 @@ export class HobbiesComponent implements OnInit {
   	window.scrollTo(0,0);
   	$('.wrap').css('display','none').delay(100).fadeIn('slow');
   	this.anim();
+    gapage('hobbies');
   }
 
   anim(){

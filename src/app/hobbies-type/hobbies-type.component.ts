@@ -45,6 +45,7 @@ export class HobbiesTypeComponent implements OnInit {
   			.subscribe(res => {
   				this.items = res.json().data;
   				this.banner= res.json().banner;
+          gapage(this.banner['name']);
   			});
       window.scrollTo(0,0);
       setTimeout(()=>{

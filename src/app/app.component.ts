@@ -18,7 +18,7 @@ import{ HeaderComponent } from './header/'
 export class AppComponent implements OnInit{
   constructor() { }
   ngOnInit(){
-
+    gapage('erikson_index');
   }
 
 }

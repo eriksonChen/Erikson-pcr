@@ -1,21 +1,4 @@
 {
-  "about": [
-    {
-      "title": "攝影",
-      "pic": "../img/climbing/lake.JPG",
-      "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
-    },
-    {
-      "title": "登山",
-      "pic": "../img/climbing/lake.JPG",
-      "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
-    },
-    {
-      "title": "單車",
-      "pic": "../img/climbing/lake.JPG",
-      "des": "最有機會成為第一批太空旅遊公司的一員的 Virgin Galactic，今天走出了重要的一步：取得了由美國聯邦航空管理局商用太空運輸辦公室頒給的營運執照。這是在仔細檢視過 Virgin Galactic 的火箭設計、安全性功能、以及飛行航道後，確認 Virgin Galactic 適宜營運的證明。確認 Virgin Galactic 適宜營運的證明。"
-    }
-  ],
   "experience":[
     {
       "date":"2012 July - 2016 May",
@@ -40,7 +23,7 @@
     },
 
     {
-      "date":"2012 July - 2016 May",
+      "date":"2006 Mar - 2007 Dec",
       "pos":"廣告AE",
       "com":"賀田國際有限公司",
       "des":"從事網路B2B廣告平台的業務，通路行銷活動及異業合作活動規劃執行，開發潛在客戶並維繫穩定客戶關係。",

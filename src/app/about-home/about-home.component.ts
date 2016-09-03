@@ -12,9 +12,10 @@ export class AboutHomeComponent implements OnInit {
 
   ngOnInit() {
   	$('.box').each((index, ele)=>{
-  		TweenMax.from(ele, 0.5, {delay:(index+1)*0.1, alpha:0, y:70, ease:Back.easeOut});
+  		TweenMax.from(ele, 0.5, {delay:(index+2)*0.2, alpha:0, y:70, ease:Back.easeOut});
   	});
     window.scrollTo(0,0);
+    gapage('about');
   }
 
 }

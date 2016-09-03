@@ -32,7 +32,9 @@
                     </div>
                 </div>
                 <input type="hidden" name="_next" [(ngModel)]='form._next' value="https://www.google.com.tw/" />
-                <button class="btn waves-effect waves-light submitBtn" type="submit">Submit</button>            </form>
+                <button class="btn waves-effect waves-light submitBtn" [class.isClick]="isClick" type="submit">Submit</button>
+                <a href="javascript:;" class="btn disabled" [class.isClick]="!isClick">上傳中</a>
+            </form>
         </div>
     </div>
 </div>

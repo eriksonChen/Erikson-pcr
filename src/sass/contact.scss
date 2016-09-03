@@ -64,6 +64,11 @@ nav {
             width: 200px;
             display: block;
 
+            &.isClick{
+                // background-color: $darkRed;
+                display: none;
+            }
+
             @media #{$sml}{
                 width: 80%;
                 height: 45px;

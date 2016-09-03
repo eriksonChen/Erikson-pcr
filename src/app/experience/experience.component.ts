@@ -27,6 +27,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
           },10);
   			});
 		window.scrollTo(0,0);
+    gapage('experience');
 	}
 
   anim(){

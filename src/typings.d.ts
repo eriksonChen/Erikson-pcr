@@ -5,4 +5,6 @@
 declare var System: any;
 declare var module: { id: string };
 declare var require: any;
+declare var gapage:Function;
+declare var gaclick:Function;
 

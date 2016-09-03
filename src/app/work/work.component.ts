@@ -27,7 +27,7 @@ export class WorkComponent implements OnInit {
 			})
 		window.scrollTo(0,0);
 		TweenMax.set('.pop-cont', {transformPerspective:3000});
-
+		gapage('work');
 	}
 
 	onUrl(url){

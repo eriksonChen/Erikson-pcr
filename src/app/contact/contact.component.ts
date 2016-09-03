@@ -12,6 +12,7 @@ import { FormGroup, FormControl, FormBuilder, REACTIVE_FORM_DIRECTIVES} from '@a
 export class ContactComponent implements OnInit {
 
   form={};
+  isClick=false;
 
   constructor(private http:Http) {
     this.form={
@@ -28,9 +29,11 @@ export class ContactComponent implements OnInit {
 
     $('.wrap').css('display', 'none').delay(200).fadeIn('slow');
     TweenMax.from('.form-cont', 0.7, {delay:0.5, alpha:0, y:30, ease:Expo.easeOut});
+    gapage('contact');
   }
 
   onSubmit(){
+    this.isClick=true;
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
@@ -44,6 +47,7 @@ export class ContactComponent implements OnInit {
         err => this.logError(err),
         () => this.clearForm()
       );
+
   }
 
   logError(err) {
@@ -52,6 +56,8 @@ export class ContactComponent implements OnInit {
 
   clearForm(){
     alert('寄送成功！');
+
+    this.isClick=false;
 
     this.form={
       name:'',
