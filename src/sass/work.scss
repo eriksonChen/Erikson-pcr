@@ -36,6 +36,7 @@
                         opacity: 1;
                     }
                     img {
+                        -moz-filter: grayscale(0%);
                         -webkit-filter: grayscale(0%);
                         filter: grayscale(0%);
                     }
