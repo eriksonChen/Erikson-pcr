@@ -69,7 +69,6 @@
         position: fixed;
         display: none;
         @include ease;
-        
         @media #{$sml} {
             display: block;
             margin: 10px;
@@ -98,7 +97,7 @@
             position: absolute;
             display: block;
             &:hover {
-                opacity:0.5;
+                opacity: 0.5;
             }
             @media #{$sml} {
                 display: none;
@@ -147,9 +146,10 @@
             }
             .title {
                 // margin-top: 3rem;
-                margin-bottom: 1.625rem;
+                margin-bottom: 3rem;
                 font-weight: 600;
                 color: $textDark;
+                
                 @media #{$sml} {
                     text-align: center;
                 }

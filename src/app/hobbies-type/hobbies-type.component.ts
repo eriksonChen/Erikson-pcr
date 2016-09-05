@@ -18,15 +18,17 @@ export class HobbiesTypeComponent implements OnInit {
   	pitem={};
     mytype="";
 
-  	constructor(private http:Http, private route:ActivatedRoute, private aboutService:AboutService) {
+    constructor(private http:Http, private route:ActivatedRoute) {}
+
+  	/*constructor(private http:Http, private route:ActivatedRoute, private aboutService:AboutService) {
       //component之間的資料傳遞方法*********************
-      /*this.aboutService.changeBar(false);
+      this.aboutService.changeBar(false);
       this.aboutService.missionErikson$.subscribe(res => {
         this.myname = res;
 
-      })*/
+      })
       
-    }
+    }*/
 
   	ngOnInit() {
       this.pitem={
@@ -47,13 +49,13 @@ export class HobbiesTypeComponent implements OnInit {
   				this.banner= res.json().banner;
           gapage(this.banner['name']);
   			});
-      window.scrollTo(0,0);
       setTimeout(()=>{
         $('.item').each((index, ele)=>{
           TweenMax.from(ele, 0.7, {delay:(index+1.8)*0.18, alpha:0, y:70, ease:Back.easeOut});
         });
+        TweenMax.set('.pop-cont', {transformPerspective:3000, x:'-50%', y:'-50%'});
       },100);
-      TweenMax.set('.pop-cont', {transformPerspective:3000, x:'-50%', y:'-50%'});
+      window.scrollTo(0,0);
   	}
 
   	pop(p){
@@ -72,7 +74,5 @@ export class HobbiesTypeComponent implements OnInit {
           TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, top:'50%', ease:Expo.easeOut});
         });
       }
-      
   	}
-
 }

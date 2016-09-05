@@ -10,6 +10,7 @@
         padding: 4.625rem 0 0.875rem;
         // background-color: red;
     }
+
     .hob-cont {
         margin-top: 1.875rem;
         color: $text;
@@ -185,6 +186,7 @@
                     position: relative;
                     height: 144px;
                     width: 100%;
+                    cursor: pointer;
                     overflow: hidden;
                     img {
                         position: absolute;

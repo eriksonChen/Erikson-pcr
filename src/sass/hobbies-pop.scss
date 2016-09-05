@@ -153,6 +153,12 @@
                 margin-bottom: 1.625rem;
                 font-weight: 600;
                 color: $textDark;
+                span {
+                    font-size: 1rem;
+                    font-weight: normal;
+                    color: $textGray;
+                    display: block;
+                }
                 @media #{$sml} {
                     text-align: center;
                 }

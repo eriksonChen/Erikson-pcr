@@ -8,7 +8,7 @@
         <app-hobbies-menu></app-hobbies-menu>
         <div class="banner intro">
             <div class="pic">
-                <img [src]="banner.pic" alt="camera">
+                <img [src]="banner.pic" [alt]='banner.name'>
             </div>
             <div class="des">
                 <h4 class="title">{{banner.name}}</h4>
@@ -20,15 +20,14 @@
         <!-- end .banner photo -->
         <div class="items">
             <div class="item" *ngFor="let item of items">
-                <div class="item-pic">
-                    <img [src]="item.pic" alt="">
+                <div class="item-pic" (click)=pop(item)>
+                    <img [src]="item.pic">
                 </div>
                 <div class="item-text">
                     <h5>{{item.title}} <span class="date">/{{item.date}}</span> </h5>
                     <p class="text">{{item.summary}}</p>
                     <div class="down">
-                        <!-- <div class="date">{{item.date}}</div> -->
-                        <div class="btn" (click)=pop(item)>more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                        <div class="btn"(click)=pop(item)>more<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                     </div>
                 </div>
             </div>
