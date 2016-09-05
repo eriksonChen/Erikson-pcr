@@ -1,20 +1,20 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HobbiesMenuComponent } from '../hobbies-menu/'
 import { Http, Request } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/map';
 import { PopupComponent } from '../popup/';
 import { AboutService } from '../about.service';
+import { Item } from '../item';
 
 @Component({
   templateUrl: 'hobbies-type.component.html',
   styleUrls: ['../../sass/hobbies.scss'],
   directives:[HobbiesMenuComponent, PopupComponent]
-  // encapsulation: ViewEncapsulation.None
 })
 export class HobbiesTypeComponent implements OnInit {
 	  banner={};
-  	items:any[];
+  	items:Item[];
   	pitem={};
     mytype="";
 
@@ -31,13 +31,13 @@ export class HobbiesTypeComponent implements OnInit {
     }*/
 
   	ngOnInit() {
-      this.pitem={
+      /*this.pitem={
         pic:'../../img/icon.png',
         title:'title',
         date:'date',
         href:'',
         des:'des'
-      };
+      };*/
       
   		$('.wrap').css('display','none').delay(100).fadeIn('slow');
 
@@ -49,12 +49,14 @@ export class HobbiesTypeComponent implements OnInit {
   				this.banner= res.json().banner;
           gapage(this.banner['name']);
   			});
+
       setTimeout(()=>{
         $('.item').each((index, ele)=>{
           TweenMax.from(ele, 0.7, {delay:(index+1.8)*0.18, alpha:0, y:70, ease:Back.easeOut});
         });
         TweenMax.set('.pop-cont', {transformPerspective:3000, x:'-50%', y:'-50%'});
       },100);
+
       window.scrollTo(0,0);
   	}
 

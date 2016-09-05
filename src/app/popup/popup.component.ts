@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { AboutService } from '../about.service';
+import { Component, Input } from '@angular/core';
+import { Item } from '../item';
 
 @Component({
   selector: 'app-popup',
@@ -7,25 +7,16 @@ import { AboutService } from '../about.service';
   styleUrls:['../../sass/hobbies-pop.scss']
 
 })
-export class PopupComponent implements OnInit, OnChanges {
+export class PopupComponent {
 
-  	@Input() popCont:any;
+  	@Input() popCont:Item;
 
-  	constructor(private aboutService:AboutService) {
+  	constructor() {
       
-    }
-
-  	ngOnInit() {
-
-  	}
-
-    ngOnChanges(){
-      // this.aboutService.changeName(this.popCont.title);
     }
 
   	closePop(){
   		$('.popup').fadeOut('fast');
-      // this.aboutService.changeName("");
   	}
 
 

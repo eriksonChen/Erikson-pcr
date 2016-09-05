@@ -3,14 +3,9 @@
 @import "cont-title";
 // hobbies.css
 .wrap {
-    @media #{$med} {
-        // background-color: $lightRed;
-    }
     @media #{$sml} {
         padding: 4.625rem 0 0.875rem;
-        // background-color: red;
     }
-
     .hob-cont {
         margin-top: 1.875rem;
         color: $text;
@@ -98,7 +93,6 @@
                 }
                 .text-cont {
                     font-weight: bold;
-                    // font-size:0.875rem;
                     span {
                         font-weight: bold;
                         font-style: italic;
@@ -189,12 +183,21 @@
                     cursor: pointer;
                     overflow: hidden;
                     img {
+                        @include ease;
                         position: absolute;
                         width: 101%;
                         top: 50%;
                         left: 50%;
                         margin-right: -50%;
                         transform: translate(-50%, -50%);
+                    }
+                    &:hover {
+                        img {
+                            width: 110%;
+                            -moz-filter: brightness(1.1);
+                            -webkit-filter: brightness(1.1);
+                            filter: brightness(1.1);
+                        }
                     }
                 }
                 .item-text {
@@ -211,9 +214,7 @@
                     .date {
                         font-weight: 400;
                         margin-left: 0.5rem;
-                        // color: $textGray;
                         font-size: 12px;
-                        // font-family: '微軟正黑體', Arial;
                     }
                     .text {
                         margin-top: 1rem;
@@ -228,7 +229,6 @@
                             color: $textGray;
                         }
                         .btn {
-                            // font-family: '微軟正黑體', Arial;
                             color: $lightRed;
                             float: right;
                             display: block;
