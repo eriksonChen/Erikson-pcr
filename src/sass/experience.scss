@@ -11,9 +11,8 @@ $time-line: 1px solid $textGray;
     color: $text;
     height: auto;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     @media #{$sml} {
-        // margin-top: 1rem;
         overflow: visible;
         padding: 1.25rem 0 0;
     }
