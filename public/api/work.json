@@ -99,6 +99,26 @@
       "pic_s":"../img/work/yannick_s.jpg",
       "pic": "../img/work/yannick.jpg",
       "des": "亞尼克產品活動網站，user看完其中一支影片分享至facebook並tag朋友，即可參加活動抽獎。此網站因為有抓user朋友的資料所以有申請facebook等殊權限。主要負責前端程式及動態的撰寫，與後端程式串接api存取user資料。"
+    },
+    {
+      "href": "http://www.acnes.com.tw/ninja/",
+      "brands":"Acnes",
+      "title": "決痘忍法帖",
+      "date": "2015.08",
+      "skill":"js, jquery, Angular, FB api, web Socket",
+      "pic_s":"../img/work/acnes_s.jpg",
+      "pic": "../img/work/acnes.jpg",
+      "des": "曼秀雷敦產品活動網站，利web socket與後端socket串接同步手機與pc的畫面，讓user可以用手機操控pc的畫面而達到遊戲的目的。此専案負責前端pc的html及flash的遊戲程式撰寫，手機版則由另一位同事負責，並與後端程式串接api存取user資料。"
+    },
+    {
+      "href": "",
+      "brands":"Zespri",
+      "title": "身體微笑健檢",
+      "date": "2015.08",
+      "skill":"js, jquery, Angular, FB api",
+      "pic_s":"../img/work/zespri_s.jpg",
+      "pic": "../img/work/zespri.jpg",
+      "des": "奇異果產品活動網站，user 擺出指定姿勢並拍照上傳並分享至facebook，即有機會抽獎獲得獎品。負責前端程式和動態的撰寫，和後端程式串接上傳user照片及資料至後台參加抽獎。"
     }
   ]
 }
