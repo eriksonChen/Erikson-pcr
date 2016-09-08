@@ -6,7 +6,7 @@
     <div class="items">
         <div class="item" *ngFor="let work of works">
             <div class="pic">
-                <img [src]="work.pic_s" [alt]="work.title">
+                <img class="lazy" [attr.data-original]='work.pic_s' [alt]="work.title">
                 <div class="btn-cont">
                     <div class="buttons inner-btn">
                         <div class="button btn-white" (click)="onPopup(work)">See Case<i class="fa fa-chevron-right" aria-hidden="true"></i></div>

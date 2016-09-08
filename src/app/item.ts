@@ -6,3 +6,7 @@ export class Item {
   summary:string;
   des:string;
 }
+
+interface JQuery{
+	lazyload: (options?: any) => JQuery;
+}

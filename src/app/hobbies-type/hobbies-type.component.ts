@@ -47,15 +47,18 @@ export class HobbiesTypeComponent implements OnInit {
   			.subscribe(res => {
   				this.items = res.json().data;
   				this.banner= res.json().banner;
+          setTimeout(()=>{
+            $('img.lazy').lazyload({ effect : "fadeIn" });
+            $('.item').each((index, ele)=>{
+              TweenMax.from(ele, 0.7, {delay:(index+1.8)*0.18, alpha:0, y:70, ease:Back.easeOut});
+            });
+            TweenMax.set('.pop-cont', {transformPerspective:3000, x:'-50%', y:'-50%'});
+          },100);
+
           gapage(this.banner['name']);
   			});
 
-      setTimeout(()=>{
-        $('.item').each((index, ele)=>{
-          TweenMax.from(ele, 0.7, {delay:(index+1.8)*0.18, alpha:0, y:70, ease:Back.easeOut});
-        });
-        TweenMax.set('.pop-cont', {transformPerspective:3000, x:'-50%', y:'-50%'});
-      },100);
+
 
       window.scrollTo(0,0);
   	}

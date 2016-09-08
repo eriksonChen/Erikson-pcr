@@ -21,7 +21,7 @@
         <div class="items">
             <div class="item" *ngFor="let item of items">
                 <div class="item-pic" (click)=pop(item)>
-                    <img [src]="item.pic">
+                    <img class='lazy' [attr.data-original]="item.pic">
                 </div>
                 <div class="item-text">
                     <h5>{{item.title}} <span class="date">/{{item.date}}</span> </h5>

@@ -23,6 +23,9 @@ export class WorkComponent implements OnInit {
 						TweenMax.from(ele, 0.7, {delay:(i+1)*0.2, alpha:0, y:50, ease:Back.easeOut});
 					});
 					this.onResize();
+					$('img.lazy').lazyload({
+						 effect : "fadeIn"
+					});
 				},1)
 			})
 		window.scrollTo(0,0);
