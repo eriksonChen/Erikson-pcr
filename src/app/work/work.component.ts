@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Request } from '@angular/http';
 
-
 @Component({
   templateUrl: 'work.component.html',
   styleUrls: ['../../sass/work.scss']
@@ -14,6 +13,7 @@ export class WorkComponent implements OnInit {
 	constructor(private http:Http) { }
 
 	ngOnInit() {
+		$('.cont-title').css('display', 'none').delay(200).fadeIn('slow');
 		this.http.get('../../api/work.json')
 			.subscribe(res =>{
 				this.works = res.json().data;
