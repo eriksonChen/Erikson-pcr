@@ -1,3 +1,4 @@
+@import "materialize";
 @import "color";
 @import "mixin";
 @import "cont-title";
@@ -29,7 +30,7 @@
                 width: 95%;
             }
             @media #{$sml} {
-                width: 95%;
+                // width: 95%;
                 height: auto;
                 background-color: #eee;
                 border: 0;
@@ -37,7 +38,6 @@
                 padding-bottom: 2rem;
                 background: #ECE9E6;
             }
-            background-color: $superLight;
             &.intro {
                 border-top: 0;
                 border-left: 0;
@@ -92,21 +92,32 @@
                     }
                 }
                 .text-cont {
-                    font-weight: bold;
-                    span {
-                        font-weight: bold;
-                        font-style: italic;
-                    }
+                    font-weight: normal;
                 }
                 .more-button {
                     position: absolute;
+                    font-size: 12px;
                     right: 2rem;
                     bottom: 1.5rem;
                     @media #{$sml} {
                         position: relative;
+                        width: 80%;
+                        height: 3rem;
                         margin: 2rem auto 0;
                         right: inherit;
-                        bottom: inherit;
+                        bottom: 5%;
+                        line-height: 3rem;
+                        font-size: 1rem;
+                    }
+                    &:hover {
+                        @extend .darken-2;
+                    }
+                    .fa {
+                        margin-left: 10px;
+                        font-size: 12px;
+                        @media #{$sml} {
+                            font-size: 1rem;
+                        }
                     }
                 }
                 .title {
@@ -147,7 +158,7 @@
             line-height: 3;
             font-weight: bold;
             letter-spacing: 3px;
-            margin-top: 2rem;
+            // margin-top: 2rem;
             display: none;
             color: $textDark;
             @media #{$sml} {
@@ -166,7 +177,7 @@
                 background-color: white;
                 overflow: hidden;
                 width: 32.5%;
-                margin-bottom: 1rem;
+                margin-bottom: 0.785rem;
                 border: 1px solid $lightGray;
                 @include rounded(2px);
                 @media #{$med} {
@@ -174,7 +185,8 @@
                 }
                 @media #{$sml} {
                     width: 100%;
-                    margin: 0 0 2.5%;
+                    margin: 0 0 4%;
+                    background-color: $superLight;
                 }
                 .item-pic {
                     position: relative;
@@ -205,11 +217,11 @@
                     padding: 0.7rem;
                     color: $textDark;
                     text-align: justify;
+                    @media #{$sml}{
+                        padding: 1rem;
+                    }
                     h5 {
                         font-weight: 600;
-                    }
-                    .fa {
-                        margin-left: 5px;
                     }
                     .date {
                         font-weight: 400;
@@ -223,68 +235,29 @@
                         display: block;
                         margin-top: 15px;
                         @include clearfix;
-                        font-size: 0.875rem;
-                        .date {
-                            float: left;
-                            color: $textGray;
-                        }
-                        .btn {
+                        .moreBtn {
+                            cursor: pointer;
                             color: $lightRed;
+                            height: 2rem;
+                            line-height: 2rem;
                             float: right;
                             display: block;
-                            cursor: pointer;
-                            &:hover {
+                            font-size: 12px;
+                            &:hover{
                                 color: $darkRed;
+                            }
+                            .fa {
+                                margin-left: 5px;
+                                font-size: inherit
+                            }
+
+                            @media #{$sml}{
+                                display: none;
                             }
                         }
                     }
                 }
             }
-        }
-    }
-}
-
-.more-button {
-    width: auto;
-    height: 34px;
-    padding: 0 17px;
-    font-size: 12px;
-    font-weight: 300;
-    color: $superLight;
-    cursor: pointer;
-    background-color: $btnGray;
-    @include rounded(5px);
-    // border: 1px solid $textGray;
-    // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50);
-    @media #{$sml} {
-        @include ease;
-        right: inherit;
-        bottom: 5%;
-        width: 80%;
-        height: 3rem;
-        -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0);
-        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0);
-    }
-    p {
-        font-size: 12px;
-    }
-    &:hover {
-        background-color: $textGray;
-        border-color: $textGray;
-        color: $superLight;
-        // box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.30);
-    }
-    .fa {
-        margin-left: 10px;
-    }
-    .btn-text {
-        display: inline-block;
-        font-weight: 500;
-        line-height: 34px;
-        @include ease;
-        @media #{$sml} {
-            line-height: 3rem;
-            font-size: 1rem;
         }
     }
 }

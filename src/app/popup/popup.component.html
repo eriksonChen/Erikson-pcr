@@ -9,10 +9,8 @@
             <h4 class="title">{{popCont.title}} <span class="date">{{popCont.date}}</span></h4>
             <p class="des" [innerHTML]='popCont.des'></p>
         </div>
-        <div class="more-button">
-            <div class="btn-text" (click)=urlto(popCont.href)>
+        <div class="waves-effect waves-light btn grey darken-3 more-button" (click)='urlto(popCont.href)'>
                 See Photo<i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </div>
         </div>
     </div>
     <div class="pop-bg" (click)="closePop()"></div>

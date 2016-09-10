@@ -1,3 +1,4 @@
+@import "materialize";
 @import "color";
 @import "mixin";
 @import "cont-title";
@@ -375,13 +376,11 @@
                 font-weight: 600;
             }
         }
-        .button {
+        .popbtn {
             position: absolute;
             right: 3.5%;
             bottom: 2rem;
-            // border: 1px solid $textDark;
-            background-color: $btnGreen;
-            color: $superLight;
+            font-size: 12px;
             @media #{$sml} {
                 font-size: 1rem;
                 display: block;
@@ -391,12 +390,11 @@
                 height: auto;
                 text-align: center;
                 line-height: 48px;
-                margin: 0 5% 5%;
+                margin: 1rem 5% 2rem;
             }
-            &:hover {
-                background-color: white;
-                border: 1px solid $textDark;
-                color: $textGray;
+            .fa{
+                font-size: inherit;
+                margin-left: 5px;
             }
         }
     }

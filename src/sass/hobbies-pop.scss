@@ -1,50 +1,7 @@
+@import "materialize";
 @import "color";
 @import "mixin";
 @import "cont-title";
-.more-button {
-    width: auto;
-    height: 34px;
-    padding: 0 17px;
-    font-size: 12px;
-    font-weight: 300;
-    color: $superLight;
-    cursor: pointer;
-    background-color: $btnGray;
-    // border: 1px solid $textGray;
-    @include rounded(5px);
-    // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50);
-    @media #{$sml} {
-        @include ease;
-        right: inherit;
-        bottom: 5%;
-        width: 80%;
-        height: 3rem;
-        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0);
-    }
-    p {
-        font-size: 12px;
-    }
-    &:hover {
-        background-color: $textGray;
-        border-color: $textGray;
-        color: $superLight;
-        // box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.30);
-    }
-    .fa {
-        margin-left: 10px;
-    }
-    .btn-text {
-        display: inline-block;
-        line-height: 34px;
-        font-weight: 500;
-        @include ease;
-        @media #{$sml} {
-            line-height: 3rem;
-            font-size: 1rem;
-        }
-    }
-}
-
 // popup css
 .popup {
     position: fixed;
@@ -69,7 +26,6 @@
         position: fixed;
         display: none;
         @include ease;
-        
         @media #{$sml} {
             display: block;
             margin: 10px;
@@ -101,7 +57,7 @@
             position: absolute;
             display: block;
             &:hover {
-                opacity:0.5;
+                opacity: 0.5;
             }
             @media #{$sml} {
                 display: none;
@@ -176,16 +132,25 @@
             position: absolute;
             right: 3rem;
             bottom: 2rem;
+            font-size: 12px;
+            &:hover{
+                @extend .darken-2;
+            }
             @media #{$sml} {
+                width: 70%;
                 font-size: 1rem;
                 display: block;
                 position: relative;
-                right: 0;
+                right: inherit;
                 bottom: 0;
                 height: auto;
                 text-align: center;
                 line-height: 48px;
-                margin: 0 auto 1rem;
+                margin: 1rem auto 2rem;
+            }
+            .fa {
+                margin-left: 5px;
+                font-size: inherit;
             }
         }
     }
