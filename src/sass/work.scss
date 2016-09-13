@@ -241,7 +241,7 @@
             margin: 10px;
             float: right;
             @include rounded(50%);
-            background-color: $superLight;
+            background-color: rgba(255, 255, 255, 0.6);
         }
     }
     .pop-cont {

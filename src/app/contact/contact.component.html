@@ -8,13 +8,11 @@
         <div class="row cont">
             <form id="contact-form" class="col s12" action="//formspree.io/botan3951@gmail.com" method="POST" (ngSubmit)="onSubmit()">
                 <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field col m5 s12">
                         <input id="name" type="text" [(ngModel)]='form.name' name="name" class="validate" required>
                         <label for="name">Name</label>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field col m7 s12">
                         <input id="subject" type="text" [(ngModel)]='form._subject' name="_subject" class="validate" required>
                         <label for="subject">Subject</label>
                     </div>

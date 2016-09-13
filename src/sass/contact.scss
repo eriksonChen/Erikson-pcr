@@ -10,9 +10,7 @@ nav {
 }
 
 .wrap {
-    
-
-    .hiddendiv{
+    .hiddendiv {
         display: none;
     }
     @media #{$sml} {
@@ -35,7 +33,7 @@ nav {
         }
     }
     .form-cont {
-        width: 590px;
+        width: 750px;
         margin: 0 auto;
         padding: 1rem 1rem 0;
         @media #{$med} {
@@ -48,9 +46,6 @@ nav {
         .cont {
             padding: 2rem 1rem;
             border: 5px solid $btnGreen;
-             // -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50);
-            // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.50); 
-            // background-color: $superLight;
             .row {
                 margin-bottom: 5px;
             }
@@ -64,18 +59,13 @@ nav {
             margin: 0 auto;
             width: 200px;
             display: block;
-
-            &.isClick{
-                // background-color: $darkRed;
+            &.isClick {
                 display: none;
             }
-
-            @media #{$sml}{
+            @media #{$sml} {
                 width: 80%;
                 height: 45px;
             }
         }
     }
 }
-
-

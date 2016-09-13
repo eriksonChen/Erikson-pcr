@@ -31,14 +31,6 @@ export class HobbiesTypeComponent implements OnInit {
     }*/
 
   	ngOnInit() {
-      /*this.pitem={
-        pic:'../../img/icon.png',
-        title:'title',
-        date:'date',
-        href:'',
-        des:'des'
-      };*/
-      
   		$('.wrap').css('display','none').delay(100).fadeIn('slow');
 
       this.mytype = this.route.snapshot.data['item'];

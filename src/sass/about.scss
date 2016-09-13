@@ -54,6 +54,7 @@
                 box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
                 .box-cont{
                     background-color: #eee;
+                    padding-bottom: 1.5rem;
                 }
             }
             .bg {
@@ -68,9 +69,6 @@
                     height: 200px;
                     overflow: visible;
                     padding-top: 1rem;
-                    img {
-                        // height: 150px;
-                    }
                 }
             }
             .p2 {
@@ -100,8 +98,8 @@
                 margin-top: 55px;
                 font-weight: 400;
                 @media #{$sml} {
-                    font-size: 1.2rem;
-                    margin-top: 1rem;
+                    font-size: 1rem;
+                    margin-top: 1.5rem;
                 }
             }
         }
