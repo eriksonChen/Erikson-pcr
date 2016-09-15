@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
-import { FormGroup, FormControl, FormBuilder, REACTIVE_FORM_DIRECTIVES} from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
 
 @Component({
@@ -11,29 +11,30 @@ import { FormGroup, FormControl, FormBuilder, REACTIVE_FORM_DIRECTIVES} from '@a
 })
 export class ContactComponent implements OnInit {
 
-  form={};
-  isClick=false;
+  form = {};
+  isClick = false;
 
-  constructor(private http:Http) {
-    this.form={
-      name:'',
-      _subject:'',
+  constructor(private http: Http) {
+    this.form = {
+      name: '',
+      _subject: '',
       email: '',
       Message: '',
-      _next:'http://e3pcr.com'
+      _next: 'http://e3pcr.com'
     }
   }
 
   ngOnInit() {
-    $('.hiddendiv').css("display","none");
+    $('.hiddendiv').css("display", "none");
 
     $('.wrap').css('display', 'none').delay(200).fadeIn('slow');
-    TweenMax.from('.form-cont', 0.7, {delay:0.5, alpha:0, y:30, ease:Expo.easeOut});
+    TweenMax.from('.form-cont', 0.7, { delay: 0.5, alpha: 0, y: 30, ease: Expo.easeOut });
     gapage('contact');
   }
 
-  onSubmit(){
-    this.isClick=true;
+  onSubmit() {
+    this.isClick = true;
+    gaclick('submit');
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
@@ -41,11 +42,11 @@ export class ContactComponent implements OnInit {
     // var data = JSON.stringify(this.form);
     // console.log($('#contact-form').serialize());
 
-    this.http.post('http://formspree.io/botan3951@gmail.com', data, {headers: headers})
+    this.http.post('http://formspree.io/botan3951@gmail.com', data, { headers: headers })
       // .map((res:Response) => res.json())
       .subscribe(
-        err => this.logError(err),
-        () => this.clearForm()
+      err => this.logError(err),
+      () => this.clearForm()
       );
 
   }
@@ -54,18 +55,18 @@ export class ContactComponent implements OnInit {
     console.error('There was an error: ' + err);
   }
 
-  clearForm(){
+  clearForm() {
     alert('寄送成功！');
 
-    this.isClick=false;
+    this.isClick = false;
 
-    this.form={
-      name:'',
-      _subject:'',
+    this.form = {
+      name: '',
+      _subject: '',
       email: '',
       Message: '',
-      _next:'http://e3pcr.com'
-    }; 
+      _next: 'http://e3pcr.com'
+    };
   }
 
 }

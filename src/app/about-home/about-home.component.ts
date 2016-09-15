@@ -18,4 +18,14 @@ export class AboutHomeComponent implements OnInit {
     gapage('about');
   }
 
+  resumeBtn(){
+    gaclick('resume btn');
+  }
+  experienceBtn(){
+    gaclick('experience btn');
+  }
+  hobbiesBtn(){
+    gaclick('hobbies btn');
+  }
+
 }

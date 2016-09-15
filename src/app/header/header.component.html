@@ -1,10 +1,10 @@
 <header>
     <nav>
-        <a routerLink="/index" (click)='closeMenu()'><img class="logo" src="../../asset/svg/logo.svg" alt="logo"></a>
+        <a routerLink="/index" (click)='closeMenu(); onLogo();'><img class="logo" src="../../asset/svg/logo.svg" alt="logo"></a>
         <ul class="menu">
-            <li><a routerLink="/about" routerLinkActive="foucs">ABOUT</a></li>
-            <li><a routerLink="/work" routerLinkActive="foucs">WORK</a></li>
-            <li><a [routerLink]="['/contact']" routerLinkActive="foucs">CONTACT</a></li>
+            <li><a routerLink="/about" routerLinkActive="foucs" (click)="onAbout()" >ABOUT</a></li>
+            <li><a routerLink="/work" routerLinkActive="foucs" (click)="onWork()">WORK</a></li>
+            <li><a [routerLink]="['/contact']" routerLinkActive="foucs" (click)="onContact()">CONTACT</a></li>
         </ul>
         <div class="social">
             <a href="javascript:;" (click)="onFb()">
@@ -27,9 +27,9 @@
 <!-- mobile meun -->
 <div class="mobile-menu">
     <ul>
-        <li routerLinkActive="foucs"><a routerLink="/about" (click)="closeMenu()">ABOUT</a></li>
-        <li routerLinkActive="foucs"><a routerLink="/work" (click)="closeMenu()">WORK</a></li>
-        <li routerLinkActive="foucs"><a [routerLink]="['/contact']" href="javascript:;" (click)="closeMenu()">CONTACT</a></li>
+        <li routerLinkActive="foucs" routerLink="/about" (click)="closeMenu(); onAbout()"><a href="javascript:;">ABOUT</a></li>
+        <li routerLinkActive="foucs" routerLink="/work" (click)="closeMenu(); onWork()"><a href="javascript:;">WORK</a></li>
+        <li routerLinkActive="foucs" [routerLink]="['/contact']" href="javascript:;" (click)="closeMenu(); onContact()"><a href="javascript:;">CONTACT</a></li>
     </ul>
     <div class="social">
         <a href="javascript:;" (click)="onFb()">

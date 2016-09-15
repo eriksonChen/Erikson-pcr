@@ -10,23 +10,24 @@
                 <div class="row">
                     <div class="input-field col m5 s12">
                         <input id="name" type="text" [(ngModel)]='form.name' name="name" class="validate" required>
-                        <label for="name">Name</label>
+                        <label for="name">姓名</label>
                     </div>
+
                     <div class="input-field col m7 s12">
-                        <input id="subject" type="text" [(ngModel)]='form._subject' name="_subject" class="validate" required>
-                        <label for="subject">Subject</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
                         <input id="email" type="email" [(ngModel)]='form.email' name="email" class="validate" required>
                         <label for="email">Email</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
+                        <input id="subject" type="text" [(ngModel)]='form._subject' name="_subject" class="validate" required>
+                        <label for="subject">主旨</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
                         <textarea id="textarea" class="materialize-textarea" [(ngModel)]='form.Message' name="message" required></textarea>
-                        <label for="textarea">Message</label>
+                        <label for="textarea">訊息</label>
                     </div>
                 </div>
                 <input type="hidden" name="_next" [(ngModel)]='form._next' value="https://www.google.com.tw/" />

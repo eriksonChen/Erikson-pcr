@@ -1,7 +1,7 @@
 <div class="wrap">
     <div class="about-cont">
         <ul>
-            <li class="box" routerLink="/about/resume">
+            <li class="box" routerLink="/about/resume" (click)="resumeBtn()" >
                 <div class="box-cont">
                     <div class="bg"><img src="../../img/book2.png" alt="自傳"></div>
                     <h6>
@@ -12,7 +12,7 @@
                 </div>
                 
             </li>
-            <li class="box" routerLink="/about/experience">
+            <li class="box" routerLink="/about/experience" (click)="experienceBtn()">
                 <div class="box-cont">
                     <div class="bg"><img src="img/bottle.png" alt="經歷"></div>
                     <h6>
@@ -22,7 +22,7 @@
                     <p>業務 / 設計 / 程式</p>
                 </div>
             </li>
-            <li class="box" [routerLink]="['/about/hobbies']">
+            <li class="box" [routerLink]="['/about/hobbies']" (click)="hobbiesBtn()">
                 <div class="box-cont">
                    <div class="bg"><img src="../../img/hobbies.png" alt="不務正業"></div>
                     <h6>

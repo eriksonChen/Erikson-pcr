@@ -71,5 +71,7 @@ export class HobbiesTypeComponent implements OnInit {
           TweenMax.to('.pop-cont', 1, {alpha:1, rotationX:0, top:'50%', ease:Expo.easeOut});
         });
       }
+
+      gaclick('btn '+ p.title);
   	}
 }
