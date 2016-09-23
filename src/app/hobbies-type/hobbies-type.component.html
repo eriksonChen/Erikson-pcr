@@ -4,7 +4,7 @@
         <!-- <h3 class="subtitle"></h3> -->
     </div>
     <div class="line"></div>
-    <div class="hob-cont">
+    <div class="hob-cont" *ngIf="banner">
         <app-hobbies-menu></app-hobbies-menu>
         <div class="banner intro">
             <div class="pic">
@@ -18,7 +18,7 @@
         </div>
         <h3 class="title_m">{{banner.name}}</h3>
         <!-- end .banner photo -->
-        <div class="items">
+        <div class="items" *ngIf="items">
             <div class="item" *ngFor="let item of items" (click)='pop(item)'>
                 <div class="item-pic">
                     <img class='lazy' [attr.data-original]="item.pic">
@@ -37,5 +37,5 @@
     <!-- end .hob-cont -->
 </div>
 
-<app-popup [popCont]='pitem'></app-popup>
+<app-popup [popCont]='pitem' *ngIf="pitem"></app-popup>
 

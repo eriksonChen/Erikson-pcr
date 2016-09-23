@@ -1,42 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Request } from '@angular/http';
+import { AboutService } from '../about.service';
 
 @Component({
 	templateUrl: 'work.component.html',
-	styleUrls: ['../../sass/work.scss']
+	styleUrls: ['../../sass/work.scss'],
+	providers: [AboutService]
 })
 export class WorkComponent implements OnInit {
 	works: any;
-	work = {};
+	work: any[];
 	pop = $('.pop-cont');
 
-	constructor(private http: Http) { }
+	constructor(private aboutService: AboutService) {
+		aboutService.getWork().subscribe(res => {
+			this.works = res.data;
+			this.work = res.data[0];
+			setTimeout(() => {
+				$('.item').css('display', 'block');
+				$('.item').each((i, ele) => {
+					TweenMax.from(ele, 0.7, { delay: (i + 1) * 0.2, alpha: 0, y: 50, ease: Back.easeOut });
+				});
+				this.onResize();
+				$('img.lazy').lazyload({
+					effect: "fadeIn"
+				});
+			}, 10)
+		});
+	}
 
 	ngOnInit() {
 		$('.cont-title').css('display', 'none').delay(200).fadeIn('slow');
-		this.http.get('../../api/work.json')
-			.subscribe(res => {
-				this.works = res.json().data;
-				setTimeout(() => {
-					$('.item').css('display', 'block');
-					$('.item').each((i, ele) => {
-						TweenMax.from(ele, 0.7, { delay: (i + 1) * 0.2, alpha: 0, y: 50, ease: Back.easeOut });
-					});
-					this.onResize();
-					$('img.lazy').lazyload({
-						effect: "fadeIn"
-					});
-				}, 1)
-			})
 		window.scrollTo(0, 0);
-		TweenMax.set('.pop-cont', { transformPerspective: 3000 });
 		gapage('work');
 	}
 
 	onUrl(url) {
 		window.open(url);
 	}
-
 
 	onResize() {
 		let pw = Math.floor($('.pic').eq(0).width());
@@ -46,6 +47,7 @@ export class WorkComponent implements OnInit {
 
 	onPopup(work) {
 		this.work = work;
+		TweenMax.set('.pop-cont', { transformPerspective: 3000 });
 		if ($('.btn-cont').css('display') === 'none') { //手機動態
 			TweenMax.set('.pop-cont', { y: '-50%', x: '50%' });
 			$('.popup').fadeIn('fast', () => {

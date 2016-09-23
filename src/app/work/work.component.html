@@ -3,7 +3,7 @@
         <h1 class="title">WORK</h1>
     </div>
     <div class="line"></div>
-    <div class="items">
+    <div class="items" *ngIf="works">
         <div class="item" *ngFor="let work of works">
             <div class="pic">
                 <img class="lazy" [attr.data-original]='work.pic_s' [alt]="work.title">
@@ -26,34 +26,33 @@
                 <div class="button" (click)="onUrl(work.href)" *ngIf="work.href">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
             </div>
         </div>
-    <!-- end .items -->
-</div>
-<!-- end .wrap -->
-<div class="popup">
-    <div class="close" (click)="onPopClose()"><img width="38" height="38" src="../../asset/svg/close3.svg" alt=""></div>
-    <div class="pop-cont">
-        <div class="close close2" (click)="onPopClose()"></div>
-        <div class="pop-pic"><img [src]="work.pic" alt=""></div>
-        <div class="pop-des">
-            <div class="title">
-                <h3>{{work.brands}} <span class="txt-line"> | </span> <span>{{work.title}}</span></h3>
-            </div>
-            <div class="red-line"></div>
-            <div class="time">
-                <div class="small">TIME：</div>
-                <h5>{{work.date}}</h5>
-            </div>
-            <div class="des">
-                <div class="small">DESCRIPTION：</div>
-                <p [innerHTML]="work.des"></p>
-                <p class="skill">{{work.skill}}</p>   
-            </div>
-        </div>
-        <div class="waves-effect waves-light btn popbtn" (click)="onUrl(work.href)" *ngIf="work.href">
-            Launch Project<i class="fa fa-link" aria-hidden="true"></i>
-        </div>
+        <!-- end .items -->
     </div>
-    <div class="pop-bg" (click)="onPopClose()"></div>
-</div>
-<!-- end .popup -->
-
+    <!-- end .wrap -->
+    <div class="popup" *ngIf="work">
+        <div class="close" (click)="onPopClose()"><img width="38" height="38" src="../../asset/svg/close3.svg" alt=""></div>
+        <div class="pop-cont">
+            <div class="close close2" (click)="onPopClose()"></div>
+            <div class="pop-pic"><img [src]="work.pic" alt=""></div>
+            <div class="pop-des">
+                <div class="title">
+                    <h3>{{work.brands}} <span class="txt-line"> | </span> <span>{{work.title}}</span></h3>
+                </div>
+                <div class="red-line"></div>
+                <div class="time">
+                    <div class="small">TIME：</div>
+                    <h5>{{work.date}}</h5>
+                </div>
+                <div class="des">
+                    <div class="small">DESCRIPTION：</div>
+                    <p [innerHTML]="work.des"></p>
+                    <p class="skill">{{work.skill}}</p>
+                </div>
+            </div>
+            <div class="waves-effect waves-light btn popbtn" (click)="onUrl(work.href)" *ngIf="work.href">
+                Launch Project<i class="fa fa-link" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="pop-bg" (click)="onPopClose()"></div>
+    </div>
+    <!-- end .popup -->
