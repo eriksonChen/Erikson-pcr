@@ -43,7 +43,6 @@ export class ContactComponent implements OnInit {
     // console.log($('#contact-form').serialize());
 
     this.http.post('http://formspree.io/botan3951@gmail.com', data, { headers: headers })
-      // .map((res:Response) => res.json())
       .subscribe(
       err => this.logError(err),
       () => this.clearForm()
@@ -57,9 +56,7 @@ export class ContactComponent implements OnInit {
 
   clearForm() {
     alert('寄送成功！');
-
     this.isClick = false;
-
     this.form = {
       name: '',
       _subject: '',
@@ -68,5 +65,4 @@ export class ContactComponent implements OnInit {
       _next: 'http://e3pcr.com'
     };
   }
-
 }

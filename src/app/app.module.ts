@@ -17,6 +17,11 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { ContactComponent } from './contact/contact.component';
+import { MdButtonModule } from '@angular2-material/button';
+import { MdCardModule } from '@angular2-material/card';
+import { MdCoreModule } from '@angular2-material/core';
+import { MdIconModule } from '@angular2-material/icon';
+import { MdInputModule } from '@angular2-material/input';
 
 @NgModule({
   declarations: [
@@ -31,13 +36,19 @@ import { ContactComponent } from './contact/contact.component';
     HobbiesTypeComponent,
     HeaderComponent,
     WorkComponent,
-    AboutHomeComponent, ContactComponent
+    AboutHomeComponent, 
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
-    routing
+    routing,
+    MdCoreModule.forRoot(),
+    MdButtonModule.forRoot(),
+    MdCardModule.forRoot(),
+    MdIconModule.forRoot(),
+    MdInputModule.forRoot()
   ],
   providers: [appRoutingProviders, HTTP_PROVIDERS],
   entryComponents: [AppComponent],

@@ -1,6 +1,7 @@
 {
   "globalDependencies": {
-    "jquery": "registry:dt/jquery#1.10.0+20160704162008"
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+    "hammerjs": "registry:dt/hammerjs#2.0.4+20160417130828"
   },
   "dependencies": {
     "debug": "registry:npm/debug#2.0.0+20160723033700"
