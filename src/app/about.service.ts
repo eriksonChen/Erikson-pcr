@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AboutService {
+	baseUrl: string;
 
 	//設定要傳遞資料的物件設定
 	private showBar = new Subject<boolean>();
@@ -15,25 +16,24 @@ export class AboutService {
 
 	constructor(private http: Http) {
 		// this.showBar=true;
+		this.baseUrl = './assets/api/';
 	}
 
 	//讀取hobbies資料
 	getData(mytype) {
-		return this.http.get('./assets/api/' + mytype + '.json').map(res => res.json());
+		return this.http.get(`${this.baseUrl}${mytype}.json`).map(res => res.json());
 	}
 	//讀取作品資料
 	getWork() {
-		return this.http.get('./assets/api/work.json').map(res => res.json());
+		return this.http.get(`${this.baseUrl}work.json`).map(res => res.json());
 	}
-
 	//讀取Experience
-	getExperience(){
-		return this.http.get('./assets/api/about.json').map(res => res.json());
+	getExperience() {
+		return this.http.get(`${this.baseUrl}work.json`).map(res => res.json());
 	}
 
 	changeBar(key: boolean) {
 		this.showBar.next(key);
-		// console.log(this.showBar);
 	}
 
 	changeName(er: string) {
