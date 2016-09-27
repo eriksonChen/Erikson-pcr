@@ -1,9 +1,12 @@
-# Erikson 個人網站
+# Erikson 個人網站 - 攝影。創作。記錄
 ![author](https://img.shields.io/badge/front--end-Erikson-blue.svg)
 
 ![author](website.JPG)
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
+這個專案使用 [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
+
+## 正式站網址
+[http://e3pcr.com](http://e3pcr.com)
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
