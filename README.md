@@ -1,4 +1,7 @@
-# WebsiteEr
+# Erikson 個人網站
+![author](https://img.shields.io/badge/front--end-Erikson-blue.svg)
+
+![author](website.JPG)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
 
