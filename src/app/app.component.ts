@@ -12,8 +12,7 @@ import{ HeaderComponent } from './header/';
 	<router-outlet></router-outlet>
   `,
   styleUrls: ['../sass/style.scss'],
-  encapsulation: ViewEncapsulation.None,
-  directives: [HeaderComponent]
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit{
   constructor() { }

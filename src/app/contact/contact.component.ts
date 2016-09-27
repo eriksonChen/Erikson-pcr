@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
-import { FormGroup, FormControl, FormBuilder, REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 
 @Component({
   // selector: 'app-contact',
   templateUrl: 'contact.component.html',
-  styleUrls: ['../../sass/contact.scss'],
-  directives: [REACTIVE_FORM_DIRECTIVES]
+  styleUrls: ['../../sass/contact.scss']
 })
 export class ContactComponent implements OnInit {
 

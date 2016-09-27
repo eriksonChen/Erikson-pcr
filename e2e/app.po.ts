@@ -1,4 +1,6 @@
-export class EriksonWebPage {
+import { browser, element, by } from 'protractor/globals';
+
+export class WebsiteErPage {
   navigateTo() {
     return browser.get('/');
   }

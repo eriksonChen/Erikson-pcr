@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { HobbiesMenuComponent } from '../hobbies-menu/';
 import { ActivatedRoute } from '@angular/router';
-import { PopupComponent } from '../popup/';
 import { AboutService } from '../about.service';
 import { Item } from '../item';
 
 @Component({
   templateUrl: 'hobbies-type.component.html',
-  styleUrls: ['../../sass/hobbies.scss'],
-  directives: [HobbiesMenuComponent, PopupComponent],
-  providers: [AboutService]
+  styleUrls: ['../../sass/hobbies.scss']
 })
 export class HobbiesTypeComponent implements OnInit {
   banner: any[];
@@ -39,7 +35,8 @@ export class HobbiesTypeComponent implements OnInit {
       }, 100);
 
       gapage(this.banner['name']);
-    })
+    },
+    error => console.log('Error fetching data'));
 
   }
 

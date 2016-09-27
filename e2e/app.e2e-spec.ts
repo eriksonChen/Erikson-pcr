@@ -1,10 +1,10 @@
-import { EriksonWebPage } from './app.po';
+import { WebsiteErPage } from './app.po';
 
-describe('erikson-web App', function() {
-  let page: EriksonWebPage;
+describe('website-er App', function() {
+  let page: WebsiteErPage;
 
   beforeEach(() => {
-    page = new EriksonWebPage();
+    page = new WebsiteErPage();
   });
 
   it('should display message saying app works', () => {

@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ApplicationRef} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routes';
-import { Http, HTTP_PROVIDERS }from '@angular/http';
 import { PopupComponent } from './popup/popup.component';
 import { HobbiesMenuComponent } from './hobbies-menu/hobbies-menu.component';
 import { HobbiesTypeComponent } from './hobbies-type/hobbies-type.component';
@@ -22,6 +22,7 @@ import { MdCardModule } from '@angular2-material/card';
 import { MdCoreModule } from '@angular2-material/core';
 import { MdIconModule } from '@angular2-material/icon';
 import { MdInputModule } from '@angular2-material/input';
+import { AboutService } from './about.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MdInputModule } from '@angular2-material/input';
     BrowserModule,
     CommonModule,
     FormsModule,
+    HttpModule,
     routing,
     MdCoreModule.forRoot(),
     MdButtonModule.forRoot(),
@@ -50,9 +52,10 @@ import { MdInputModule } from '@angular2-material/input';
     MdIconModule.forRoot(),
     MdInputModule.forRoot()
   ],
-  providers: [appRoutingProviders, HTTP_PROVIDERS],
+  providers: [appRoutingProviders, AboutService],
   entryComponents: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
 

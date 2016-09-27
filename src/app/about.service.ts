@@ -19,13 +19,17 @@ export class AboutService {
 
 	//讀取hobbies資料
 	getData(mytype) {
-		return this.http.get('./api/' + mytype + '.json').map(res => res.json());
+		return this.http.get('./assets/api/' + mytype + '.json').map(res => res.json());
 	}
 	//讀取作品資料
 	getWork() {
-		return this.http.get('./api/work.json').map(res => res.json());
+		return this.http.get('./assets/api/work.json').map(res => res.json());
 	}
 
+	//讀取Experience
+	getExperience(){
+		return this.http.get('./assets/api/about.json').map(res => res.json());
+	}
 
 	changeBar(key: boolean) {
 		this.showBar.next(key);
