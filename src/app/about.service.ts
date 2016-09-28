@@ -32,7 +32,7 @@ export class AboutService {
 	}
 	//讀取Experience
 	getExperience() {
-		return this.http.get(`${this.baseUrl}work.json`).map(res => res.json());
+		return this.http.get(`${this.baseUrl}about.json`).map(res => res.json());
 	}
 
 	changeBar(key: boolean) {
