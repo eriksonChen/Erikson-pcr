@@ -13,7 +13,7 @@ export class HobbiesTypeComponent implements OnInit {
   pitem: any[];
   mytype = "";
 
-  constructor( private route: ActivatedRoute, private aboutService: AboutService) {
+  constructor(private route: ActivatedRoute, private aboutService: AboutService) {
     //component之間的資料傳遞方法*********************
 
     // this.aboutService.changeBar(false);
@@ -22,7 +22,6 @@ export class HobbiesTypeComponent implements OnInit {
     // })
 
     this.mytype = this.route.snapshot.data['item'];
-
     aboutService.getData(this.mytype).subscribe(res => {
       this.items = res.data;
       this.banner = res.banner;
@@ -36,13 +35,15 @@ export class HobbiesTypeComponent implements OnInit {
 
       gapage(this.banner['name']);
     },
-    error => console.log('Error fetching data'));
+      error => console.log('Error fetching data')
+    );
 
   }
 
   ngOnInit() {
     $('.wrap').css('display', 'none').delay(100).fadeIn('slow');
     window.scrollTo(0, 0);
+    // this.aboutService.changeName(this.mytype);
   }
 
   pop(p) {

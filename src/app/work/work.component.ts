@@ -4,8 +4,7 @@ import { AboutService } from '../about.service';
 
 @Component({
 	templateUrl: 'work.component.html',
-	styleUrls: ['../../sass/work.scss'],
-	providers: [AboutService]
+	styleUrls: ['../../sass/work.scss']
 })
 export class WorkComponent implements OnInit {
 	works: any;

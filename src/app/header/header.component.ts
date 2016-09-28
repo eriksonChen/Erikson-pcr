@@ -1,20 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-header',
     templateUrl: 'header.component.html'
 })
 export class HeaderComponent implements OnInit {
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router
-    ) { }
-
     isopen: boolean = false;
-
+    constructor() { }
     ngOnInit() {
-
         $('img.svg').each(function () {
             var $img = $(this);
             var imgID = $img.attr('id');
@@ -62,11 +55,6 @@ export class HeaderComponent implements OnInit {
             gaclick('hamburger open');
         }
 
-    }
-
-    isSelected(state: String) {
-        var st = this.router.url.indexOf(state + "");
-        return st != -1;
     }
 
     onLogo() {

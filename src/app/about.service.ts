@@ -6,6 +6,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AboutService {
 	baseUrl: string;
+	myNum:number=1;
+	str:string="er";
 
 	//設定要傳遞資料的物件設定
 	private showBar = new Subject<boolean>();
@@ -13,6 +15,7 @@ export class AboutService {
 
 	private erikson = new Subject<string>();
 	missionErikson$ = this.erikson.asObservable();
+
 
 	constructor(private http: Http) {
 		// this.showBar=true;
@@ -42,6 +45,11 @@ export class AboutService {
 
 	getBar() {
 		return this.showBar;
+	}
+
+	changeNum(){
+		this.myNum+=1;
+		console.log(this.myNum);
 	}
 
 }
