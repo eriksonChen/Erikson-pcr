@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import{ HeaderComponent } from './header/';
 
 @Component({
   selector: 'app-root',
