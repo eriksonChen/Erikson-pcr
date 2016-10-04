@@ -43,9 +43,8 @@
         &:hover {
             .start{
                 @include ease(0.25s);
-                // background-color: $textGray;
-                background-color: $darkRed;
-                color: #fff;
+                background-color:inherit;
+                color: $darkRed;
             }
             
         }
@@ -73,9 +72,9 @@
             font-size: 1.125rem;
             @include rounded(2px);
             margin: 2rem auto;
-            
+            background-color: $darkRed;
             border: 1px solid $darkRed;
-            color: $darkRed;
+            color: #fff;
             cursor: pointer;
             display: none;
 
