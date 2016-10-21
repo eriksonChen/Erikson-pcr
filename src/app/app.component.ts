@@ -17,8 +17,10 @@ export class AppComponent implements OnInit {
   constructor() { }
   ngOnInit() {
     gapage('erikson_index');
-    if (this.paVaule('p') == '4') {
-      gaclick('--104--');
+    if (this.paVaule('p') != '') {
+      var page = this.paVaule('p');
+      gaclick(`--${page}--`);
+      // console.log(`--${page}--`);
     }
   }
 
