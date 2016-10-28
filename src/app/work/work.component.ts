@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Http, Request } from '@angular/http';
 import { AboutService } from '../about.service';
 
@@ -6,13 +7,14 @@ import { AboutService } from '../about.service';
 	templateUrl: 'work.component.html',
 	styleUrls: ['../../sass/work.scss']
 })
-export class WorkComponent implements OnInit {
+export class WorkComponent implements OnInit, OnDestroy {
 	works: any;
 	work: any[];
 	pop = $('.pop-cont');
+	subs:Subscription;
 
 	constructor(private aboutService: AboutService) {
-		aboutService.getWork().subscribe(res => {
+		this.subs = aboutService.getWork().subscribe(res => {
 			this.works = res.data;
 			this.work = res.data[0];
 			setTimeout(() => {
@@ -66,6 +68,10 @@ export class WorkComponent implements OnInit {
 
 	onPopClose() {
 		$('.popup').fadeOut();
+	}
+
+	ngOnDestroy(){
+		this.subs.unsubscribe();
 	}
 
 }

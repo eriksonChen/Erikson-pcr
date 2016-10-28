@@ -1,3 +1,4 @@
+import { Subscription } from 'rxjs/Subscription';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Http, Request } from '@angular/http';
 import { AboutService } from '../about.service';
@@ -11,6 +12,8 @@ import 'rxjs/add/operator/map';
 export class ExperienceComponent implements OnInit, OnDestroy {
 
   experience: any[];
+  subs:Subscription;
+
 
   constructor(private aboutService: AboutService) {
 
@@ -18,7 +21,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     $('.wrap').css('display', 'none').delay(200).fadeIn('slow');
-    this.aboutService.getExperience().subscribe(res => {
+    this.subs = this.aboutService.getExperience().subscribe(res => {
       this.experience = res.experience;
       this.experience.forEach((val, key) => {
         val.dist = key % 2 == 0 ? 'left' : 'right';
@@ -42,6 +45,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    this.subs.unsubscribe();
   }
 
 }

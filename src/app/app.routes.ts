@@ -1,6 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-
-import { HomeComponent } from './home/';
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/';
 import { AboutHomeComponent } from './about-home/about-home.component';
@@ -38,6 +37,9 @@ const appRoutes: Routes = [
   },{
     path: 'contact',
     component: ContactComponent
+  },{
+    path: '**',
+    component: HomeComponent
   }
 
 ];

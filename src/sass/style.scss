@@ -98,7 +98,7 @@ header {
     nav {
         max-width: 1280px;
         height: 3.75rem;
-        padding: 0 20px;
+        padding: 0 30px;
         position: relative;
         display: block;
         margin: 0 auto;
@@ -106,23 +106,25 @@ header {
         ul.menu {
             display: inline-block;
             position: relative;
-            line-height: 30px;
-            padding: 15px 0;
+            line-height: 56px;
+            padding: 2px 0;
             li {
                 font-family: Helvetica, '微軟正黑體', Arial;
                 float: left;
-                font-weight: bold;
-                width: 120px;
+                font-weight: 300;
+                width: 130px;
+                padding: 0 15px;
                 text-align: center;
                 font-size: 0.875rem;
                 letter-spacing: 1px;
-                border-left: 1px solid $lightGray;
+                // border-left: 1px solid $lightGray;
                 @include ease(0.25s);
                 :hover {
                     color: $lightRed;
                 }
                 a.foucs {
                     color: $darkRed;
+                    border-bottom: 2px solid #933;
                 }
             }
         }

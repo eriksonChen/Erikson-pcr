@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AboutService } from '../about.service';
 import { Item } from '../item';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   templateUrl: 'hobbies-type.component.html',
   styleUrls: ['../../sass/hobbies.scss']
 })
-export class HobbiesTypeComponent implements OnInit {
+export class HobbiesTypeComponent implements OnInit,OnDestroy {
   banner: any[];
   items: Item[];
   pitem: any[];
   mytype = "";
+  subs:Subscription;
 
   constructor(private route: ActivatedRoute, private aboutService: AboutService) {
     //component之間的資料傳遞方法*********************
@@ -22,7 +24,7 @@ export class HobbiesTypeComponent implements OnInit {
     // })
 
     this.mytype = this.route.snapshot.data['item'];
-    aboutService.getData(this.mytype).subscribe(res => {
+    this.subs = aboutService.getData(this.mytype).subscribe(res => {
       this.items = res.data;
       this.banner = res.banner;
       setTimeout(() => {
@@ -44,6 +46,10 @@ export class HobbiesTypeComponent implements OnInit {
     $('.wrap').css('display', 'none').delay(100).fadeIn('slow');
     window.scrollTo(0, 0);
     // this.aboutService.changeName(this.mytype);
+  }
+
+  ngOnDestroy(){
+    this.subs.unsubscribe();
   }
 
   pop(p) {
