@@ -6,7 +6,7 @@
 // work.css
 .wrap {
     @media #{$sml} {
-        padding: 4.625rem 0 0.875rem;
+        padding: 4.625rem 1rem 0.875rem;
     }
     .line {
         margin-top: 0;
@@ -17,13 +17,14 @@
     .items {
         width: 100%;
         position: relative;
-        margin: 20px 0 2.5rem 0;
+        margin: 2.5rem 0 2.5rem 0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         @media #{$sml} {
             margin-bottom: 0;
+            margin-top: 1rem;
         }
         .item {
             position: relative;
@@ -52,7 +53,7 @@
                 border: 0;
                 border-bottom: 1px dashed $textGray;
                 padding-bottom: 1rem;
-                margin: 1rem 0.5rem;
+                margin: 1rem auto;
             }
             .out-btn {
                 display: none;

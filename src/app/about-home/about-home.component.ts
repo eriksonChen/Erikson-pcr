@@ -4,7 +4,7 @@ import { AboutService } from '../about.service';
 @Component({
   // selector: 'app-about-home',
   templateUrl: 'about-home.component.html',
-  styleUrls: ['../../sass/about.scss']
+  styleUrls: ['../../assets/sass/about.scss']
 })
 export class AboutHomeComponent implements OnInit {
 

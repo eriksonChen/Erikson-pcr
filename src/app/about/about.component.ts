@@ -4,8 +4,7 @@ import { AboutService } from '../about.service';
 
 @Component({
 	// selector: 'app-about',
-	templateUrl: `<router-outlet></router-outlet>`,
-	// encapsulation: ViewEncapsulation.None
+	template: `<router-outlet></router-outlet>`
 })
 export class AboutComponent implements OnInit, OnDestroy {
 

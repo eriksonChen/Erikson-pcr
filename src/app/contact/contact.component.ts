@@ -6,21 +6,22 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 @Component({
   // selector: 'app-contact',
   templateUrl: 'contact.component.html',
-  styleUrls: ['../../sass/contact.scss']
+  styleUrls: ['../../assets/sass/contact.scss']
 })
 export class ContactComponent implements OnInit {
 
-  form = {};
+  // form = {};
   isClick = false;
+  form = {
+    name: '',
+    _subject: '',
+    email: '',
+    Message: '',
+    _next: 'http://e3pcr.com'
+  }
 
   constructor(private http: Http) {
-    this.form = {
-      name: '',
-      _subject: '',
-      email: '',
-      Message: '',
-      _next: 'http://e3pcr.com'
-    }
+    
   }
 
   ngOnInit() {
@@ -46,11 +47,11 @@ export class ContactComponent implements OnInit {
       err => this.logError(err),
       () => this.clearForm()
       );
-
   }
 
   logError(err) {
-    console.error('There was an error: ' + err);
+    // console.error('There was an error: ' + err);
+    this.clearForm();
   }
 
   clearForm() {

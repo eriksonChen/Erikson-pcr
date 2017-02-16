@@ -1,8 +1,9 @@
 <div class="wrap" (window:resize)="onResize($event)">
     <div class="cont-title">
         <h1 class="title">WORK</h1>
+        <h5>作品集</h5>
     </div>
-    <div class="line"></div>
+    <!--<div class="line"></div>-->
     <div class="items" *ngIf="works">
         <div class="item" *ngFor="let work of works">
             <div class="pic">

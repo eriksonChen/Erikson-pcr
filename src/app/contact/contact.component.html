@@ -2,11 +2,11 @@
     <div class="cont-title">
         <h1 class="title">CONTACT</h1>
     </div>
-    <div class="line"></div>
+    <!--<div class="line"></div>-->
     <div class="form-cont">
         <h4 class="thank">感謝您，若有任何興趣請留下您的聯絡方式，我會儘快與您聯絡。</h4>
         <div class="row cont">
-            <form id="contact-form" class="col s12" action="//formspree.io/botan3951@gmail.com" method="POST" (ngSubmit)="onSubmit()">
+            <form id="contact-form" class="col s12" action="http://formspree.io/botan3951@gmail.com" method="POST" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="input-field col m5 s12">
                         <input id="name" type="text" [(ngModel)]='form.name' name="name" class="validate" required>
@@ -30,7 +30,7 @@
                         <label for="textarea">訊息</label>
                     </div>
                 </div>
-                <input type="hidden" name="_next" [(ngModel)]='form._next' value="https://www.google.com.tw/" />
+                <input type="hidden" name="_next" [(ngModel)]='form._next' value="" />
                 <button class="btn waves-effect waves-light submitBtn" [class.isClick]="isClick" type="submit">Submit</button>
                 <a href="javascript:;" class="btn disabled" [class.isClick]="!isClick">上傳中</a>
             </form>

@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   templateUrl: 'hobbies-type.component.html',
-  styleUrls: ['../../sass/hobbies.scss']
+  styleUrls: ['../../assets/sass/hobbies.scss']
 })
 export class HobbiesTypeComponent implements OnInit,OnDestroy {
   banner: any[];

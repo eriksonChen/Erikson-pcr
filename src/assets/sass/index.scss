@@ -14,10 +14,12 @@
         position: absolute;
     }
     .bgimg {
-        top: 52%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 450px;
         img {
+            width: 100%;
             position: relative;
         }
         @media #{$sml} {
@@ -37,9 +39,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: white;
+
+        background-color: rgba(255, 255, 255, 0.9);
         cursor: pointer;
-        @include rounded(2px);
+        @include rounded(5px);
         &:hover {
             .start{
                 @include ease(0.25s);
@@ -71,7 +74,7 @@
             text-align: center;
             font-size: 1.125rem;
             @include rounded(2px);
-            margin: 2rem auto;
+            margin: 1rem auto;
             background-color: $darkRed;
             border: 1px solid $darkRed;
             color: #fff;
@@ -81,7 +84,7 @@
         }
         @media #{$sml} {
             width: 95%;
-            top: 85%;
+            top: 82%;
             height: 120px;
             .box-title,
             .box-name {

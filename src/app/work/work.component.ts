@@ -5,7 +5,7 @@ import { AboutService } from '../about.service';
 
 @Component({
 	templateUrl: 'work.component.html',
-	styleUrls: ['../../sass/work.scss']
+	styleUrls: ['../../assets/sass/work.scss']
 })
 export class WorkComponent implements OnInit, OnDestroy {
 	works: any;

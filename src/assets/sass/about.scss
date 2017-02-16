@@ -81,13 +81,16 @@
                 line-height: 1.5;
                 letter-spacing: 0;
                 display: block;
+                color: #000;
+                font-size: 1.5rem;
+                font-weight: bold;
                 @media #{$sml} {
                     font-size: 1.5rem;
                 }
                 span {
                     display: block;
-                    font-size: 1rem;
-                    font-weight: 500;
+                    font-size: 1.25rem;
+                    font-weight: 700;
                     @media #{$sml} {
                         font-size: 1.5rem;
                     }

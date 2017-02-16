@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-experience',
   templateUrl: 'experience.component.html',
-  styleUrls: ['../../sass/experience.scss']
+  styleUrls: ['../../assets/sass/experience.scss']
 })
 export class ExperienceComponent implements OnInit, OnDestroy {
 

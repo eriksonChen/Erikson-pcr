@@ -16,7 +16,7 @@
     .title {
         color: $lightGray;
         font-family: Helvetica;
-        font-weight: 300;
+        font-weight: bold;
         font-size: 3rem;
         letter-spacing: 0;
     }
@@ -27,19 +27,26 @@
         color: $textDark;
     }
     @media #{$sml} {
-        text-align: center;
-        margin-bottom: 0.5rem;
-        line-height: 1;
+        text-align: left;
+        // margin-bottom: 0.5rem;
+        // margin-top: 1rem;
+        width: 100%;
+        border-bottom: 1px solid $textGray;
+        padding-bottom: 0.875rem;
         .subtitle {
             margin-top: 0;
-            font-size: 2rem;
+            margin-left: 0;
+            font-size: 1.75rem;
             display: block;
         }
         .title {
             font-size: 2.5rem;
-            
-            // font-weight: 300;
+            color: black;
+        }
+        h5{
+            padding-bottom: 0.25rem;
             color: $textGray;
+            // font-size: 0.875rem;
         }
     }
 }
@@ -52,6 +59,7 @@
     @media #{$sml} {
         width: 35%;
         border-color: $darkRed;
+        display: none;
     }
 }
 
@@ -69,5 +77,7 @@
     }
     @media #{$sml} {
         right: 1rem;
+        margin-top: 0;
+        top: 4rem;
     }
 }

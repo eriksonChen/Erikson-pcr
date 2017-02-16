@@ -5,7 +5,7 @@
 // hobbies.css
 .wrap {
     @media #{$sml} {
-        padding: 4.625rem 0 0.875rem;
+        padding: 4.625rem 1rem 0.875rem;
     }
     .hob-cont {
         margin-top: 1.875rem;
@@ -30,7 +30,7 @@
                 width: 95%;
             }
             @media #{$sml} {
-                // width: 95%;
+                width: 100%;
                 height: auto;
                 background-color: #eee;
                 border: 0;
@@ -172,6 +172,9 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            @media #{$sml}{
+                width: 100%;
+            }
             .item {
                 position: relative;
                 background-color: white;
