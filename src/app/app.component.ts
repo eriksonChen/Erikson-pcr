@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
     if (this.paVaule('p') != '') {
       var page = this.paVaule('p');
       gaclick(`--${page}--`);
-      // console.log(`--${page}--`);
     }
   }
 
