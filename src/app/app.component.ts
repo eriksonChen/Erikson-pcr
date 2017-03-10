@@ -1,17 +1,20 @@
+import { environment } from './../environments/environment';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+// import { environment } from './environment';
 
 @Component({
   selector: 'app-root',
-  
   template: `
 	<app-header></app-header>
 
 	<router-outlet></router-outlet>
-  `,
-  styleUrls: ['../assets/sass/style.scss'],
-  encapsulation: ViewEncapsulation.None
+  `
+  // ,
+  // styleUrls: ['../assets/sass/style.scss'],
+  // encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
+  // myname=environment.myname;
   constructor() { }
   ngOnInit() {
     gapage('erikson_index');

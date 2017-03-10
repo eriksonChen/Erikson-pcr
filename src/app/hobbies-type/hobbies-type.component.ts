@@ -22,9 +22,15 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
     // this.aboutService.missionErikson$.subscribe(res => {
     //   this.myname = res;
     // })
+  }
 
+  ngOnInit() {
+    $('.wrap').css('display', 'none').delay(100).fadeIn('slow');
+    window.scrollTo(0, 0);
+    // this.aboutService.changeName(this.mytype);
+    
     this.mytype = this.route.snapshot.data['item'];
-    this.subs = aboutService.getData(this.mytype).subscribe(res => {
+    this.subs = this.aboutService.getData(this.mytype).subscribe(res => {
       this.items = res.data;
       this.banner = res.banner;
       setTimeout(() => {
@@ -40,12 +46,6 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
       error => console.log('Error fetching data')
     );
 
-  }
-
-  ngOnInit() {
-    $('.wrap').css('display', 'none').delay(100).fadeIn('slow');
-    window.scrollTo(0, 0);
-    // this.aboutService.changeName(this.mytype);
   }
 
   ngOnDestroy(){

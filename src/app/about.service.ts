@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AboutService {
-	baseUrl: string;
+	baseUrl: string = './assets/api/';
 	myNum:number=1;
 	str:string="er";
 
@@ -19,7 +19,6 @@ export class AboutService {
 
 	constructor(private http: Http) {
 		// this.showBar=true;
-		this.baseUrl = './assets/api/';
 	}
 
 	//讀取hobbies資料

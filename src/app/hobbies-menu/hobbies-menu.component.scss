@@ -3,7 +3,7 @@
 .icon-menu {
     position: relative;
     float: right;
-    margin-top: -5rem;
+    margin-top: -0.5rem;
     cursor: pointer;
     img {
         width: 42px;
@@ -17,7 +17,7 @@
         display: none;
     }
     @media #{$sml} {
-        margin: 1.5rem 0 1rem;
+        margin: 0;
         float: none;
         right: 0;
         text-align: center;
