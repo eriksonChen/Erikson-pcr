@@ -8,7 +8,7 @@ import { AboutService } from '../about.service';
 	styleUrls: ['../../assets/sass/work.scss']
 })
 export class WorkComponent implements OnInit, OnDestroy {
-	works: any;
+	works: any[];
 	work: any[];
 	pop = $('.pop-cont');
 	subs:Subscription;
@@ -41,6 +41,7 @@ export class WorkComponent implements OnInit, OnDestroy {
 	}
 
 	onResize() {
+		// console.log('resize');
 		let pw = Math.floor($('.pic').eq(0).width());
 		let ph = Math.floor(pw / 6 * 4) + 1;
 		$('.item .pic').css('height', ph + 'px');

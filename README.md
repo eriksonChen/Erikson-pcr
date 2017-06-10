@@ -3,7 +3,7 @@
 
 ![author](website.JPG)
 
-這個專案使用 [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
+這個專案使用 [angular-cli](https://github.com/angular/angular-cli) version 1.1.0.
 
 ## 正式站網址
 [http://e3pcr.com](http://e3pcr.com)

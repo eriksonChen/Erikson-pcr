@@ -1,14 +1,16 @@
-import { WebsiteErPage } from './app.po';
+import { E3pcrPage } from './app.po';
 
-describe('website-er App', function() {
-  let page: WebsiteErPage;
+describe('e3pcr App', () => {
+  let page: E3pcrPage;
 
   beforeEach(() => {
-    page = new WebsiteErPage();
+    page = new E3pcrPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', done => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    page.getParagraphText()
+      .then(msg => expect(msg).toEqual('Welcome to app!!'))
+      .then(done, done.fail);
   });
 });

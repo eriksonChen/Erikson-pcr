@@ -1,7 +1,6 @@
 @import "media";
 @import 'color';
 @import 'mixin';
-
 .wrap {
     padding: 4.625rem 2rem 0.875rem 2rem;
     @media #{$sml} {
@@ -15,10 +14,10 @@
     position: relative;
     .title {
         color: $lightGray;
-        font-family: Helvetica;
-        font-weight: bold;
+        // font-family: Helvetica;
+        font-weight: 100;
         font-size: 3rem;
-        letter-spacing: 0;
+        letter-spacing: 2px;
     }
     .subtitle {
         // margin-top: -1.5rem;
@@ -43,7 +42,7 @@
             font-size: 2.5rem;
             color: black;
         }
-        h5{
+        h5 {
             padding-bottom: 0.25rem;
             color: $textGray;
             // font-size: 0.875rem;

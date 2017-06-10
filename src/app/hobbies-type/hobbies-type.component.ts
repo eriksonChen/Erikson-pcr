@@ -12,7 +12,6 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
   banner: any[];
   items: Item[];
   pitem: any[];
-  mytype = "";
   subs:Subscription;
 
   constructor(private route: ActivatedRoute, private aboutService: AboutService) {
@@ -27,10 +26,17 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
   ngOnInit() {
     $('.wrap').css('display', 'none').delay(100).fadeIn('slow');
     window.scrollTo(0, 0);
-    // this.aboutService.changeName(this.mytype);
+
+    this.getType(this.route.snapshot.data['item']);
+    // this.route.data.subscribe((res:{item:string}) =>{
+    //   this.getType(res.item);
+    // })
     
-    this.mytype = this.route.snapshot.data['item'];
-    this.subs = this.aboutService.getData(this.mytype).subscribe(res => {
+    // this.aboutService.changeName(this.mytype);
+  }
+
+  getType(type:string){
+    this.subs = this.aboutService.getData(type).subscribe(res => {
       this.items = res.data;
       this.banner = res.banner;
       setTimeout(() => {
@@ -45,7 +51,6 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
     },
       error => console.log('Error fetching data')
     );
-
   }
 
   ngOnDestroy(){

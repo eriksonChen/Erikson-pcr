@@ -8,14 +8,12 @@
 //         padding: 4.625rem 1rem 2rem;
 //     }
 // }
-
 .bio-cont {
     margin-top: 1.875rem;
     padding: 1.25rem 0 0;
     color: $text;
     width: 100%;
     word-wrap: break-word;
-    
     @media #{$sml} {
         padding: 2rem 0 0;
         margin-top: 0;
@@ -41,6 +39,7 @@
         .name {
             margin-left: 1rem;
             line-height: 100px;
+            font-weight: 100;
             // float: left;
         }
         @media #{$sml} {
@@ -65,7 +64,7 @@
         width: 100%;
         padding: 0 1rem;
         color: $textDark;
-        @media #{$med}{
+        @media #{$med} {
             padding: 0;
         }
         a {
@@ -91,6 +90,7 @@
                 letter-spacing: 1px;
                 line-height: 1.5;
                 color: $textDark;
+                font-weight: 100;
             }
             ul {
                 display: flex;
@@ -101,17 +101,16 @@
                     margin: 0 0.8rem 2rem;
                     width: 130px;
                     text-align: center;
-                    h5{
+                    h5 {
                         font-size: 0.875rem;
-                        font-weight: 400;
+                        font-weight: 100;
                     }
-                    
                     img {
                         width: 100px;
                     }
-                     @media #{$med} {
+                    @media #{$med} {
                         margin: 0 0.5rem 2rem;
-                     }
+                    }
                 }
                 .big {
                     margin: 0 2rem 2rem;

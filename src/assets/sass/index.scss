@@ -39,21 +39,19 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         background-color: rgba(255, 255, 255, 0.9);
         cursor: pointer;
         @include rounded(5px);
         &:hover {
-            .start{
+            .start {
                 @include ease(0.25s);
-                background-color:inherit;
+                background-color: inherit;
                 color: $darkRed;
             }
-            
         }
         .box-title {
             margin-top: 1.7rem;
-            font-weight: bold;
+            font-weight: 100;
             // letter-spacing: 1px;
             color: $textDark;
         }
@@ -80,7 +78,6 @@
             color: #fff;
             cursor: pointer;
             display: none;
-
         }
         @media #{$sml} {
             width: 95%;
@@ -93,7 +90,7 @@
             .box-title {
                 margin-top: 1rem;
             }
-            .start{
+            .start {
                 background-color: $darkRed;
                 color: #fff;
             }

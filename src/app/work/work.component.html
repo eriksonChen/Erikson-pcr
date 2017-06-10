@@ -1,9 +1,11 @@
-<div class="wrap" (window:resize)="onResize($event)">
+<!--<div class="wrap">-->
+<div class="wrap" (window:resize)="onResize()">
+
     <div class="cont-title">
         <h1 class="title">WORK</h1>
         <h5>作品集</h5>
     </div>
-    <!--<div class="line"></div>-->
+
     <div class="items" *ngIf="works">
         <div class="item" *ngFor="let work of works">
             <div class="pic">
@@ -27,8 +29,8 @@
                 <div class="button" (click)="onUrl(work.href)" *ngIf="work.href">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
             </div>
         </div>
-        <!-- end .items -->
     </div>
+
     <!-- end .wrap -->
     <div class="popup" *ngIf="work">
         <div class="close" (click)="onPopClose()"><img width="38" height="38" src="../../assets/svg/close3.svg" alt=""></div>
@@ -56,4 +58,5 @@
         </div>
         <div class="pop-bg" (click)="onPopClose()"></div>
     </div>
-    <!-- end .popup -->
+
+</div>

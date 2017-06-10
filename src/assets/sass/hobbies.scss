@@ -7,9 +7,9 @@
     @media #{$sml} {
         padding: 4.625rem 1rem 0.875rem;
     }
-    .cont-title{
-        @media #{$sml}{
-            border:0;
+    .cont-title {
+        @media #{$sml} {
+            border: 0;
         }
     }
     .hob-cont {
@@ -127,7 +127,7 @@
                 }
                 .title {
                     margin-top: 2rem;
-                    font-weight: 600;
+                    font-weight: 100;
                     @media #{$med} {
                         margin-top: 2rem;
                     }
@@ -161,7 +161,7 @@
         .title_m {
             text-align: center;
             line-height: 3;
-            font-weight: bold;
+            font-weight: 100;
             letter-spacing: 3px;
             // margin-top: 2rem;
             display: none;
@@ -177,7 +177,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            @media #{$sml}{
+            @media #{$sml} {
                 width: 100%;
             }
             .item {
@@ -225,14 +225,14 @@
                     padding: 0.7rem;
                     color: $textDark;
                     text-align: justify;
-                    @media #{$sml}{
+                    @media #{$sml} {
                         padding: 1rem;
                     }
                     h5 {
-                        font-weight: 600;
+                        font-weight: normal;
                     }
                     .date {
-                        font-weight: 400;
+                        font-weight: normal;
                         margin-left: 0.5rem;
                         font-size: 12px;
                     }
@@ -251,15 +251,14 @@
                             float: right;
                             display: block;
                             font-size: 12px;
-                            &:hover{
+                            &:hover {
                                 color: $darkRed;
                             }
                             .fa {
                                 margin-left: 5px;
                                 font-size: inherit
                             }
-
-                            @media #{$sml}{
+                            @media #{$sml} {
                                 display: none;
                             }
                         }

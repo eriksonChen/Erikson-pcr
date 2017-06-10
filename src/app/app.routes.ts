@@ -12,11 +12,6 @@ import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'index'
-  },
-  {
     path: 'index',
     component: HomeComponent
   },
@@ -40,6 +35,10 @@ const appRoutes: Routes = [
   }, {
     path: 'contact',
     component: ContactComponent
+  },　{
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/index'
   }, {
     path: '**',
     component: HomeComponent
