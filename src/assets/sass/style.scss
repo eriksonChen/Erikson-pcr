@@ -141,7 +141,6 @@ body {
     text-decoration: none;
 }
 
-@import "materialize";
 @import "typography";
 @import "color";
 @import "mixin";
@@ -332,7 +331,7 @@ header {
             font-size: 1.25rem;
             @include ease();
             @include rounded();
-            // border-bottom: 1px solid $textGray;
+            border: 1px solid $textGray;
         }
     }
     .social {

@@ -4,8 +4,8 @@ import { Http, Request } from '@angular/http';
 import { AboutService } from '../about.service';
 
 @Component({
-	templateUrl: 'work.component.html',
-	styleUrls: ['../../assets/sass/work.scss']
+  templateUrl: 'work.component.html',
+  styleUrls: ['../../assets/sass/work.scss']
 })
 export class WorkComponent implements OnInit, OnDestroy {
 	works: any[];
@@ -24,7 +24,8 @@ export class WorkComponent implements OnInit, OnDestroy {
 				});
 				this.onResize();
 				$('img.lazy').lazyload({
-					effect: "fadeIn"
+					effect: 'fadeIn'
+
 				});
 			}, 10)
 		});
@@ -42,15 +43,15 @@ export class WorkComponent implements OnInit, OnDestroy {
 
 	onResize() {
 		// console.log('resize');
-		let pw = Math.floor($('.pic').eq(0).width());
-		let ph = Math.floor(pw / 6 * 4) + 1;
+		const pw = Math.floor($('.pic').eq(0).width());
+		const ph = Math.floor(pw / 6 * 4) + 1;
 		$('.item .pic').css('height', ph + 'px');
 	}
 
 	onPopup(work) {
 		this.work = work;
 		TweenMax.set('.pop-cont', { transformPerspective: 3000 });
-		if ($('.btn-cont').css('display') === 'none') { //手機動態
+		if ($('.btn-cont').css('display') === 'none') { // 手機動態
 			TweenMax.set('.pop-cont', { y: '-50%', x: '50%' });
 			$('.popup').fadeIn('fast', () => {
 				TweenMax.to('.pop-cont', 0.7, { x: '-50%', ease: Expo.easeInOut });
