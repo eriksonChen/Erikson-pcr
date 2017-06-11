@@ -1,4 +1,3 @@
-@import "materialize";
 @import "color";
 @import "mixin";
 @import "cont-title";
@@ -29,6 +28,8 @@ nav {
         color: $textGray;
         font-size: 1.25rem;
         @media #{$sml} {
+            text-align: left;
+            margin-top: 0;
             width: 100%;
         }
     }

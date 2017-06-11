@@ -141,6 +141,7 @@ body {
     text-decoration: none;
 }
 
+@import "materialize";
 @import "typography";
 @import "color";
 @import "mixin";
@@ -317,17 +318,21 @@ header {
         font-weight: 100;
     }
     .foucs {
-        border-bottom: 1px solid $darkRed;
+        // border-bottom: 1px solid $darkRed;
+        background-color: $textDark;
         a {
-            color: $darkRed;
+            color: #fff;
         }
     }
     ul {
         margin: 3rem 15% 5rem;
         li {
-            line-height: 3.5;
+            line-height: 2.5;
+            margin-bottom: 20px;
             font-size: 1.25rem;
-            border-bottom: 1px solid $textGray;
+            @include ease();
+            @include rounded();
+            // border-bottom: 1px solid $textGray;
         }
     }
     .social {

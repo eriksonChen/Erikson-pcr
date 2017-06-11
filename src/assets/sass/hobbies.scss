@@ -227,6 +227,9 @@
                     text-align: justify;
                     @media #{$sml} {
                         padding: 1rem;
+                        .text {
+                            font-size: 0.875rem;
+                        }
                     }
                     h5 {
                         font-weight: normal;
