@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CustomValidators } from 'ng2-validation';
+import { Subscription } from 'rxjs/Subscription';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -10,18 +12,24 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  // form = {};
   isClick = false;
-  form = {
-    name: '',
-    _subject: '',
-    email: '',
-    Message: '',
-    _next: 'http://e3pcr.com'
-  }
+  sub:Subscription;
+  // form = {
+  //   name: '',
+  //   _subject: '',
+  //   email: '',
+  //   message: '',
+  //   _next: 'http://e3pcr.com'
+  // }
+  form: FormGroup;
 
-  constructor(private http: Http) {
-    
+  constructor(private fb:FormBuilder, private http: Http) {
+    this.form = fb.group({
+        name:["", Validators.required],
+        _subject:["", Validators.required],
+        email:["", [Validators.required , CustomValidators.email]],
+        message:["", Validators.required]
+    })
   }
 
   ngOnInit() {
@@ -31,18 +39,29 @@ export class ContactComponent implements OnInit {
     TweenMax.from('.form-cont', 0.7, { delay: 0.5, alpha: 0, y: 30, ease: Expo.easeOut });
     gapage('contact');
   }
+  get name(){
+    return this.form.get('name');
+  }
+  get email(){
+    return this.form.get('email');
+  }
+  get _subject(){
+    return this.form.get('_subject');
+  }
+  get message(){
+    return this.form.get('message');
+  }
 
   onSubmit() {
+    console.log('send');
     this.isClick = true;
     gaclick('submit');
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    var data = $.param(this.form);
-    // var data = JSON.stringify(this.form);
-    // console.log($('#contact-form').serialize());
+    var data = $.param(this.form.value);
 
-    this.http.post('http://formspree.io/botan3951@gmail.com', data, { headers: headers })
+    this.sub = this.http.post('http://formspree.io/botan3951@gmail.com', data, { headers: headers })
       .subscribe(
       err => this.logError(err),
       () => this.clearForm()
@@ -57,12 +76,8 @@ export class ContactComponent implements OnInit {
   clearForm() {
     alert('寄送成功！');
     this.isClick = false;
-    this.form = {
-      name: '',
-      _subject: '',
-      email: '',
-      Message: '',
-      _next: 'http://e3pcr.com'
-    };
+    this.form.reset();
+    this.sub.unsubscribe();
   }
+
 }
