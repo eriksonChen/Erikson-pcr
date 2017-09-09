@@ -13,7 +13,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 export class ContactComponent implements OnInit {
 
   isClick = false;
-  sub:Subscription;
+  sub: Subscription;
   // form = {
   //   name: '',
   //   _subject: '',
@@ -23,17 +23,17 @@ export class ContactComponent implements OnInit {
   // }
   form: FormGroup;
 
-  constructor(private fb:FormBuilder, private http: Http) {
+  constructor(private fb: FormBuilder, private http: Http) {
     this.form = fb.group({
-        name:["", Validators.required],
-        _subject:["", Validators.required],
-        email:["", [Validators.required , CustomValidators.email]],
-        message:["", Validators.required]
+        name: ['', Validators.required],
+        _subject: ['', Validators.required],
+        email: ['', [Validators.required , CustomValidators.email]],
+        message: ['', Validators.required]
     })
   }
 
   ngOnInit() {
-    $('.hiddendiv').css("display", "none");
+    $('.hiddendiv').css('display', 'none');
 
     $('.wrap').css('display', 'none').delay(200).fadeIn('slow');
     TweenMax.from('.form-cont', 0.7, { delay: 0.5, alpha: 0, y: 30, ease: Expo.easeOut });
@@ -56,10 +56,10 @@ export class ContactComponent implements OnInit {
     console.log('send');
     this.isClick = true;
     gaclick('submit');
-    let headers = new Headers();
+    const headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    var data = $.param(this.form.value);
+    const data = $.param(this.form.value);
 
     this.sub = this.http.post('http://formspree.io/botan3951@gmail.com', data, { headers: headers })
       .subscribe(
