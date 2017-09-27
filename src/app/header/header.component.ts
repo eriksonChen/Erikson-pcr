@@ -5,17 +5,17 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'header.component.html'
 })
 export class HeaderComponent implements OnInit {
-    isopen: boolean = false;
+    isopen = false;
     constructor() { }
     ngOnInit() {
         $('img.svg').each(function () {
-            var $img = $(this);
-            var imgID = $img.attr('id');
-            var imgClass = $img.attr('class');
-            var imgURL = $img.attr('src');
+            const $img = $(this);
+            const imgID = $img.attr('id');
+            const imgClass = $img.attr('class');
+            const imgURL = $img.attr('src');
 
             $.get(imgURL, function (data) {
-                var $svg = $(data).find('svg');
+                let $svg = $(data).find('svg');
                 if (typeof imgID !== 'undefined') {
                     $svg = $svg.attr('id', imgID);
                 }
@@ -63,7 +63,6 @@ export class HeaderComponent implements OnInit {
         gaclick('contact');
     }
 
-    //social
     onFb() {
         window.open('https://www.facebook.com/ChenErikson');
         gaclick('facebook');
