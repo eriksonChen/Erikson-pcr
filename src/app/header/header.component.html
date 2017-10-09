@@ -1,19 +1,19 @@
 <header>
     <nav>
         <a routerLink="/index" (click)='closeMenu(); onLogo();'><img class="logo" src="../../assets/svg/logo.svg" alt="logo"></a>
-        <ul class="menu">
-            <li><a routerLink="/about" routerLinkActive="foucs" (click)="onAbout()">ABOUT</a></li>
-            <li><a routerLink="/work" routerLinkActive="foucs" (click)="onWork()">WORK</a></li>
-            <li><a [routerLink]="['/contact']" routerLinkActive="foucs" (click)="onContact()">CONTACT</a></li>
+        <ul class="menu tabs">
+            <li class="tab"><a routerLink="/about" routerLinkActive="active" (click)="onAbout()">ABOUT</a></li>
+            <li class="tab"><a routerLink="/work" routerLinkActive="active" (click)="onWork()">WORK</a></li>
+            <li class="tab"><a [routerLink]="['/contact']" routerLinkActive="active" (click)="onContact()">CONTACT</a></li>
         </ul>
         <div class="social">
-            <a href="javascript:;" (click)="onFb()">
+            <a class="tooltipped" href="javascript:;" (click)="onFb()" data-position="bottom" data-delay="50" data-tooltip="facebook">
                 <img src="../../assets/svg/facebook.svg" alt="facebook" class="svg">
             </a>
-            <a href="javascript:;" (click)="onIg()">
+            <a class="tooltipped" href="javascript:;" (click)="onIg()" data-position="bottom" data-delay="50" data-tooltip="instagram">
                 <img src="../../assets/svg/instagram.svg" alt="instagram" class="svg">
             </a>
-            <a href="javascript:;" (click)="onFlickr()">
+            <a class="tooltipped" href="javascript:;" (click)="onFlickr()" data-position="bottom" data-delay="50" data-tooltip="Flickr">
                 <img src="../../assets/svg/flickr.svg" alt="flickr" class="svg">
             </a>
         </div>

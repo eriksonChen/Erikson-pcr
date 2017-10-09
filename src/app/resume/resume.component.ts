@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AboutService } from '../about.service';
 @Component({
   templateUrl: 'resume.component.html',
-  styleUrls: ['../../assets/sass/resume.scss']
+  styleUrls: ['resume.scss']
 })
 export class ResumeComponent implements OnInit {
 
-	constructor(private aboutService:AboutService) { 
-  		
+	constructor(private aboutService:AboutService) {
+
   	}
 
   	ngOnInit() {

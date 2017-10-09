@@ -18,6 +18,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutService } from './about.service';
+import { MaterializeModule } from "angular2-materialize";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { AboutService } from './about.service';
     HobbiesTypeComponent,
     HeaderComponent,
     WorkComponent,
-    AboutHomeComponent, 
+    AboutHomeComponent,
     ContactComponent
   ],
   imports: [
@@ -41,7 +42,8 @@ import { AboutService } from './about.service';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterializeModule
   ],
   providers: [AboutService],
   // entryComponents: [AppComponent],

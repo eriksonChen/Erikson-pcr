@@ -1,39 +1,57 @@
-
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-html{
-  // line-height: 1.5;
-
-  @media only screen and (min-width: 0) {
-    font-size: 16px;
-  }
-
-  @media only screen and (min-width: $medium-screen) {
-    font-size: 16px;
-  }
-
-  @media only screen and (min-width: $large-screen) {
-    font-size: 16px;
-  }
-
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  color: $off-black;
-}
-
+// html {
+//     line-height: 1.5;
+//     @media only screen and (min-width: 0) {
+//         font-size: 14px;
+//     }
+//     @media only screen and (min-width: $medium-screen) {
+//         font-size: 14.5px;
+//     }
+//     @media only screen and (min-width: $large-screen) {
+//         font-size: 15px;
+//     }
+//     font-family: "Roboto",
+//     sans-serif;
+//     font-weight: normal;
+//     color: $off-black;
+// }
 // Header Styles
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-
 // Text Styles
-em { font-style: italic; }
-strong { font-weight: 500; }
-small { font-size: 75%; }
-.light { font-weight: 300; }
-.thin { font-weight: 200; }
+em {
+    font-style: italic;
+}
 
+strong,
+.strong {
+    font-weight: 500;
+}
 
-.flow-text{
+small {
+    font-size: 75%;
+}
 
+.light {
+    font-weight: 300;
+}
+
+.thin {
+    font-weight: 200;
+}
+
+.flow-text {
+    font-weight: 300;
+    $i: 0;
+    @while $i <=$intervals {
+        @media only screen and (min-width: 360 + ($i * $interval-size)) {
+            font-size: 1.2rem * (1 + (.02 * $i));
+        }
+        $i: $i+1;
+    }
+    // Handle below 360px screen
+    @media only screen and (max-width: 360px) {
+        font-size: 1.2rem;
+    }
 }

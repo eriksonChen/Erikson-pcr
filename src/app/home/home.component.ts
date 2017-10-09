@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: 'home.component.html',
-  styleUrls: ['../../assets/sass/index.scss']
+  styleUrls: ['index.scss']
 })
 export class HomeComponent implements OnInit {
 

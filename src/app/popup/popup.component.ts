@@ -4,7 +4,7 @@ import { Item } from '../item';
 @Component({
   selector: 'app-popup',
   templateUrl: 'popup.component.html',
-  styleUrls:['../../assets/sass/hobbies-pop.scss']
+  styleUrls:['popup.scss']
 
 })
 export class PopupComponent {
@@ -12,7 +12,7 @@ export class PopupComponent {
   	@Input() popCont:Item;
 
   	constructor() {
-      
+
     }
 
   	closePop(){

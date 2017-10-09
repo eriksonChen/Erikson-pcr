@@ -1,0 +1,273 @@
+@import "../../assets/sass/materialize";
+@import "../../assets/sass/color";
+@import "../../assets/sass/mixin";
+@import "../../assets/sass/cont-title";
+// hobbies.css
+.wrap {
+    @media #{$sml} {
+        padding: 4.625rem 1rem 0.875rem;
+    }
+    .cont-title {
+        @media #{$sml} {
+            border: 0;
+        }
+    }
+    .hob-cont {
+        margin-top: 1.875rem;
+        color: $text;
+        width: 100%;
+        position: relative;
+        @media #{$sml} {
+            height: 100%;
+            margin-top: 0;
+        }
+        .banner {
+            width: 95%;
+            height: 380px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid $lightGray;
+            margin: 0 auto 1rem;
+            background: #ECE9E6;
+            background: -webkit-linear-gradient(to right, #ECE9E6, #FFFFFF);
+            background: linear-gradient(to right, #ECE9E6, #FFFFFF);
+            @media #{$med} {
+                width: 95%;
+            }
+            @media #{$sml} {
+                width: 100%;
+                height: auto;
+                background-color: #eee;
+                border: 0;
+                margin: 12px auto 0;
+                padding-bottom: 2rem;
+                background: #ECE9E6;
+            }
+            &.intro {
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                border-bottom: 1px dashed $textGray;
+                background: inherit;
+                @media #{$sml} {
+                    display: none;
+                }
+            }
+            .pic {
+                position: relative;
+                width: 45%;
+                height: 100%;
+                float: left;
+                @media #{$sml} {
+                    height: 270px;
+                    margin-top: 1rem;
+                }
+                img {
+                    position: absolute;
+                    height: 85%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    @media #{$med} {
+                        width: auto;
+                    }
+                    @media #{$sml} {
+                        height: 80%;
+                    }
+                }
+            }
+            .des {
+                width: 55%;
+                height: 100%;
+                padding: 0 2rem 0 4rem;
+                float: right;
+                line-height: 1.7;
+                color: $textDark;
+                position: relative;
+                @media #{$med} {
+                    padding-left: 2rem;
+                }
+                @media #{$sml} {
+                    padding: 0 1.5rem;
+                    height: 55%;
+                    line-height: 1.5;
+                    p {
+                        text-align: justify;
+                        font-size: 1rem;
+                    }
+                }
+                .text-cont {
+                    font-weight: normal;
+                }
+                .more-button {
+                    position: absolute;
+                    font-size: 12px;
+                    right: 2rem;
+                    bottom: 1.5rem;
+                    @media #{$sml} {
+                        position: relative;
+                        width: 80%;
+                        height: 3rem;
+                        margin: 2rem auto 0;
+                        right: inherit;
+                        bottom: 5%;
+                        line-height: 3rem;
+                        font-size: 1rem;
+                    }
+                    &:hover {
+                        @extend .darken-2;
+                    }
+                    .fa {
+                        margin-left: 10px;
+                        font-size: 12px;
+                        @media #{$sml} {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .title {
+                    margin-top: 2rem;
+                    font-weight: 100;
+                    @media #{$med} {
+                        margin-top: 2rem;
+                    }
+                    @media #{$sml} {
+                        margin-top: 5px;
+                    }
+                }
+                .red-line {
+                    margin: 0 0 1rem;
+                    width: 60px;
+                    height: 1px;
+                    display: block;
+                    border-bottom: 1px solid $darkRed;
+                    @media #{$med} {
+                        margin: 0.5rem 0;
+                    }
+                    @media #{$sml} {
+                        margin: 0.5rem auto 1.5rem;
+                    }
+                }
+            }
+            .pic,
+            .des {
+                @media #{$sml} {
+                    text-align: center;
+                    float: none;
+                    width: 100%;
+                }
+            }
+        }
+        .title_m {
+            text-align: center;
+            line-height: 3;
+            font-weight: 100;
+            letter-spacing: 3px;
+            // margin-top: 2rem;
+            display: none;
+            color: $textDark;
+            @media #{$sml} {
+                display: block;
+            }
+        }
+        .items {
+            width: 95%;
+            position: relative;
+            margin: 0 auto 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @media #{$sml} {
+                width: 100%;
+            }
+            .item {
+                position: relative;
+                background-color: white;
+                overflow: hidden;
+                width: 32.5%;
+                margin-bottom: 0.785rem;
+                border: 1px solid $lightGray;
+                @include rounded(2px);
+                @media #{$med} {
+                    width: 49%;
+                }
+                @media #{$sml} {
+                    width: 100%;
+                    margin: 0 0 4%;
+                    background-color: $superLight;
+                }
+                .item-pic {
+                    position: relative;
+                    height: 144px;
+                    width: 100%;
+                    cursor: pointer;
+                    overflow: hidden;
+                    img {
+                        @include ease;
+                        position: absolute;
+                        width: 101%;
+                        top: 50%;
+                        left: 50%;
+                        margin-right: -50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    &:hover {
+                        img {
+                            width: 110%;
+                            -moz-filter: brightness(1.1);
+                            -webkit-filter: brightness(1.1);
+                            filter: brightness(1.1);
+                        }
+                    }
+                }
+                .item-text {
+                    position: relative;
+                    padding: 0.7rem;
+                    color: $textDark;
+                    text-align: justify;
+                    @media #{$sml} {
+                        padding: 1rem;
+                        .text {
+                            font-size: 0.875rem;
+                        }
+                    }
+                    h5 {
+                        font-weight: normal;
+                    }
+                    .date {
+                        font-weight: normal;
+                        margin-left: 0.5rem;
+                        font-size: 12px;
+                    }
+                    .text {
+                        margin-top: 1rem;
+                    }
+                    .down {
+                        display: block;
+                        margin-top: 15px;
+                        @include clearfix;
+                        .moreBtn {
+                            cursor: pointer;
+                            color: $lightRed;
+                            height: 2rem;
+                            line-height: 2rem;
+                            float: right;
+                            display: block;
+                            font-size: 12px;
+                            &:hover {
+                                color: $darkRed;
+                            }
+                            .fa {
+                                margin-left: 5px;
+                                font-size: inherit
+                            }
+                            @media #{$sml} {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

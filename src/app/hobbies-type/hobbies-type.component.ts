@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   templateUrl: 'hobbies-type.component.html',
-  styleUrls: ['../../assets/sass/hobbies.scss']
+  styleUrls: ['../hobbies/hobbies.scss']
 })
 export class HobbiesTypeComponent implements OnInit,OnDestroy {
   banner: any[];
@@ -31,7 +31,7 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
     // this.route.data.subscribe((res:{item:string}) =>{
     //   this.getType(res.item);
     // })
-    
+
     // this.aboutService.changeName(this.mytype);
   }
 

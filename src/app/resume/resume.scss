@@ -1,0 +1,119 @@
+@import "../../assets/sass/color";
+@import "../../assets/sass/mixin";
+@import "../../assets/sass/media";
+@import '../../assets/sass/cont-title';
+.bio-cont {
+    margin-top: 1.875rem;
+    padding: 1.25rem 0 0;
+    color: $text;
+    width: 100%;
+    word-wrap: break-word;
+    @media #{$sml} {
+        padding: 2rem 0 0;
+        margin-top: 0;
+    }
+    .profile {
+        // @include clearfix;
+        padding: 0 1rem;
+        display: flex;
+        // justify-content:
+        .photo {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border: 1px solid $superLight;
+            box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.30);
+            @include rounded(50%);
+            display: inline-block;
+            // float:left;
+            img {
+                width: 100%;
+            }
+        }
+        .name {
+            margin-left: 1rem;
+            line-height: 100px;
+            font-weight: 100;
+            // float: left;
+        }
+        @media #{$sml} {
+            // float: none;
+            text-align: center;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            .photo,
+            .name {
+                float: none;
+            }
+            .name {
+                line-height: 2;
+            }
+        }
+    }
+    .intro {
+        margin: 2.125rem auto;
+        line-height: 2;
+        text-align: justify;
+        width: 100%;
+        padding: 0 1rem;
+        color: $textDark;
+        @media #{$med} {
+            padding: 0;
+        }
+        a {
+            color: $darkRed;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1rem;
+            // font-weight: bold;
+        }
+        strong {
+            font-weight: 700;
+            color: $textDark;
+        }
+        .skill-cont {
+            border-top: 1px dashed $textGray;
+            width: 100%;
+            padding: 5rem 0 4rem;
+            text-align: center;
+            h4 {
+                display: inline-block;
+                margin: 0 0 3.8rem;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                color: $textDark;
+                font-weight: 100;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                li {
+                    margin: 0 0.8rem 2rem;
+                    width: 130px;
+                    text-align: center;
+                    h5 {
+                        font-size: 0.875rem;
+                        font-weight: 100;
+                    }
+                    img {
+                        width: 100px;
+                    }
+                    @media #{$med} {
+                        margin: 0 0.5rem 2rem;
+                    }
+                }
+                .big {
+                    margin: 0 2rem 2rem;
+                    width: 200px;
+                    img {
+                        width: 140px;
+                    }
+                }
+            }
+        }
+    }
+}

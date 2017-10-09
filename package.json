@@ -21,13 +21,14 @@
         "@angular/platform-browser": "^4.0.0",
         "@angular/platform-browser-dynamic": "^4.0.0",
         "@angular/router": "^4.0.0",
-        "core-js": "^2.4.1",
-        "rxjs": "^5.1.0",
-        "zone.js": "^0.8.4",
         "@types/greensock": "^1.15.28",
         "@types/hammerjs": "^2.0.33",
         "@types/jquery": "^2.0.32",
-        "ng2-validation": "^4.0.0"
+        "angular2-materialize": "^15.1.10",
+        "core-js": "^2.4.1",
+        "ng2-validation": "^4.2.0",
+        "rxjs": "^5.1.0",
+        "zone.js": "^0.8.4"
     },
     "devDependencies": {
         "@angular/cli": "^1.1.1",

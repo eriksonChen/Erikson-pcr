@@ -1,0 +1,100 @@
+@import "../../assets/sass/color";
+@import "../../assets/sass/mixin";
+@import "../../assets/sass/media";
+// index style.css
+.wrap {
+    display: none;
+    background: #abbabb;
+    background: -webkit-linear-gradient(to top, #abbabb, #fff);
+    background: linear-gradient(to top, #abbabb, #fff);
+    max-width: inherit;
+    overflow: hidden;
+    .bgimg,
+    .text-box {
+        position: absolute;
+    }
+    .bgimg {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+        img {
+            width: 100%;
+            position: relative;
+        }
+        @media #{$sml} {
+            width: 100%;
+            top: 45%;
+            img {
+                width: 80%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+        }
+    }
+    .text-box {
+        width: 300px;
+        height: 125px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+        @include rounded(5px);
+        &:hover {
+            .start {
+                @include ease(0.25s);
+                background-color: inherit;
+                color: $darkRed;
+            }
+        }
+        .box-title {
+            margin-top: 1.7rem;
+            font-weight: 100;
+            // letter-spacing: 1px;
+            color: $textDark;
+        }
+        .box-name {
+            font-size: 1rem;
+            color: $textDark;
+        }
+        .line {
+            border-bottom: 1px solid $darkRed;
+            width: 100px;
+            margin: 0.6rem auto;
+        }
+        .start {
+            position: relative;
+            width: 60%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 1rem;
+            @include rounded(2px);
+            margin: 1rem auto;
+            background-color: $darkRed;
+            border: 1px solid $darkRed;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+        @media #{$sml} {
+            width: 95%;
+            top: 82%;
+            height: 120px;
+            .box-title,
+            .box-name {
+                line-height: 2;
+            }
+            .box-title {
+                margin-top: 1rem;
+            }
+            .start {
+                background-color: $darkRed;
+                color: #fff;
+            }
+        }
+    }
+    @include clearfix;
+}
