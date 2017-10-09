@@ -1,13 +1,28 @@
 <!--<div class="wrap">-->
-<div class="wrap" (window:resize)="onResize()">
+<div class="wrap">
 
     <div class="cont-title">
         <h1 class="title">WORK</h1>
         <h5>作品集</h5>
     </div>
 
-    <div class="items" *ngIf="works">
-        <div class="item" *ngFor="let work of works">
+    <div class="items">
+        <div class="card item grey lighten-5" *ngFor="let item of works">
+          <div class="card-image waves-effect waves-block waves-light" (click)="onPopup(item)">
+            <img class="activator" src="images/office.jpg" [src]="item.pic_s" [alt]='item.title'>
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4 small">{{item.brands}} / {{item.title}}</span>
+            <p class="grey-text">{{item.date}}</p>
+          </div>
+          <div class="card-action">
+              <a class="blue-text" href="javascritp:;" (click)="onPopup(item)">more</a>
+              <a class="blue-text" href="javascritp:;" (click)="onUrl(item.href)" *ngIf="item.href">Launch</a>
+          </div>
+        </div>
+
+
+        <!-- <div class="item" *ngFor="let work of works">
             <div class="pic">
                 <img class="lazy" [attr.data-original]='work.pic_s' [alt]="work.title">
                 <div class="btn-cont">
@@ -28,34 +43,38 @@
                     <div class="button" (click)="onUrl(work.href)" *ngIf="work.href">Launch Project<i class="fa fa-link" aria-hidden="true"></i></div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- end .wrap -->
-        <div class="popup" *ngIf="work">
-            <div class="close" (click)="onPopClose()"><img width="38" height="38" src="../../assets/svg/close3.svg" alt=""></div>
-            <div class="pop-cont">
-                <div class="close close2" (click)="onPopClose()"></div>
-                <div class="pop-pic"><img [src]="work.pic" alt=""></div>
-                <div class="pop-des">
-                    <div class="title">
-                        <h5>{{work.brands}} <span class="txt-line"> | </span> {{work.title}} </h5>
-                    </div>
-                    <div class="red-line"></div>
-                    <div class="time">
-                        <div class="small">TIME：</div>
-                        <h5>{{work.date}}</h5>
-                    </div>
-                    <div class="des">
-                        <div class="small">DESCRIPTION：</div>
-                        <p [innerHTML]="work.des"></p>
-                        <p class="skill">{{work.skill}}</p>
-                    </div>
+      <div class="popup" *ngIf="work">
+          <div class="close" (click)="onPopClose()"><img width="38" height="38" src="../../assets/svg/close3.svg" alt=""></div>
+          <div class="pop-cont">
+            <div class="close close2" (click)="onPopClose()"></div>
+            <div class="pop-pic"><img [src]="work.pic" alt=""></div>
+            <div class="pop-des">
+                <div class="title">
+                  <h5>{{work.brands}} <span class="txt-line"> | </span> {{work.title}} </h5>
                 </div>
-                <div class="waves-effect waves-light btn popbtn" (click)="onUrl(work.href)" *ngIf="work.href">
-                    Launch Project<i class="fa fa-link" aria-hidden="true"></i>
+                <div class="red-line"></div>
+                <div class="time">
+                    <div class="small">TIME：</div>
+                    <h5>{{work.date}}</h5>
+                </div>
+                <div class="des">
+                  <div class="small">DESCRIPTION：</div>
+                  <p [innerHTML]="work.des"></p>
+                  <p class="skill">{{work.skill}}</p>
                 </div>
             </div>
-            <div class="pop-bg" (click)="onPopClose()"></div>
-        </div>
+            <div class="waves-effect waves-light btn popbtn" (click)="onUrl(work.href)" *ngIf="work.href">
+                <i class="material-icons right">link</i>Launch Project
+            </div>
+          </div>
+          <div class="pop-bg" (click)="onPopClose()"></div>
+      </div>
+
+
 
     </div>
+
+<!-- end .wrap -->
+
