@@ -38,6 +38,13 @@
               font-size: 1.2rem;
             }
           }
+          .card-reveal{
+            p{
+              color: $textGray;
+              line-height: 2;
+              padding-top: 10px;
+            }
+          }
           .card-action{
             a{
               color: $textDark;
@@ -51,6 +58,8 @@
             display: none;
             width: 32%;
             margin-bottom: 2rem;
+            @include rounded(10px);
+            overflow: hidden;
             &:hover {
                 .pic {
                     .btn-cont {

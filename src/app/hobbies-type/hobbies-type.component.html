@@ -20,7 +20,8 @@
         <div class="items" *ngIf="items">
             <div class="item" *ngFor="let item of items" (click)='pop(item)'>
                 <div class="item-pic">
-                    <img class='lazy' [attr.data-original]="item.pic">
+                    <img class="lazy" src="../assets/svg/loading.svg" [attr.data-src]='item.pic'>
+                    <!-- <img class='lazy' [attr.data-original]="item.pic"> -->
                 </div>
                 <div class="item-text">
                     <h5>{{item.title}} <span class="date">/{{item.date}}</span> </h5>

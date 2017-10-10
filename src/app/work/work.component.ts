@@ -10,8 +10,8 @@ import { Work } from './../work';
 })
 export class WorkComponent implements OnInit, OnDestroy {
 
-  works: Work;
-  work: Work;
+  works: Work[];
+  work: any[];
   pop = $('.pop-cont');
   subs: Subscription;
 
@@ -24,7 +24,6 @@ export class WorkComponent implements OnInit, OnDestroy {
         $('.item').each((i, ele) => {
           TweenMax.from(ele, 0.7, { delay: (i + 1) * 0.2, alpha: 0, y: 50, ease: Back.easeOut });
         });
-        // this.onResize();
         $('img.lazy').lazyload({
           effect: 'fadeIn'
         });
