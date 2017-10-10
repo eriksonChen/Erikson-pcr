@@ -1,41 +1,43 @@
 <div class="wrap">
-    <div class="cont-title">
-        <!--<h2 class="title">Hobbies</h2>-->
+  <div class="cont-title">
+    <!--<h2 class="title">Hobbies</h2>-->
+  </div>
+  <!--<div class="line"></div>-->
+  <div class="hob-cont" *ngIf="banner">
+    <app-hobbies-menu></app-hobbies-menu>
+    <div class="banner intro">
+      <div class="pic">
+        <img [src]="banner.pic" [alt]='banner.name'>
+      </div>
+      <div class="des">
+        <h4 class="title">{{banner.name}}</h4>
+        <div class="red-line"></div>
+        <p class="text-cont" [innerHTML]="banner.text"></p>
+      </div>
     </div>
-    <!--<div class="line"></div>-->
-    <div class="hob-cont" *ngIf="banner">
-        <app-hobbies-menu></app-hobbies-menu>
-        <div class="banner intro">
-            <div class="pic">
-                <img [src]="banner.pic" [alt]='banner.name'>
-            </div>
-            <div class="des">
-                <h4 class="title">{{banner.name}}</h4>
-                <div class="red-line"></div>
-                <p class="text-cont" [innerHTML]="banner.text"></p>
-            </div>
+    <h3 class="title_m">{{banner.name}}</h3>
+    <!-- end .banner photo -->
+    <div class="items" *ngIf="items">
+      <div class="item" *ngFor="let item of items" (click)='pop(item)'>
+        <div class="item-pic">
+          <img class="lazy" src="../assets/svg/loading.svg" [attr.data-src]='item.pic'>
         </div>
-        <h3 class="title_m">{{banner.name}}</h3>
-        <!-- end .banner photo -->
-        <div class="items" *ngIf="items">
-            <div class="item" *ngFor="let item of items" (click)='pop(item)'>
-                <div class="item-pic">
-                    <img class="lazy" src="../assets/svg/loading.svg" [attr.data-src]='item.pic'>
-                    <!-- <img class='lazy' [attr.data-original]="item.pic"> -->
-                </div>
-                <div class="item-text">
-                    <h5>{{item.title}} <span class="date">/{{item.date}}</span> </h5>
-                    <p class="text">{{item.summary}}</p>
-                    <div class="down">
-                        <div class="moreBtn">MORE<i class="fa fa-chevron-right tiny" aria-hidden="true"></i></div>
-                    </div>
-                </div>
+        <div class="item-text">
+          <h5>{{item.title}}
+            <span class="date">/{{item.date}}</span>
+          </h5>
+          <p class="text">{{item.summary}}</p>
+          <div class="down">
+            <div class="moreBtn">MORE
+              <i class="fa fa-chevron-right tiny" aria-hidden="true"></i>
             </div>
+          </div>
         </div>
-        <!-- end .items -->
+      </div>
     </div>
-    <!-- end .hob-cont -->
+    <!-- end .items -->
+  </div>
+  <!-- end .hob-cont -->
 </div>
 
 <app-popup [popCont]='pitem' *ngIf="pitem"></app-popup>
-

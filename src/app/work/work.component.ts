@@ -11,7 +11,16 @@ import { Work } from './../work';
 export class WorkComponent implements OnInit, OnDestroy {
 
   works: Work[];
-  work: any[];
+  work = {
+    pic: '',
+    brands: '',
+    title: '',
+    date: '',
+    skill: '',
+    des: '',
+    href: ''
+  }
+  wsrc = '../assets/svg/loading.svg';
   pop = $('.pop-cont');
   subs: Subscription;
 
@@ -49,8 +58,12 @@ export class WorkComponent implements OnInit, OnDestroy {
 
   onPopup(work) {
     this.work = work;
+    $('img.lazyload').lazyload({
+      effect: 'fadeIn'
+    });
+
     TweenMax.set('.pop-cont', { transformPerspective: 3000 });
-    if ($('.wrap').outerWidth() <= 768 ) { // 手機動態
+    if ($('.wrap').outerWidth() <= 768) { // 手機動態
       TweenMax.set('.pop-cont', { y: '-50%', x: '50%' });
       $('.popup').fadeIn('fast', () => {
         TweenMax.to('.pop-cont', 0.7, { x: '-50%', ease: Expo.easeInOut });
@@ -68,10 +81,10 @@ export class WorkComponent implements OnInit, OnDestroy {
   }
 
   onPopClose() {
-  $('.popup').fadeOut();
+    $('.popup').fadeOut();
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.subs.unsubscribe();
   }
 
