@@ -58,9 +58,11 @@ export class WorkComponent implements OnInit, OnDestroy {
 
   onPopup(work) {
     this.work = work;
-    $('img.lazyload').lazyload({
-      effect: 'fadeIn'
-    });
+    this.wsrc = '../assets/svg/loading.svg';
+    setTimeout(() => {
+      $('img.lazyload').lazyload();
+    }, 100);
+
 
     TweenMax.set('.pop-cont', { transformPerspective: 3000 });
     if ($('.wrap').outerWidth() <= 768) { // 手機動態
@@ -81,7 +83,9 @@ export class WorkComponent implements OnInit, OnDestroy {
   }
 
   onPopClose() {
-    $('.popup').fadeOut();
+    $('.popup').fadeOut(() => {
+      this.wsrc = '../assets/svg/loading2.svg';
+    });
   }
 
   ngOnDestroy() {

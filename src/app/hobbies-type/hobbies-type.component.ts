@@ -8,14 +8,15 @@ import { Subscription } from 'rxjs/Subscription';
   templateUrl: 'hobbies-type.component.html',
   styleUrls: ['../hobbies/hobbies.scss']
 })
-export class HobbiesTypeComponent implements OnInit,OnDestroy {
+export class HobbiesTypeComponent implements OnInit, OnDestroy {
   banner: any[];
   items: Item[];
   pitem: any[];
-  subs:Subscription;
+  subs: Subscription;
+  ishide = true;
 
   constructor(private route: ActivatedRoute, private aboutService: AboutService) {
-    //component之間的資料傳遞方法*********************
+    // component之間的資料傳遞方法*********************
 
     // this.aboutService.changeBar(false);
     // this.aboutService.missionErikson$.subscribe(res => {
@@ -24,7 +25,7 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
   }
 
   ngOnInit() {
-    $('.wrap').css('display', 'none').delay(100).fadeIn('slow');
+    $('.wrap').delay(100).fadeIn('slow');
     window.scrollTo(0, 0);
 
     this.getType(this.route.snapshot.data['item']);
@@ -35,12 +36,13 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
     // this.aboutService.changeName(this.mytype);
   }
 
-  getType(type:string){
+  getType(type: string) {
     this.subs = this.aboutService.getData(type).subscribe(res => {
       this.items = res.data;
       this.banner = res.banner;
       setTimeout(() => {
-        $('img.lazy').lazyload({ effect: "fadeIn" });
+        this.ishide = false;
+        $('img.lazy').lazyload({ effect: 'fadeIn' });
         $('.item').each((index, ele) => {
           TweenMax.from(ele, 0.7, { delay: (index + 1.8) * 0.18, alpha: 0, y: 70, ease: Back.easeOut });
         });
@@ -53,20 +55,20 @@ export class HobbiesTypeComponent implements OnInit,OnDestroy {
     );
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.subs.unsubscribe();
   }
 
   pop(p) {
     this.pitem = p;
     TweenMax.set('.pop-cont', { transformPerspective: 3000, x: '-50%', y: '-50%' });
-    if ($('.banner').css('display') === 'none') { //手機動態
+    if ($('.banner').css('display') === 'none') { // 手機動態
       TweenMax.set('.pop-cont', { y: '-50%', x: '50%' });
       $('.popup').fadeIn('fast', () => {
         TweenMax.to('.pop-cont', 0.6, { x: '-50%', ease: Expo.easeInOut });
       });
 
-      $(".pop-cont").scrollTop(0);
+      $('.pop-cont').scrollTop(0);
     } else {
       TweenMax.set('.pop-cont', { alpha: 0, rotationX: 90, top: 50 });
       $('.popup').fadeIn(() => {

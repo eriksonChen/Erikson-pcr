@@ -1,4 +1,4 @@
-<div class="wrap">
+<div class="wrap" style="display:none;">
   <div class="cont-title">
     <!--<h2 class="title">Hobbies</h2>-->
   </div>
@@ -17,8 +17,8 @@
     </div>
     <h3 class="title_m">{{banner.name}}</h3>
     <!-- end .banner photo -->
-    <div class="items" *ngIf="items">
-      <div class="item" *ngFor="let item of items" (click)='pop(item)'>
+    <div class="items er" *ngIf="items">
+      <div class="item" [hidden]='ishide' *ngFor="let item of items" (click)='pop(item)'>
         <div class="item-pic">
           <img class="lazy" src="../assets/svg/loading.svg" [attr.data-src]='item.pic'>
         </div>
