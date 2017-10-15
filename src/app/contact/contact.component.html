@@ -2,7 +2,6 @@
     <div class="cont-title">
         <h1 class="title">CONTACT</h1>
     </div>
-    <!--<div class="line"></div>-->
     <div class="form-cont">
         <div class="row">
             <h4 class="thank col s12 center-align">感謝您，若有任何興趣請留下您的聯絡方式，我將會儘快與您聯絡。</h4>
@@ -34,7 +33,7 @@
                     </div>
                 </div>
                 <!--<input type="hidden" formControlName="_next" value="" />-->
-                <button class="btn waves-effect waves-light submitBtn" [class.isClick]="isClick" type="submit" [disabled]="form.invalid">Submit</button>
+                <button class="btn waves-effect waves-light submitBtn" materialize [materializeActions]="toastAction" [class.isClick]="isClick" type="submit" [disabled]="form.invalid">Submit</button>
                 <a href="javascript:;" class="btn disabled" [class.isClick]="!isClick">上傳中</a>
             </form>
         </div>

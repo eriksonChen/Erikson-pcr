@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
 import { CustomValidators } from 'ng2-validation';
 import { Subscription } from 'rxjs/Subscription';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-
+import {MaterializeAction} from 'angular2-materialize';
 
 @Component({
   // selector: 'app-contact',
@@ -12,6 +12,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 export class ContactComponent implements OnInit {
 
+  toastAction = new EventEmitter<string|MaterializeAction>();
   isClick = false;
   sub: Subscription;
   // form = {
@@ -38,6 +39,7 @@ export class ContactComponent implements OnInit {
     $('.wrap').css('display', 'none').delay(200).fadeIn('slow');
     TweenMax.from('.form-cont', 0.7, { delay: 0.5, alpha: 0, y: 30, ease: Expo.easeOut });
     gapage('contact');
+    // this.toast();
   }
   get name(){
     return this.form.get('name');
@@ -53,7 +55,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('send');
     this.isClick = true;
     gaclick('submit');
     const headers = new Headers();
@@ -63,18 +64,27 @@ export class ContactComponent implements OnInit {
 
     this.sub = this.http.post('http://formspree.io/botan3951@gmail.com', data, { headers: headers })
       .subscribe(
-      err => this.logError(err),
-      () => this.clearForm()
+      () => {
+          this.toast();
+          this.clearForm();
+        }
       );
   }
 
   logError(err) {
-    // console.error('There was an error: ' + err);
+    console.error('There was an error: ' + err);
     this.clearForm();
   }
 
+  toast() {
+    this.toastAction.emit({
+      action: 'toast',
+      params: ['寄送成功 ~', 3000]
+    });
+  }
+
   clearForm() {
-    alert('寄送成功！');
+    // alert('寄送成功！');
     this.isClick = false;
     this.form.reset();
     this.sub.unsubscribe();
