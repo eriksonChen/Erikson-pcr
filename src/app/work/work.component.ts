@@ -11,15 +11,7 @@ import { Work } from './../work';
 export class WorkComponent implements OnInit, OnDestroy {
 
   works: Work[];
-  work = {
-    pic: '',
-    brands: '',
-    title: '',
-    date: '',
-    skill: '',
-    des: '',
-    href: ''
-  }
+  work: Work;
   wsrc = '../assets/svg/loading.svg';
   pop = $('.pop-cont');
   subs: Subscription;
