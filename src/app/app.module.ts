@@ -18,7 +18,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutService } from './about.service';
-import { MaterializeModule } from "angular2-materialize";
+import { MaterializeModule } from 'angular2-materialize';
 
 @NgModule({
   declarations: [

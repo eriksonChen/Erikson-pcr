@@ -32,25 +32,25 @@
             margin-bottom: 0;
             margin-top: 0.5rem;
         }
-        .card{
-          .card-content{
-            .card-title{
-              font-size: 1.2rem;
+        .card {
+            .card-content {
+                .card-title {
+                    font-size: 1.2rem;
+                }
             }
-          }
-          .card-reveal{
-            p{
-              color: $textGray;
-              line-height: 2;
-              padding-top: 10px;
+            .card-reveal {
+                p {
+                    color: $textGray;
+                    line-height: 2;
+                    padding-top: 10px;
+                }
             }
-          }
-          .card-action{
-            a{
-              color: $textDark;
-              font-size: 14px;
+            .card-action {
+                a {
+                    color: $textDark;
+                    font-size: 14px;
+                }
             }
-          }
         }
         .item {
             position: relative;
@@ -437,5 +437,3 @@
     }
     @include clearfix;
 }
-
-

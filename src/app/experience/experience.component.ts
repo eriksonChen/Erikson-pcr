@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class ExperienceComponent implements OnInit, OnDestroy {
 
   experience: any[];
-  subs:Subscription;
+  subs: Subscription;
 
 
   constructor(private aboutService: AboutService) {
@@ -24,14 +24,14 @@ export class ExperienceComponent implements OnInit, OnDestroy {
     this.subs = this.aboutService.getExperience().subscribe(res => {
       this.experience = res.experience;
       this.experience.forEach((val, key) => {
-        val.dist = key % 2 == 0 ? 'left' : 'right';
+        val.dist = key % 2 === 0 ? 'left' : 'right';
       })
 
       setTimeout(() => {
         this.anim();
       }, 10);
     },
-    err => console.log('Error fetching about data'));
+      err => console.log('Error fetching about data'));
     window.scrollTo(0, 0);
     gapage('experience');
   }
