@@ -1,31 +1,31 @@
 {
-  posts: [
+  "posts": [
     {
-      id: 1,
-      title: "Erikson"
+      "id": 1,
+      "title": "Erikson"
     },
     {
-      id: 2,
-      title: "Apple"
+      "id": 2,
+      "title": "Apple"
     },
     {
-      id: 3,
-      title: "Johnny"
+      "id": 3,
+      "title": "Johnny"
     }
   ],
-  comments: [
+  "comments": [
     {
-      id: 1,
-      body: "some comment",
-      postId: 1
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
     },
     {
-      id: 2,
-      body: "some comment",
-      postId: 1
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
     }
   ],
-    profile: {
-    name: "typicode"
+    "profile": {
+    "name": "typicode"
   }
 }
